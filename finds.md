@@ -156,3 +156,54 @@ For selective bold headlines: use `<h2>` with `<strong>` wrapping only the key w
 **Implementation brief:**
 Create a `<div class="stat-list">` as a vertical stack. Each `<div class="stat-row">` uses `display: flex`, `align-items: baseline`, `gap: 24px`, `padding: 16px 0`, `border-bottom: 1px solid #eee`. Left column: `<span class="stat-index">` at `font-size: 0.7rem`, `font-weight: 400`, `color: #bbb`, `min-width: 32px` — contains `001`, `002`, etc. (pad manually or use CSS counters: `counter-increment: stat-row; content: "00" counter(stat-row)`). Right side: `<span class="stat-value">` at `font-size: 1.8rem`, `font-weight: 700`, followed by `<span class="stat-label">` at `font-size: 0.9rem`, `color: #666`. Keep the container left-aligned, `max-width: 600px`. Works best on a clean white or light gray background with no other visual elements competing.
 
+---
+
+## Scout Run — 2026-03-28 17:00 UTC
+Sources checked: [Land-book](https://land-book.com/design/about-us-page) (About Us category), [Land-book](https://land-book.com/design/pricing-page) (Pricing category), [Godly](https://godly.website/) (fresh index pass)
+
+### 🏆 Find 10: The Anti-FAQ Pricing Manifesto
+**Site:** Monarch Money — [https://www.monarch.com/pricing](https://www.monarch.com/pricing)
+**Found on:** Land-book — [https://land-book.com/websites/79795-pricing-monarch-money](https://land-book.com/websites/79795-pricing-monarch-money)
+**What it is:** Instead of an FAQ section, Monarch's pricing page includes a 4-point named manifesto embedded directly *within* the pricing content — not below it. The four items are titled "Never any ads", "Industry-best data connectivity", "We never sell your data", and "We're not going anywhere." Each is a short paragraph making a specific claim about *why paying is better for you than using a free alternative*. It reads as a genuine argument, not a feature list. The page frames the pricing decision as a values alignment question: do you want to be the product, or the customer?
+
+**Scores:**
+- Uniqueness: 9/10 — This reframes the pricing objection ("why should I pay?") into a principled argument before the customer even thinks to ask. Most pricing pages just list features. This one argues a philosophy. I've never seen it structured this explicitly and placed this centrally on a pricing page.
+- Transferability: 9/10 — A repair shop has an obvious version: "Why use a local repair shop instead of mailing it in?" or "Why us instead of the big-box store?" Same structure: 3–4 named principles — "We do it same day", "We stand behind our work", "You deal with one person, not a call center", "We're in Hailey because we live here." Same energy — a direct argument, not a brochure.
+- Personal taste: 9/10 — The line "When you are paying for a service, you are the customer. Free services are incentivized to sell your data" is blunt and true, and it's on a *pricing page*. The boldness is what makes it work. It trusts the reader to process an argument instead of just scanning bullets.
+- **Average: 9/10**
+
+**Implementation brief:**
+Create a `<section class="why-us-manifesto">` below the main CTA or service list. Open with a framing question: "Why choose a local repair shop?" or "Why pay someone local instead of mailing it in?" Then 3–4 `<div class="manifesto-point">` blocks — each with a `<h3>` (bold, short — "We do it same day", "You'll talk to the person fixing it") and a `<p>` (2–3 sentences, honest and specific). No icons, no checkmarks. Style: clean white or light-gray background, generous vertical padding, `max-width: 640px` centered. The power is in the copy being argumentative rather than declarative — each point should answer an actual objection a customer would have, not just restate a feature. Keep tone conversational. End the section with a single closing line: "That's why we're here." or similar — gives it the feel of a spoken argument, not a list.
+
+---
+
+### 🥈 Find 11: Numbered Journey Arc (Stage-Based Feature Sections)
+**Site:** Mixpanel — [https://mixpanel.com](https://mixpanel.com)
+**Found on:** Godly — [https://godly.website/website/mixpanel-962](https://godly.website/website/mixpanel-962)
+**What it is:** Feature sections are structured as a numbered journey arc — `01 Acquire new customers / 02 Drive engagement / 03 Grow your user base` — where each number represents not just a feature but a *stage in the customer's life* with the product. Each stage gets a number label, a bold headline (the outcome), a one-line description, and a visual. The progression implies: "you don't just use our product, you go on a journey with it." The numbers make it feel like a roadmap rather than a checklist.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered sections are common, but the stage-of-life framing (acquire → engage → grow) rather than feature categories (analytics → reports → integrations) is more narrative and less catalog-like. It maps the customer's goals, not the product's capabilities.
+- Transferability: 8/10 — Directly adaptable for a repair shop: `01 Bring it in (or text us a photo) / 02 We diagnose it fast / 03 You get it back, fixed`. That's the customer's journey through a repair. It's more honest and confidence-building than listing services, because it shows the whole experience arc rather than just capability claims.
+- Personal taste: 7/10 — Clean, purposeful, and the numbered format gives it a sense of forward motion. Doesn't knock me over the way some other finds do, but it's solid and immediately usable. The "01" left-aligned above the section head is a quietly confident detail.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create a `<div class="journey-arc">` containing 3 `<div class="journey-step">` blocks. Each step: `<span class="step-num">` (e.g., `01`) in `font-size: 0.75rem`, `letter-spacing: 0.15em`, `color: #999`, displayed as a block above the headline. Then `<h3>` for the outcome headline — bold, ~1.5rem. Then `<p>` for a single descriptive sentence. Then an optional CTA link. Stack vertically on mobile; 3-column grid on desktop. Use a thin `border-top` or colored accent line on each block to visually anchor the number above the heading. The key to making this feel like a *journey* rather than a list is the choice of words — each step should be a customer-facing action or outcome ("Get your diagnosis fast"), not an internal product capability ("Advanced diagnostics engine").
+
+---
+
+### 🥉 Find 12: One-Paragraph Opinionated Intro (The Single-Block About)
+**Site:** Kons — [https://kons.fyi](https://kons.fyi)
+**Found on:** Godly — [https://godly.website/website/kons-1017](https://godly.website/website/kons-1017)
+**What it is:** The entire site is a single paragraph of opinionated self-introduction: "It's been 14 years since I got into design. I now have clear principles, the main one being 'value instead of mindless execution'. It's easy to print generic solutions, but what we designers are hired for is our unique point of view and creative thinking." No logo, no nav, no services list — just a person making a case for who they are in plain prose. The directness is disarming. You know exactly what you're getting before you've even seen any work.
+
+**Scores:**
+- Uniqueness: 9/10 — Even among minimal sites, this is uncommonly stripped down. Most solo/studio sites still have a project grid or a services list. The decision to let a single paragraph carry all the weight is radical restraint. It works because the paragraph is genuinely opinionated — it says something specific, not generic.
+- Transferability: 7/10 — Not for the full homepage, but perfect for the "About" or "Why us" page of a repair shop. A single paragraph like: "I've been fixing phones in Hailey since 2023. I don't waste your time with appointments. I don't give vague estimates. When I tell you it'll be done by 5pm, I mean it. Bring it in." — that paragraph, alone on a page with some breathing room, is more credible than any bullet-point capability list.
+- Personal taste: 9/10 — The line "It's easy to print generic solutions" is doing a lot of work. It's a shot at the competition and a statement of values simultaneously. That's hard to write. The fact that a freelancer put this on their homepage instead of a portfolio carousel shows they understand that confidence is a product feature.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+For an "About" page or a mid-page section: create a `<section>` with `max-width: 680px`, `margin: 0 auto`, `padding: 80px 24px`. Single `<p>` element at `font-size: clamp(1.1rem, 2vw, 1.35rem)`, `line-height: 1.75`, `font-weight: 400`. No heading above it. No subheading after it. Just the paragraph. Let it breathe. The content must be genuinely opinionated — it needs at least one sentence that takes a position or makes a small claim that other shops *can't or wouldn't* make. Without that, it's just a bio. With it, it's a positioning statement. End with your name, a signature font, or a simple `— Sam, Hailey Device Repair` attribution in `font-style: italic`. Add a `background: #fdfdf9` (warm off-white) to distinguish it from the surrounding content. No other elements on this section.
+
