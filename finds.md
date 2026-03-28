@@ -54,3 +54,54 @@ Create a full-width section with a max-width container (~600px) centered. Use a 
 **Implementation brief:**
 Add a `<p class="section-label">` element above each `<h2>` section headline. Style it with `font-size: 0.75rem`, `letter-spacing: 0.12em`, `text-transform: uppercase`, and a muted brand color (a desaturated version of your primary). Use the Unicode ✦ character (U+2726) or similar decorative glyph as a prefix — no icon library needed. Increment the label text manually or via a CSS counter: `counter-increment: superpower; content: "✦ Superpower #" counter(superpower)`. The section itself doesn't need to change — just adding this label above the H2 restructures the visual hierarchy and gives the page a consistent cadence. Works especially well when sections have alternating background colors to further segment them.
 
+---
+
+## Scout Run — 2026-03-28 12:57 UTC
+Sources checked: [Land-book](https://land-book.com/design/landing-page), [Godly](https://godly.website/) (new listings), [Awwwards](https://www.awwwards.com/websites/sites-of-the-day/)
+
+### 🏆 Find 4: Audience-Specific Hero Swap (Rotating Sport/Service Targeting)
+**Site:** Veo Sports Cameras — [https://www.veo.com](https://www.veo.com)
+**Found on:** Land-book — [https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse](https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse)
+**What it is:** The hero headline cycles through audience-specific versions of the same offer: "Record, analyse, and livestream every basketball match / every lacrosse match / every rugby match." The sport name swaps out on a timer (or scroll trigger) while everything else stays anchored. The feeling is that the site is talking specifically to *you* — even though it's the same sentence for everyone.
+
+**Scores:**
+- Uniqueness: 7/10 — Text-swap heroes exist, but most cycle through buzzwords or generic claims. Veo's version swaps a concrete, specific noun (the sport) rather than abstract adjectives. That specificity is what makes it feel targeted rather than gimmicky.
+- Transferability: 9/10 — Near-perfect for a repair shop. "We fix cracked iPhone screens / broken charging ports / dead Samsung batteries / water-damaged iPads." Each swap represents a real customer coming in with a real problem. Zero budget, just a JS interval and a CSS transition.
+- Personal taste: 8/10 — It's one of those ideas that's so obvious in hindsight it's annoying. Why isn't every service business doing this?
+- **Average: 8/10**
+
+**Implementation brief:**
+Create an array of service-specific strings (e.g., `["cracked iPhone screens", "broken charging ports", "water-damaged iPads", "dead laptop batteries"]`). Wrap the swappable word in a `<span id="swap-target">` inside the H1. Use a JS `setInterval` every ~2500ms to fade out the current text (`opacity: 0`, `transition: opacity 200ms`), swap the `textContent`, then fade back in. Alternatively use CSS `animation: swap-cycle Xs infinite` with `@keyframes` defining multiple `content:` states if using a pseudo-element. Keep the surrounding text constant and short — the swap should be the only moving part. Add `prefers-reduced-motion` fallback that just shows all options as a static list instead of cycling.
+
+---
+
+### 🥈 Find 5: Outcome Stats as Editorial Interrupt Cards
+**Site:** Superpower — [https://superpower.com](https://superpower.com)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/website/superpower-1015)
+**What it is:** Between feature sections, Superpower drops standalone cards with a single bold outcome statistic: "63% of members find early risk factors for diabetes" / "44% of members find elevated heart disease risk" / "70% of members slow their speed of ageing." Each is a full-width dark card, large type, one sentence. They read like editorial fact-drops from a magazine — not marketing, not testimonials, just data presented with confidence.
+
+**Scores:**
+- Uniqueness: 8/10 — Using outcome stats as layout elements (not buried in a grid or under a heading) is genuinely fresh. Most sites hide their best proof in a "results" section nobody reaches. Surfacing it mid-scroll as a dark interrupt breaks the visual pattern and makes the number unavoidable.
+- Transferability: 9/10 — A repair shop has real data: "95% of repairs done same day." "We've fixed 500+ phones in Hailey since 2023." "Most repairs take under an hour." These are boring in a bullet list but powerful as a full-width interrupt card in 60pt font on a dark background.
+- Personal taste: 9/10 — This is exactly the kind of thing I'd steal immediately. It uses design to give credibility the visual weight it deserves instead of burying it.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Create a `<section class="stat-interrupt">` with `background: #111` (or your darkest brand color), `padding: 80px 24px`, `text-align: center`. The stat number goes in a `<p class="stat-number">` at ~72px or larger, bold, white. The supporting sentence goes in a `<p class="stat-context">` at ~18px, lighter weight, `color: rgba(255,255,255,0.7)`. No icons, no images — just text on dark. Repeat 2-3 times throughout the page at natural transition points (after a features section, before testimonials). The contrast switch from light page body to dark interrupt card does all the visual heavy lifting. Keep each stat to one sentence maximum.
+
+---
+
+### 🥉 Find 6: Ultra-Minimal Copy as a Confidence Statement
+**Site:** Reboot Studio — [https://reboot.studio](https://reboot.studio)
+**Found on:** Godly — [https://godly.website/website/reboot-1001](https://godly.website/website/reboot-1001)
+**What it is:** The entire homepage is basically a few lines of prose. The value prop is one sentence: "We build world-class marketing sites for software startups." The disciplines are listed inline as running text: "Design. / Engineering. / Branding. / Copywriting. / Video. / 3D. / Interaction." — each word punctuated, each standing alone. No hero image. No grid of features. No testimonial carousel. The constraint itself becomes the message: we're confident enough to say less.
+
+**Scores:**
+- Uniqueness: 8/10 — Minimal sites aren't rare, but most minimal sites still have a hero image or some visual anchor. Reboot leans entirely into typography and white space. The boldest move is what's NOT there.
+- Transferability: 6/10 — Somewhat transferable as a *tone* model — a small repair shop shouldn't be this sparse (customers need reassurance), but the practice of stripping copy down to the one sentence that actually matters is a lesson every small business homepage needs. The inline discipline list is directly stealable for a "What we fix" section.
+- Personal taste: 9/10 — I keep coming back to it. There's something almost arrogant about having this little content and it somehow *working*. The period after each discipline word — "Design. Engineering. Branding." — gives each one finality and weight. It's the design equivalent of knowing when to stop talking.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+For the "What we fix" application: create an inline list inside a paragraph element. "Cracked screens. Broken ports. Dead batteries. Water damage. Bad cameras. Stuck buttons." — each item separated by a space and period, not commas, not bullets. Style the container at `font-size: clamp(1.4rem, 3vw, 2rem)`, `font-weight: 600`, `line-height: 1.5`, `max-width: 700px`. The period-stop rhythm forces each item to register individually rather than blur together as a list. Combine with generous `padding` and a clean white or off-white background — no decorative elements needed. This works especially well as an "About" or "Services" section header before more detailed content below it.
+
