@@ -207,3 +207,54 @@ Create a `<div class="journey-arc">` containing 3 `<div class="journey-step">` b
 **Implementation brief:**
 For an "About" page or a mid-page section: create a `<section>` with `max-width: 680px`, `margin: 0 auto`, `padding: 80px 24px`. Single `<p>` element at `font-size: clamp(1.1rem, 2vw, 1.35rem)`, `line-height: 1.75`, `font-weight: 400`. No heading above it. No subheading after it. Just the paragraph. Let it breathe. The content must be genuinely opinionated — it needs at least one sentence that takes a position or makes a small claim that other shops *can't or wouldn't* make. Without that, it's just a bio. With it, it's a positioning statement. End with your name, a signature font, or a simple `— Sam, Hailey Device Repair` attribution in `font-style: italic`. Add a `background: #fdfdf9` (warm off-white) to distinguish it from the surrounding content. No other elements on this section.
 
+---
+
+## Scout Run — 2026-03-28 19:02 UTC
+Sources checked: [CSS Design Awards](https://www.cssdesignawards.com/) (WOTD winners March 20–28), [Land-book](https://land-book.com/design/product-page) (Product Page category)
+
+### 🏆 Find 13: Customer-Type Service Branching ("Three Paths Depending on Your Project")
+**Site:** MERSI Architecture Studio — [https://www.mersi-architecture.com/process](https://www.mersi-architecture.com/process)
+**Found on:** CSS Design Awards — [https://www.cssdesignawards.com/sites/mersi-architecture-studio/49039/](https://www.cssdesignawards.com/sites/mersi-architecture-studio/49039/)
+**What it is:** Instead of a single "How it works" section, MERSI's Process page presents three completely separate service tracks organized by *who the customer is and what they're trying to do*: "Résidentiel pour utilisateur / Résidentiel pour investisseur / Retail concept pour marque." Each track gets its own framing sentence, its own bullet list, and its own CTA. The page starts with "Quel que soit le type de projet, notre méthode repose sur un cadre clair et éprouvé" (Whatever the project type, our method rests on a clear, proven framework) — then immediately branches by customer type. You're never reading about someone else's job.
+
+**Scores:**
+- Uniqueness: 8/10 — Most service businesses have one generic "our process" section. Branching it by customer type — who you are, what you want — treats visitors as distinct audiences rather than a monolith. I've seen this in SaaS pricing tiers but not structured as a process/service page for a small creative firm. The execution here is unusually clean.
+- Transferability: 10/10 — Exact match for a repair shop with multiple customer types: "Personal device (cracked screen, battery)" vs. "Business devices (multiple phones, fleet management)" vs. "Water damage / emergency same-day." Each customer is coming with a different urgency and different questions. Showing them a path that matches their situation immediately reduces friction and builds trust before they've even texted you.
+- Personal taste: 9/10 — It's the kind of organizational decision that shows you've actually thought about your customer instead of just listing your services. Reading the right track feels like the site is talking directly to you. The realization that "this is about me, not about them" is rare and memorable.
+- **Average: 9/10**
+
+**Implementation brief:**
+Create a `<section class="service-paths">` with a brief intro paragraph ("Whatever brings you in, here's how it works") followed by 2–3 `<div class="path-track">` blocks. Each block opens with a `<h3 class="path-label">` — keep it short and customer-facing: "Cracked screen or battery" / "Water damage or emergency" / "Business / multiple devices". Below it, 4–6 `<li>` items describing the flow from that customer's perspective (e.g., "Text us a photo → get a quote in minutes → drop off when ready → done same day"). End each track with a `<a class="path-cta">` button: "Text us now" or "Book a same-day slot". On desktop use 2–3 columns; on mobile stack fully. Differentiate tracks subtly with `background-color` tint variations (e.g., `#f9f7f4` / `#f4f7f9`) rather than heavy borders. The key: each track should use *second-person* language ("you", "your device") not first-person ("we offer").
+
+---
+
+### 🥈 Find 14: Asymmetric Muted Tile Grid for Service Categories
+**Site:** Jacques + Cie Dental Clinic — [https://jacques-cie.com](https://jacques-cie.com)
+**Found on:** Land-book — [https://land-book.com/websites/90165-jacques-cie-clinique-dentaire-a-quebec-soins-dentaires-humains-and-professionnels-a-sainte-foy](https://land-book.com/websites/90165-jacques-cie-clinique-dentaire-a-quebec-soins-dentaires-humains-and-professionnels-a-sainte-foy)
+**What it is:** The services section uses a CSS grid of muted, warm-gray rectangular tiles where each service category gets its own tile — but the tiles are *asymmetric*: some span two-thirds of the row, others one-third. No icons, no bold colors, no hover drop-shadows. Just the service name inside a softly rounded, lightly tinted background tile. The uneven sizing gives the grid visual rhythm without any decorative elements. The page's overall palette — warm off-white background, sage/gray tiles, pale blue footer — is completely calm for a healthcare site.
+
+**Scores:**
+- Uniqueness: 7/10 — Asymmetric grids are common in editorial/portfolio contexts, but applying them to a services list (which usually gets boring equal-width cards or a bullet list) is fresher. The combination with the muted palette and zero icons is the differentiator — most service grids use icons or bold accent colors to add visual interest. This gets there through proportion alone.
+- Transferability: 8/10 — Direct steal for "What we fix": "iPhone screens" tile spans full width; "Charging ports" and "Batteries" share a row; "Water damage" spans 2/3; "Other Android" fills 1/3. The asymmetry makes the tile the customer most commonly needs (screen repairs) visually dominant without any hierarchical text needed. Pure layout as communication.
+- Personal taste: 8/10 — The restraint here is the point. Dental clinics (like repair shops) are usually visually noisy — aggressive CTAs, stock photos, hard-sell copy. Jacques + Cie looks like a design studio that happens to do dentistry. That visual calm is itself a trust signal. A repair shop that looks this composed communicates competence before you've read a word.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="services-grid">` using CSS Grid: `grid-template-columns: repeat(3, 1fr)`, `gap: 12px`. Each `<a class="service-tile">` has `background: #e8e4df` (warm gray), `border-radius: 8px`, `padding: 24px 20px`, `min-height: 100px`. Set the service name as a `<span>` at `font-size: 1rem`, `font-weight: 500`. For asymmetry, use `grid-column: span 2` on 1–2 tiles (your most important services) and `grid-column: span 1` on the rest. Vary row heights with `min-height` differences — the "big" tile can be `140px`, others `100px`. No icons. No description text inside the tile. The name alone, set at the bottom-left with `align-self: end`, gives a clean label feel. On mobile, everything drops to `grid-template-columns: 1fr 1fr` with consistent sizing. The tile colors can all be the same muted shade or vary slightly (e.g., `#e8e4df` / `#dde0e4`) to add another layer of hierarchy without loudness.
+
+---
+
+### 🥉 Find 15: Brand Name Embedded Inside Hero Copy Word
+**Site:** SŌM Power — [https://www.drinksom.eu](https://www.drinksom.eu)
+**Found on:** CSS Design Awards — [https://www.cssdesignawards.com/sites/som-power/49068/](https://www.cssdesignawards.com/sites/som-power/49068/)
+**What it is:** The CTA section hero reads: "BECOME SŌM[E]ONE POWERFUL" — the brand name "SŌM" is embedded inside the common word "SOMEONE," styled differently (heavier weight, brand color, with the macron over the O). "SOMEONE" becomes "SŌM•E•ONE" where the brand mark is visually distinct within the word. The headline lands its brand name and its aspiration in a single phrase rather than separately. It's typographically dense and confident — the kind of line that makes you read it twice.
+
+**Scores:**
+- Uniqueness: 9/10 — I genuinely haven't seen brand-name embedding done this cleanly in a headline. Nested wordmarks exist in logos, but using it as a copy device in a full sentence — where the brand name reads as a meaningful syllable chunk of a real word — is an unusual and clever play. The macron diacritic (Ō) adds a level of craft that signals the brand cares about visual details.
+- Transferability: 6/10 — Somewhat low because it requires a brand name that phonetically embeds in a common word or phrase. "Hailey" doesn't embed as cleanly, though variations are possible: "RELI[ABLE] REPAIR" where the brand value is embedded in the adjective, or using the first letters of the shop name as a visual element within a headline. The *principle* transfers even if the exact technique is name-dependent.
+- Personal taste: 9/10 — It's genuinely clever. The moment you parse "SOMEONE" and realize "SŌM" is in there, the brand lands twice — once as the visual surprise and once as the meaning. That double-register is the kind of thing that makes a headline memorable. The all-caps treatment with the contrast weight difference between SŌM and the surrounding letters gives it a graphic design poster quality.
+- **Average: 8/10**
+
+**Implementation brief:**
+To embed a brand element within a headline word: identify a common word or phrase where the brand name (or its first letters, or a brand value word) appears as a syllable chunk. Wrap that fragment in a `<span class="brand-embed">` with `font-weight: 800` or a brand color, while the surrounding characters stay at `font-weight: 400` or a muted shade. The entire word should be one `<span>` container with `display: inline-block` at the same `font-size` — only weight and color vary internally. Keep the full headline in uppercase for maximum contrast impact. For Hailey Device Repair, consider: "PHONE [FIXED]" where "FIXED" is styled as the brand promise in a different weight; or "HAILEY REPAIRED" where HAILEY takes the brand color weight. The key is that the styled fragment has to mean something on its own — brand-colored noise inside a word reads as a typo, but brand-colored *meaning* reads as craft.
+
