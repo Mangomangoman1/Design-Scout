@@ -142,6 +142,43 @@ For selective bold headlines: use `<h2>` with `<strong>` wrapping only the key w
 
 ---
 
+## Scout Run — 2026-03-29 23:16 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/), [Awwwards](https://www.awwwards.com/websites/sites-of-the-day/)
+
+### 🏆 Find 16: Variable Font Text-Fade Hero as Cinematic Intro
+**Site:** Anorak Film — [https://anorakfilm.com](https://anorakfilm.com)
+**Found on:** Hover States — [https://www.hoverstat.es/features/anorak-film/](https://www.hoverstat.es/features/anorak-film/)
+**Element type:** Typography / entrance animation / scroll effect
+**What it is:** The homepage opens as a simple text-based landing page with poetic, interwoven copy where director names are inline links. As you engage, the text slowly fades and bleeds using variable font weight transitions — characters drift from bold to thin, creating a dreamlike visual that feels like text dissolving into fog. It's meditative, cinematic, and completely text-driven. The transition builds suspense before snapping into a more active portfolio experience.
+
+**Scores:**
+- Uniqueness: 9/10 — Variable font animations exist, but using them as a *narrative device* for pacing and mood — making text feel impermanent and dreamlike — is rare. Most sites use variable fonts for hover states or scroll indicators; Anorak uses them to set emotional tone.
+- Transferability: 7/10 — Requires a variable font with a weight axis (many Google Fonts now support this). For a repair shop, a lighter version could work: a hero text that subtly shifts weight on scroll, giving the first impression a premium, thoughtful feel. Not essential, but a strong differentiator for businesses wanting to feel boutique rather than generic.
+- Eyecatch factor: 9/10 — The fade/bleed effect is hypnotic. You pause to watch it happen. That's extremely valuable real estate time.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Use a variable font with a `wght` (weight) axis — Roboto Flex, Inter Variable, or Source Sans Variable all work. Apply a CSS transition on font-variation-settings: `font-variation-settings: 'wght' 700` transitioning to `'wght' 200` over 2-3 seconds. Trigger on scroll (IntersectionObserver) or on a simple timer after page load. For the bleed effect, combine with subtle `opacity` (1→0.4) and optional `letter-spacing` expansion (tighten→loosen). Use `transition: font-variation-settings 2s ease-out, opacity 1.5s ease-out` for a smooth cinematic feel. Pair with a dark background and generous line-height (1.8+). Keep the text itself meaningful — this technique works best when the copy deserves to be savored. Add `prefers-reduced-motion` fallback that skips the animation entirely.
+
+---
+
+### 🥈 Find 17: Feature Sections with Two-Word Punchy Headlines + Single-Sentence Descriptions
+**Site:** Tatem — [https://tatem.com](https://tatem.com)
+**Found on:** Godly — [https://godly.website/website/tatem-1003](https://godly.website/website/tatem-1003)
+**Element type:** Typography / layout / copywriting pattern
+**What it is:** Each feature section follows a brutally simple format: a two-word headline ("Split inbox", "Speed", "Shortcuts", "Security") followed by a single punchy sentence that explains the benefit in human terms ("Say goodbye to lag."). No paragraph bloat, no marketing filler. The result is a page that scans instantly but still feels complete. Every section is confident enough to make one claim and let the visual do the rest.
+
+**Scores:**
+- Uniqueness: 7/10 — Minimal copy isn't rare, but the discipline of two-word headlines + single-sentence benefits (no exceptions) creates a rhythm that most sites break. Tatem commits to the constraint across the entire page, which is what makes it feel intentional rather than lazy.
+- Transferability: 10/10 — Zero budget, pure copywriting. A repair shop version: "Same Day" → "Drop it off by noon, pick it up by five." / "Honest Pricing" → "We tell you the cost before we start." / "Real People" → "Text us directly — no hold music, no runaround." The pattern forces clarity and eliminates filler.
+- Eyecatch factor: 8/10 — The confidence of saying less is eye-catching in a world of bloated marketing copy. Each section lands hard because nothing dilutes it.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Structure each feature as a `<section>` with three elements: `<h2>` for the two-word headline (font-size: clamp(2rem, 4vw, 3rem), font-weight: 700), `<p class="feature-tagline">` for the single benefit sentence (font-size: 1.1rem, font-weight: 400, max-width: 400px), and an optional visual (screenshot, icon, or illustration). Keep headline and tagline left-aligned; visual can be right or below on mobile. Enforce the constraint: if you can't say it in two words + one sentence, you don't understand it yet. Generous vertical padding between sections (80-120px) lets each one breathe. Alternate background colors subtly (white → #f8f8f8 → white) to visually separate without heavy borders. The discipline is the design — no icons, no bullet points, no "and also."
+
+---
+
 ### 🥉 Find 9: Zero-Padded Sequential Stat Blocks (Clinical Confidence Format)
 **Site:** Diag-Nose — [https://www.diag-nose.io](https://www.diag-nose.io)
 **Found on:** Land-book — [https://land-book.com/websites/92439-diag-nose-io](https://land-book.com/websites/92439-diag-nose-io)
