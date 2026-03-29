@@ -406,3 +406,40 @@ Create feature sections as `<div class="feature-block">` with generous vertical 
 **Implementation brief:**
 Create a `<div class="service-cards">` using CSS Grid with `grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))`, `gap: 24px`. Each `<div class="service-card">` has `background: #fff`, `border-radius: 12px`, `padding: 28px`, `box-shadow: 0 2px 12px rgba(0,0,0,0.05)`. Inside: `<h3 class="card-title">` (`font-size: 1.25rem`, `font-weight: 700`, `margin-bottom: 12px`), `<p class="card-desc">` (1-2 sentences, `font-size: 0.95rem`, `color: #555`, `margin-bottom: 20px`), then `<ul class="card-features">` with exactly 4 `<li>` items — each `<li>` contains `<strong>` label + `: ` + value (e.g., "Turnaround: Same day"). End with `<div class="card-ctas">` containing two buttons (primary + secondary). Enforce the 4-bullet rule: if a service has fewer differentiators, find them; if it has more, prioritize. The consistency is the trust signal.
 
+---
+
+## Scout Run — 2026-03-29 23:56 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/)
+
+### 🏆 Find 20: Pre-Emptive Q&A Section Labels ("What we do", "Who we're for", etc.)
+**Site:** Duties — [https://www.duties.xyz](https://www.duties.xyz)
+**Found on:** Godly — [https://godly.website/website/duties-1009](https://godly.website/website/duties-1009)
+**Element type:** Copy structure / information architecture / trust-building
+**What it is:** The "About" section uses bold question-style labels that pre-empt what visitors want to know: "What we do" / "How it helps" / "Who are we for" / "When to engage" / "What it costs". Each label gets a direct 1-2 sentence answer. The structure acknowledges that visitors arrive with specific questions and answers them in order of importance. It reads like an FAQ but presents as confident positioning — you're not searching for answers, you're reading a system.
+
+**Scores:**
+- Uniqueness: 8/10 — Most "About" sections are freeform paragraphs. Duties structures theirs as a series of pre-answered questions, which is rare. The labels ("Who are we for", "When to engage") are specific enough to feel tailored, not generic. It's a copywriting technique presented as design.
+- Transferability: 10/10 — Perfect fit for a repair shop: "What we fix" → "Phones, tablets, laptops — any brand, any damage." / "How it works" → "Text us a photo, get a quote, drop it off, pick it up same day." / "What it costs" → "Screen repairs from $XX, batteries from $XX. No hidden fees." / "When to come in" → "Walk-ins welcome. Text ahead if you want us ready." Each label anticipates a real question.
+- Eyecatch factor: 7/10 — The structure itself is the visual interest. The repeating label → answer pattern creates rhythm. Bold labels in muted color, answers in regular weight — scannable and calm.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create an `<dl class="faq-labels">` (description list) with `display: grid`, `grid-template-columns: 1fr 2fr` on desktop (label left, answer right), stacking on mobile. Each `<dt class="label">` at `font-size: 0.85rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`, `color: #888`. Each `<dd class="answer">` at `font-size: 1rem`, `font-weight: 400`, `color: #222`, `margin-bottom: 24px`. Choose 4-6 labels that map to real visitor questions: "What we fix", "How it works", "What it costs", "Where to find us", "Why us". Keep each answer to 1-2 sentences max — if you need more, the question needs splitting. The power is in the label selection: generic labels ("Our Mission") don't work; specific question-labels ("Who is this for") do.
+
+---
+
+### 🥈 Find 21: Numbered Service Index ("S01.", "S02.", etc.)
+**Site:** Burn Studio — [https://burnstudio.co](https://burnstudio.co)
+**Found on:** Hover States — [https://www.hoverstat.es/features/burn/](https://www.hoverstat.es/features/burn/)
+**Element type:** Typography / list design / visual hierarchy
+**What it is:** Services are listed with a numbered index prefix: "S01. Creative Direction & AEO Strategy" / "S02. Multi-Platform Production" / "S03. Cinematic Social & Multi-Platform Content" / etc. The "S" prefix + zero-padded number creates a visual system — it suggests a defined methodology with discrete, numbered steps. The numbering implies the services are part of a coherent framework rather than a random list.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered lists exist everywhere, but the specific "S01." notation (with the prefix letter + zero-padding) is uncommon. It feels like a design system index or a technical spec sheet. The formality is the point — it reads as rigorous rather than casual.
+- Transferability: 8/10 — Directly applicable for a services list: "R01. Screen Repair" / "R02. Battery Replacement" / "R03. Charging Port Fix" / "R04. Water Damage Recovery". The "R" prefix could stand for "Repair" — or use "FX01", "FX02" for "Fix". The numbering suggests a catalog, which implies breadth and organization.
+- Eyecatch factor: 7/10 — The zero-padded numbers with the prefix letter create typographic texture. It's not flashy, but it catches the eye because it looks like a structured system — more intentional than a bulleted list.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create a `<ul class="service-index">` with `list-style: none`, `padding: 0`. Each `<li class="service-item">` uses CSS Grid: `grid-template-columns: auto 1fr`, `gap: 12px`, `align-items: baseline`, `padding: 12px 0`, `border-bottom: 1px solid #eee`. The index number is a `<span class="index">` at `font-size: 0.85rem`, `font-weight: 500`, `color: #888`, `font-variant-numeric: tabular-nums` (keeps numbers aligned). Use a consistent prefix: "S01.", "R01.", "FX01." — pick one letter that relates to your business. The service name is a `<span class="name">` at `font-size: 1rem`, `font-weight: 600`. Optionally add a brief description below the name at smaller size. Keep to 4-6 services max; more than that and the index loses its impact. The zero-padding matters: "S01" not "S1" — it implies the system could scale.
+
