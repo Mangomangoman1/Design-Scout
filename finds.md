@@ -369,3 +369,40 @@ Create a `<div class="impact-stats">` with `display: flex`, `justify-content: sp
 **Implementation brief:**
 Create a `<div class="testimonials-carousel">` with `display: flex`, `overflow-x: auto`, `scroll-snap-type: x mandatory`, `gap: 20px`, `padding: 20px 0`. Each `<div class="testimonial-card">` has `scroll-snap-align: start`, `min-width: 300px`, `max-width: 340px`, `background: #fff`, `border-radius: 12px`, `padding: 20px`, `box-shadow: 0 2px 8px rgba(0,0,0,0.06)`. Inside: `<div class="card-header">` with name (`font-weight: 600`, `font-size: 0.95rem`) and @handle or location (`font-size: 0.85rem`, `color: #888`) stacked, then `<p class="quote">` at `font-size: 0.95rem`, `line-height: 1.5`, `margin-top: 12px`. For a repair shop: use "— Sarah M., Hailey" or Google star ratings as the identifier. Keep quotes short (2-3 sentences max). The horizontal scroll encourages browsing; hide scrollbar with `::-webkit-scrollbar { display: none }` for a cleaner look.
 
+---
+
+## Scout Run — 2026-03-29 23:46 UTC
+Sources checked: [Land-book](https://land-book.com/), [CSS Design Awards](https://www.cssdesignawards.com/wotd-award-winners), [Godly](https://godly.website/)
+
+### 🏆 Find 18: Two-Word Feature Headline + Single Sentence Tagline
+**Site:** Tatem — [https://tatem.com](https://tatem.com)
+**Found on:** Godly — [https://godly.website/website/tatem-1003](https://godly.website/website/tatem-1003)
+**Element type:** Typography / copywriting / feature presentation
+**What it is:** Each feature section uses a stark two-word headline ("Split inbox" / "Modern text editor" / "Speed" / "Seamless design" / "Shortcuts" / "Security") followed by a single imperative sentence that delivers the benefit ("Prioritize what's important." / "Write faster." / "Say goodbye to lag."). No icons, no bullet lists, no paragraph explanations — just headline → tagline → done. The constraint forces clarity: if you can't say what a feature does in two words + one sentence, you don't understand it yet.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections balloon into paragraphs, bullet lists, and icon grids. Tatem's radical compression — two words + one sentence — is uncommon. It reads like a table of contents that tells you everything you need to know without clicking through. The discipline is the design.
+- Transferability: 9/10 — Perfect for a repair shop's services page: "Screen Repair" → "Fixed same day." / "Battery Swap" → "30 minutes, done." / "Water Damage" → "Act fast, we'll save it." / "Free Quote" → "Text a photo, get a price." Each service becomes a scannable promise rather than a paragraph to skim.
+- Eyecatch factor: 8/10 — The whitespace created by the compression makes each section feel intentional. Your eye moves cleanly from headline to headline without getting stuck in paragraph mud. It's visually confident.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create feature sections as `<div class="feature-block">` with generous vertical padding (`padding: 60px 0`). Each contains: `<h2 class="feature-headline">` at `font-size: clamp(1.5rem, 4vw, 2.5rem)`, `font-weight: 700`, `margin-bottom: 8px` — keep to 2-3 words max. Below it, `<p class="feature-tagline">` at `font-size: 1.1rem`, `font-weight: 400`, `color: #555`, `max-width: 300px` — exactly one sentence, imperative voice ("Do X." not "We help you do X."). No icons. No additional text. Optionally add a visual (screenshot or product image) to the right on desktop, but the text must stand alone. On mobile, stack headline → tagline → visual. The key constraint: if you need more than one sentence to explain what something does, the feature isn't clear enough.
+
+---
+
+### 🥈 Find 19: Repeating Service Card Grid with Consistent 4-Point Format
+**Site:** Elecctro — [https://elecctro.com](https://elecctro.com)
+**Found on:** CSS Design Awards — [https://www.cssdesignawards.com/sites/elecctro/48967/](https://www.cssdesignawards.com/sites/elecctro/48967/)
+**Element type:** Layout / service presentation / consistency pattern
+**What it is:** Elecctro offers 14 different service verticals (Parkomat, Laundromat, Snacks, Kiosk, Coffee, etc.) and presents each one using an identical card structure: service name, one-paragraph description, exactly 4 benefit bullets (each with a bold label + one-line explanation), and dual CTAs ("Learn More" / "Get in Touch"). The rigid consistency — same format, same number of bullets, same CTA placement — creates a system. You can compare services at a glance because they're structurally identical.
+
+**Scores:**
+- Uniqueness: 7/10 — Card-based service grids are common, but the strict enforcement of exactly 4 bullets per card is the differentiator. Most service pages vary wildly — some cards have 3 points, some have 7, some have paragraphs. Elecctro's rigid template creates visual rhythm and makes comparison effortless.
+- Transferability: 9/10 — Direct steal for a repair shop with multiple service types: each card (Screen Repair, Battery, Charging Port, Water Damage) gets the same 4-bullet structure — e.g., "Turnaround: Same day" / "Parts: OEM quality" / "Warranty: 90 days" / "Price: From $XX". The customer can scan across cards and immediately compare what matters.
+- Eyecatch factor: 7/10 — The visual uniformity is calming rather than flashy. You trust a business that presents information this cleanly — it implies they've thought about it. The dual CTAs at the bottom of each card create consistent action points.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="service-cards">` using CSS Grid with `grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))`, `gap: 24px`. Each `<div class="service-card">` has `background: #fff`, `border-radius: 12px`, `padding: 28px`, `box-shadow: 0 2px 12px rgba(0,0,0,0.05)`. Inside: `<h3 class="card-title">` (`font-size: 1.25rem`, `font-weight: 700`, `margin-bottom: 12px`), `<p class="card-desc">` (1-2 sentences, `font-size: 0.95rem`, `color: #555`, `margin-bottom: 20px`), then `<ul class="card-features">` with exactly 4 `<li>` items — each `<li>` contains `<strong>` label + `: ` + value (e.g., "Turnaround: Same day"). End with `<div class="card-ctas">` containing two buttons (primary + secondary). Enforce the 4-bullet rule: if a service has fewer differentiators, find them; if it has more, prioritize. The consistency is the trust signal.
+
