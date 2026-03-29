@@ -179,6 +179,43 @@ Structure each feature as a `<section>` with three elements: `<h2>` for the two-
 
 ---
 
+## Scout Run — 2026-03-29 23:26 UTC
+Sources checked: [Land-book](https://land-book.com/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 18: Giant Stacked Fraction Stats ("9 out of 10" as Visual Element)
+**Site:** Persephone Biosciences — [https://persephone.bio](https://persephone.bio)
+**Found on:** Land-book — [https://land-book.com/websites/92728-persephone-biosciences](https://land-book.com/websites/92728-persephone-biosciences)
+**Element type:** Typography / trust-building / stat visualization
+**What it is:** Instead of writing "9 out of 10 babies lack essential gut bacteria" in running text, the site displays it as a giant typographic stack: the number "9" in massive display type, with "out of" stacked vertically beside it, and "10" equally large below — creating a visual fraction that dominates the section. The stat becomes a graphic element, not just supporting copy. This same pattern repeats with "4 Keystone Strains", "HMO prebiotic blend", and "100%" — each treated as a visual anchor with surrounding explanatory text.
+
+**Scores:**
+- Uniqueness: 8/10 — Most sites put stats in small circular badges or inline text. Treating a stat as the *primary visual element* of a section — with the number large enough to be mistaken for a logo — is a confident design choice. The vertical stacking of "out of" creates a fraction-like visual that's both scannable and memorable.
+- Transferability: 9/10 — Direct lift for a repair shop: "98% of repairs done same day" where "98%" is the visual anchor, or "500+ devices fixed in Hailey" where "500+" dominates the section. For local businesses, these kinds of concrete numbers are credibility gold — but most sites bury them in paragraphs. Pulling them out as giant visual anchors makes the page memorable.
+- Eyecatch factor: 9/10 — The giant "9" next to vertical "out of" next to "10" genuinely stops you mid-scroll. It reads like a design choice, not like content — which is why it works. You process the number before you process the explanation.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Create a `<div class="stat-block">` with `display: flex`, `align-items: baseline`, `gap: 8px`. The main number (`<span class="stat-num">`) uses `font-size: clamp(4rem, 10vw, 8rem)`, `font-weight: 800`, `line-height: 0.9`. The "out of" or descriptor text (`<span class="stat-label">`) uses `font-size: 0.9rem`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `writing-mode: vertical-rl` (for vertical stacking) or stacked with `flex-direction: column`. Place the explanatory sentence below as a `<p>` at normal size. Use generous whitespace around the stat block (`padding: 60px 0`). For multiple stats, create a row with `justify-content: space-around` on desktop, stacking on mobile. The key: the number must be *uncomfortably large* — if it feels balanced with the surrounding text, it's too small.
+
+---
+
+### 🥈 Find 19: Numbered Step Strip with Tight Headlines ("01 / 02 / 03" Process Flow)
+**Site:** Veo Sports — [https://www.veo.com](https://www.veo.com)
+**Found on:** Land-book — [https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse](https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse)
+**Element type:** Layout / process visualization / copywriting
+**What it is:** The "How it works" section uses three numbered steps — `01 Record and livestream every match / 02 Instantly relive the match and break down every key play / 03 Share and celebrate your winning moments` — where each step is a bold two-digit number followed by a tight, benefit-focused headline (no paragraphs). The numbers are styled as design elements (`01`, `02`, `03`) rather than plain numerals, with the whole strip flowing horizontally. The simplicity makes the three-step process feel effortless rather than complex.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered step processes are everywhere, but this execution stands out for: (1) using `01/02/03` format instead of "Step 1/2/3", (2) keeping each step to a single tight headline rather than paragraph + icon, and (3) the horizontal strip layout that reads like a ticker. Most "how it works" sections feel like forms; this one feels like a story.
+- Transferability: 10/10 — Perfect for a repair shop: `01 Text us a photo of the damage / 02 Get a quote in minutes / 03 Drop off, pick up same day`. That's the entire customer journey in one glanceable strip. No icons needed, no paragraph explanations — just three numbered promises. The two-digit format (`01` vs `1`) adds a subtle sense of precision and professionalism.
+- Eyecatch factor: 7/10 — It's clean rather than flashy, but the constraint makes it stand out from the usual icon-heavy, paragraph-bloated "how it works" sections. The rhythm of seeing just three numbered lines is reassuring — it says "this isn't complicated."
+- **Average: 8.0/10**
+
+**Implementation brief:**
+Create a `<section class="process-strip">` with `display: flex`, `gap: 40px`, `padding: 60px 24px`, and `flex-wrap: wrap` for mobile. Each `<div class="step">` contains: `<span class="step-num">01</span>` styled with `font-size: 1rem`, `font-weight: 700`, `color: #999`, `letter-spacing: 0.05em`, and `<h3 class="step-headline">` at `font-size: 1.1rem`, `font-weight: 600`, `max-width: 280px`. No icons, no paragraph text below the headline — just the number and one sentence. On mobile, stack vertically with the number above the headline. On desktop, arrange in a row with even spacing. Add a subtle `border-left: 2px solid #eee` to each step (except the first) for visual separation. The key: every headline must be customer-facing ("Drop off, pick up same day") not process-facing ("Customer drops off device for repair").
+
+---
+
 ### 🥉 Find 9: Zero-Padded Sequential Stat Blocks (Clinical Confidence Format)
 **Site:** Diag-Nose — [https://www.diag-nose.io](https://www.diag-nose.io)
 **Found on:** Land-book — [https://land-book.com/websites/92439-diag-nose-io](https://land-book.com/websites/92439-diag-nose-io)
