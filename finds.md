@@ -332,3 +332,40 @@ Create a `<div class="services-grid">` using CSS Grid: `grid-template-columns: r
 **Implementation brief:**
 To embed a brand element within a headline word: identify a common word or phrase where the brand name (or its first letters, or a brand value word) appears as a syllable chunk. Wrap that fragment in a `<span class="brand-embed">` with `font-weight: 800` or a brand color, while the surrounding characters stay at `font-weight: 400` or a muted shade. The entire word should be one `<span>` container with `display: inline-block` at the same `font-size` — only weight and color vary internally. Keep the full headline in uppercase for maximum contrast impact. For Hailey Device Repair, consider: "PHONE [FIXED]" where "FIXED" is styled as the brand promise in a different weight; or "HAILEY REPAIRED" where HAILEY takes the brand color weight. The key is that the styled fragment has to mean something on its own — brand-colored noise inside a word reads as a typo, but brand-colored *meaning* reads as craft.
 
+---
+
+## Scout Run — 2026-03-29 23:36 UTC
+Sources checked: [Godly](https://godly.website/), [Hover States](https://www.hoverstat.es/)
+
+### 🏆 Find 16: Big-Number Impact Stats with "of members" Framing
+**Site:** Superpower — [https://superpower.com](https://superpower.com)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/website/superpower-1015)
+**Element type:** Typography / trust-building / stat presentation
+**What it is:** The page displays three large-format statistics with a specific structure: "63% of members find early risk factors for diabetes" / "44% of members find elevated heart disease risk" / "70% of members slow their speed of ageing." Each stat uses a giant percentage number followed by "of members" (establishing the sample), then a specific outcome. This framing transforms marketing claims into quasi-research findings — it's not "you might find X" but "here's what actually happens to people who use this."
+
+**Scores:**
+- Uniqueness: 8/10 — Stat blocks are everywhere, but the "of members find/do X" construction is uncommon. Most sites use "95% satisfaction" or "10,000+ customers" — vague aggregate numbers. Superpower's framing implies a cohort study: we tracked what happened to our users, and here's the data. That specificity reads as more credible even if the numbers are cherry-picked.
+- Transferability: 9/10 — Direct application for a repair shop: "98% of repairs completed same day" / "85% of customers text back within 6 months for another repair" / "100% of quotes honored as given" — these are specific, trackable claims that build trust. The "of [your customers/repairs/devices]" framing turns marketing into data.
+- Eyecatch factor: 8/10 — The oversized percentage numbers are designed to stop the scroll. Combined with the specific outcomes rather than vague promises, they create cognitive engagement — you actually read the claim instead of pattern-matching past it.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="impact-stats">` with `display: flex`, `justify-content: space-between`, `gap: 40px`, wrapping on mobile. Each stat block: `<div class="stat-item">` containing `<span class="stat-number">` (e.g., "63%") at `font-size: clamp(3rem, 8vw, 5rem)`, `font-weight: 800`, `color: #111`. Below it, `<span class="stat-description">` at `font-size: 1rem`, `line-height: 1.4`, `max-width: 200px`. The description must follow the pattern: "of [who] [verb] [specific outcome]". Use a subtle border-left (`3px solid #ddd`) or colored accent bar on each stat to add visual structure. On mobile, stack vertically with generous padding between. The power is in the copy formula — generic stats ("fast turnaround") don't work; specific trackable claims ("same-day completion rate") do.
+
+---
+
+### 🥈 Find 17: Twitter-Style Testimonial Cards with @handle
+**Site:** Reflect — [https://reflect.app/home](https://reflect.app/home)
+**Found on:** Godly — [https://godly.website/website/reflect-968](https://godly.website/website/reflect-968)
+**Element type:** Social proof / layout / trust-building
+**What it is:** Testimonials are displayed as Twitter-like cards with the user's name, @handle, and a brief quote. Each card looks like an embedded tweet without actually embedding Twitter — clean white card, profile name in bold, @handle in muted gray below, quote in regular weight. The cards scroll horizontally in a carousel. The effect: these feel like real public endorsements rather than anonymous "Customer from Texas" testimonials.
+
+**Scores:**
+- Uniqueness: 7/10 — Twitter-style testimonial layouts exist, but many are actual embeds (heavy, slow, break often). Reflect's approach is a styled imitation — it captures the trust signal of a public statement without the embed overhead. The @handle is the key detail: it implies verifiability, whether or not anyone actually clicks through.
+- Transferability: 8/10 — For a local business like a repair shop, this works with slight adaptation: Google review cards styled similarly (name + "★★★★★" + quote), or local community testimonials with "— Jane D., Hailey" attribution that feels more real than generic praise. The key is specificity: a name + location/handle > "Happy Customer."
+- Eyecatch factor: 7/10 — The horizontal scroll carousel invites interaction, and the card format is immediately recognizable as "social proof." Not flashy, but trustworthy — which is the point.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create a `<div class="testimonials-carousel">` with `display: flex`, `overflow-x: auto`, `scroll-snap-type: x mandatory`, `gap: 20px`, `padding: 20px 0`. Each `<div class="testimonial-card">` has `scroll-snap-align: start`, `min-width: 300px`, `max-width: 340px`, `background: #fff`, `border-radius: 12px`, `padding: 20px`, `box-shadow: 0 2px 8px rgba(0,0,0,0.06)`. Inside: `<div class="card-header">` with name (`font-weight: 600`, `font-size: 0.95rem`) and @handle or location (`font-size: 0.85rem`, `color: #888`) stacked, then `<p class="quote">` at `font-size: 0.95rem`, `line-height: 1.5`, `margin-top: 12px`. For a repair shop: use "— Sarah M., Hailey" or Google star ratings as the identifier. Keep quotes short (2-3 sentences max). The horizontal scroll encourages browsing; hide scrollbar with `::-webkit-scrollbar { display: none }` for a cleaner look.
+
