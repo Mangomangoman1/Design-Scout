@@ -1331,3 +1331,40 @@ Create a `<div class="philosophy">` with `display: flex`, `gap: 24px`, `align-it
 **Implementation brief:**
 Create a `<div class="quote-wizard">` containing: 1) Progress tabs at top with `display: flex`, `gap: 8px`, each tab with `padding: 8px 16px`, current tab with `background: #111`, `color: #fff`, inactive with `background: #f0f0f0`. 2) Question area with `<h3>` for the question, options as clickable buttons or radio cards. 3) Navigation with "Back" and "Next" buttons. Use JavaScript or a form library to manage state. Keep to 4-6 steps. Each step should have one clear question with 2-5 options. The final step captures contact info. The format works best when you need to qualify leads or gather configuration details before quoting.
 
+---
+
+## Scout Run — 2026-03-30 10:11 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/)
+
+### 🏆 Find 70: Question-Answer FAQ Grid with "What/How/Who/When/What" Structure
+**Site:** Duties — [https://duties.xyz/](https://duties.xyz/)
+**Found on:** Godly — [https://godly.website/website/duties-1009](https://godly.website/)
+**Element type:** About section / positioning / FAQ format
+**What it is:** Duties presents their entire business positioning through five simple question-answer pairs: "What we do" / "How it helps" / "Who are we for" / "When to engage" / "What it costs." Each question is a bold heading followed by a short, direct answer paragraph. The format anticipates visitor questions and answers them in natural reading order.
+
+**Scores:**
+- Uniqueness: 8/10 — Most About sections are generic paragraphs or bullet lists. Structuring positioning around the exact questions visitors have creates immediate clarity. The What/How/Who/When/What structure covers the full decision journey in five simple blocks.
+- Transferability: 9/10 — Direct lift for any service business: "What we do → We fix phones, tablets, and laptops" / "How it helps → Same-day repairs mean you're not without your device" / "Who are we for → Locals who value their time and their tech" / "When to engage → Your screen is cracked, battery is dying, or it just won't turn on" / "What it costs → Transparent pricing, no surprises."
+- Eyecatch factor: 8/10 — The question format creates visual rhythm. Each heading is scannable. The format signals "we understand what you're thinking" which builds trust. Works best as an About section or service overview.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="faq-grid">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 32px`. Each block is a `<div class="faq-item">` containing `<h3 class="question">` + `<p class="answer">`. Style questions with `font-size: 1.25rem`, `font-weight: 600`, `margin-bottom: 12px`. Style answers with `font-size: 1rem`, `line-height: 1.6`, `color: #444`. Use exactly 5 questions: What we do / How it helps / Who are we for / When to engage / What it costs. Keep answers to 2-3 sentences max. The format works best when answers are specific and confident.
+
+---
+
+### 🥈 Find 71: Compact Discipline Tagline with Bullet Separators
+**Site:** Christopher Ireland Creative — [https://christopherireland.net/](https://christopherireland.net/)
+**Found on:** Godly — [https://godly.website/website/christopher-ireland-986](https://godly.website/)
+**Element type:** Positioning / tagline / service list
+**What it is:** Christopher Ireland presents their services in a single line with bullet separators: "Commercial campaigns · Documentary films · Long-form photography." The format compresses three distinct disciplines into one scannable line. The bullets create visual rhythm without the weight of a bulleted list.
+
+**Scores:**
+- Uniqueness: 7/10 — Inline lists with separators exist, but using them as the primary positioning statement is bold. The format says "we do these three things, nothing more." The simplicity is the statement.
+- Transferability: 9/10 — Works for any multi-service business: "Screen repairs · Battery replacements · Data recovery" / "iPhones · iPads · MacBooks" / "Same-day service · Fair prices · Local business." For Hailey Device Repair, the format communicates breadth without complexity.
+- Eyecatch factor: 7/10 — The horizontal layout is scannable. The bullet separators create visual pauses. The format works as a hero subtitle, footer tagline, or header navigation subtitle. Best with 2-4 items.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<p class="tagline-list">` with `font-size: 1.25rem`, `color: #666`, `letter-spacing: 0.02em`. Items are inline text separated by ` · ` (space-middot-space). Use CSS `white-space: nowrap` on mobile to prevent awkward line breaks, or break into stacked list on small screens with media query. Keep to 2-4 items. Each item should be a distinct service category or value prop. The format works best when items are parallel in structure and roughly equal in importance.
+
