@@ -480,3 +480,40 @@ Create a `<div class="trust-ticker">` with `overflow: hidden`, `white-space: now
 **Implementation brief:**
 Create a `<div class="honest-review">` containing two side-by-side columns on desktop (`display: grid`, `grid-template-columns: 1fr 1fr`, `gap: 24px`), stacking on mobile. Left column: `<div class="likes">` with `<h4>What you'll love</h4>` (`font-size: 0.9rem`, `font-weight: 600`, `color: #2a9d4a`, `margin-bottom: 12px`) followed by `<ul>` of 2-4 points. Right column: `<div class="knows">` with `<h4>What to know</h4>` (`font-size: 0.9rem`, `font-weight: 600`, `color: #888`, `margin-bottom: 12px`) followed by `<ul>` of 2-3 honest limitations. Keep the "knows" column shorter than the "likes" — you're being transparent, not self-deprecating. Use neutral gray for the limitations header, not red or warning colors. The goal is honesty, not alarm. Place this section on a Services or About page, not the homepage hero.
 
+---
+
+## Scout Run — 2026-03-30 00:16 UTC
+Sources checked: [Godly](https://godly.website/)
+
+### 🏆 Find 24: "Replaces: [Competitor List]" One-Liner
+**Site:** Amie — [https://amie.so](https://amie.so)
+**Found on:** Godly — [https://godly.website/website/amie-992](https://godly.website/website/amie-992)
+**Element type:** Copywriting / positioning / competitive framing
+**What it is:** Under each major feature section, Amie includes a single line: "Replaces: Fireflies, Otter, Fathom" or "Replaces: Gcal, Things 3, Motion." It's a compact, almost throwaway line that packs a punch — it positions the product as a consolidator and immediately answers "what does this replace?" without lengthy comparison charts. The competitors are struck through or styled as if being crossed off, reinforcing the replacement framing.
+
+**Scores:**
+- Uniqueness: 8/10 — Most SaaS sites either avoid mentioning competitors or create elaborate comparison tables. This one-liner approach is bold and efficient. It says "you know these tools — we replace them" without making it a whole page. The struck-through styling adds a dismissive confidence.
+- Transferability: 7/10 — Less direct for a repair shop (you don't "replace" competitors), but the concept adapts: "Skip: the mall kiosk, the mail-in wait, the AppleCare appointment" → then your CTA. Or for services: "No more: driving to Boise, waiting 3 days, paying double." The "replace/skip/no more" framing works when you're positioning against the status quo.
+- Eyecatch factor: 7/10 — It's a small line, but it stands out because of the strikethrough treatment and the audacity of naming competitors directly. Your eye catches it because most companies don't do this.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Add a `<p class="replaces-line">` beneath a feature or service section: `<span class="replaces-label">Skip:</span> <span class="replaced">the mall kiosk</span>, <span class="replaced">the 3-day wait</span>, <span class="replaced">the upsell</span>`. Style: `.replaces-label` at `font-size: 0.8rem`, `font-weight: 600`, `color: #888`, `margin-right: 4px`. `.replaced` at `font-size: 0.8rem`, `color: #aaa`, `text-decoration: line-through`, `text-decoration-color: #ccc`. Keep the list to 3 items max — more dilutes the punch. Place it directly below the feature headline or as a footer to a section, not as a standalone element. The strikethrough is the visual hook; the named alternatives are the substance.
+
+---
+
+### 🥈 Find 25: Vertically Stacked Discipline List with Alternating Emphasis
+**Site:** Reboot Studio — [https://reboot.studio](https://reboot.studio)
+**Found on:** Godly — [https://godly.website/website/reboot-1001](https://godly.website/website/reboot-1001)
+**Element type:** Typography / services presentation / visual rhythm
+**What it is:** Instead of listing services horizontally or as bullets, Reboot stacks them vertically as single words: "Design." / "Engineering." / "Branding." / "Copywriting." / "Video." / "3D." / "Interaction." Each word gets its own line. Some are styled in italics or a different weight, creating visual rhythm. The vertical stacking gives each discipline equal prominence — no hierarchy, just breadth. The periods add finality to each one.
+
+**Scores:**
+- Uniqueness: 8/10 — Vertical word lists are rare because they take up space. Most sites compress services into horizontal rows or icon grids. The vertical treatment says: "each of these matters enough to get its own line." The alternating styling (some italic, some regular weight) prevents monotony.
+- Transferability: 8/10 — Works for a repair shop's capabilities: "Phones." / "Tablets." / "Laptops." / "Smartwatches." / "Consoles." Each device type gets its own line. Or for services: "Screens." / "Batteries." / "Ports." / "Water damage." The vertical stacking implies: we do all of this, and we do each one seriously.
+- Eyecatch factor: 8/10 — The vertical layout forces your eye to move down the page. Each word registers individually rather than blurring together. The periods add punctuation that makes each item feel declarative — a statement, not a list item.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<div class="discipline-stack">` with `display: flex`, `flex-direction: column`, `gap: 4px`, `align-items: flex-start`. Each item is a `<span class="discipline">` at `font-size: clamp(1.2rem, 3vw, 1.8rem)`, `font-weight: 400`, ending with a period. Alternate every other item with `font-style: italic` or a different `font-weight: 500` for rhythm — use `:nth-child(odd)` or `:nth-child(even)` selectors. Keep to 5-8 words max; fewer feels incomplete, more loses impact. Consider adding subtle hover effects: `.discipline:hover { font-weight: 700; }` with a quick transition. Place this in an "About" or "Services" section as a visual anchor, not as the primary navigation.
+
