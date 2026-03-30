@@ -924,3 +924,40 @@ Create a `<section class="differentiators">` with a `<h2 class="diff-headline">`
 **Implementation brief:**
 Create a `<section class="founder-letter">` with `max-width: 600px`, `margin: 64px auto`, `padding: 32px`, `background: #fafafa` (optional light background to set it apart), `border-left: 3px solid #111` (optional visual anchor). Content structure: `<p class="letter-greeting">` "Dear [audience]," at `font-style: italic`, `margin-bottom: 16px`. Then `<p class="letter-body">` with the main message at `font-size: 1rem`, `line-height: 1.7`, `color: #333`. Finally: `<p class="letter-signature">` with the sign-off at `font-weight: 600`, `margin-top: 24px`, followed by `<span class="letter-name">` with name and title. Keep the letter conversational — no marketing speak. 3-5 sentences max. The format works best when it explains the "why" behind your business or addresses a specific pain point your customers face.
 
+---
+
+## Scout Run — 2026-03-30 02:16 UTC
+Sources checked: [Land-book](https://land-book.com/), [Hover States](https://www.hoverstat.es/)
+
+### 🏆 Find 48: "Hover to Know More" Interactive Card Reveal
+**Site:** Vecton — [https://vecton.ai](https://vecton.ai)
+**Found on:** Land-book — [https://land-book.com/websites/92881-production-ready-ai-solutions-for-bfsi-vecton](https://land-book.com/websites/92881-production-ready-ai-solutions-for-bfsi-vecton)
+**Element type:** Micro-interaction / card reveal / engagement pattern
+**What it is:** Vecton presents service categories as cards with "Hover to know more" prompts. The card shows a category title (e.g., "Sales acceleration & Lead Qualification") with a visible instruction to hover. On hover, additional bullet points and details reveal: "• Automates qualification with predictive scoring • Surfaces intent signals in real time • Accelerates pipeline growth with precision." The hover instruction sets expectations and encourages exploration.
+
+**Scores:**
+- Uniqueness: 8/10 — Most hover effects happen without prompting. Vecton's explicit "Hover to know more" invitation teaches visitors how to interact with the page. The pattern bridges the gap between desktop (hover) and mobile (tap) by making the interaction discoverable.
+- Transferability: 8/10 — Works for a repair shop's service cards: "Screen Repair" with "Hover to know more" → reveals "• iPhone & Android • Same-day service • 90-day warranty • From $79". The pattern keeps the initial view clean while giving detailed info to curious visitors.
+- Eyecatch factor: 7/10 — The "Hover to know more" text creates curiosity. The reveal animation adds engagement. The format works especially well when you have 4-6 categories with varying detail levels.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="service-card">` with `position: relative`, `padding: 24px`, `background: #f8f8f8`, `border-radius: 8px`, `cursor: pointer`, `transition: all 0.3s`. Inside: `<h3 class="card-title">` with the service name, `<p class="card-hint">` with "Hover to know more" at `font-size: 0.8rem`, `color: #999`, `margin-top: 8px`. Below: `<div class="card-details">` set to `opacity: 0`, `max-height: 0`, `overflow: hidden`, `transition: all 0.3s`. On hover (`.service-card:hover .card-details`): `opacity: 1`, `max-height: 200px`, `margin-top: 16px`. The details contain `<ul>` with short bullet points. For mobile: add touch detection and toggle on tap instead of hover. The "Hover to know more" text should hide on mobile and replace with tap-based interaction.
+
+---
+
+### 🥈 Find 49: "Brand × Brand" Collaboration Format
+**Site:** Lafour — [https://lafour.com](https://lafour.com)
+**Found on:** Hover States — [https://www.hoverstat.es/features/lafour/](https://www.hoverstat.es/features/lafour/)
+**Element type:** Typography / portfolio presentation / brand pairing
+**What it is:** Lafour presents work as brand collaborations using the "×" (multiplication) symbol: "MONCLER × EDWARD ENNINFUL CAMPAIGN VIDEO" / "ON × FKA TWIGS CAPSULE SS25" / "MARGIELA × GENTLE MONSTER". The format emphasizes partnerships and elevates each project to feel like a collaboration between equals. The × symbol is more elegant than "+" or "and".
+
+**Scores:**
+- Uniqueness: 8/10 — The "×" symbol for collaborations is common in fashion but rare in service business contexts. The format transforms a simple project list into something that feels curated and high-end. The uppercase treatment adds formality.
+- Transferability: 7/10 — Works for a repair shop's testimonials or case studies: "SAMSUNG × HAILEY DEVICE REPAIR" / "APPLE × LOCAL EXPERTISE" or for partnerships: "HAILEY DEVICE REPAIR × OtterBox" (if you sell cases). Less essential for basic service sites, but effective when you want to emphasize partnerships or high-profile clients.
+- Eyecatch factor: 8/10 — The × symbol is visually distinctive. The all-caps format demands attention. The format makes every project feel like a headline collaboration. Works especially well in hero sections or portfolio lists.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create project titles using the format: `<h3 class="collab-title"><span class="brand-a">BRAND A</span> <span class="collab-symbol">×</span> <span class="brand-b">BRAND B</span></h3>`. Style the title at `font-size: clamp(1rem, 2.5vw, 1.5rem)`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`. The × symbol (`&times;` or Unicode ×) should be styled at `margin: 0 8px`, `color: #888` (slightly muted) or same as text. For maximum impact, use this format in hero headlines or portfolio cards. Keep brand names short — trim to key words if needed. The format works best when presenting partnerships, collaborations, or client work where you want to emphasize both parties.
+
