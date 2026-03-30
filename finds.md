@@ -554,3 +554,40 @@ Create a `<p class="prose-nav">` with `font-size: clamp(1rem, 2vw, 1.3rem)`, `li
 **Implementation brief:**
 Create section labels with `<span class="superpower-label">✦ Superpower #1</span>` styled at `font-size: 0.75rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #888`, `margin-bottom: 8px`, `display: block`. Place above each major feature section headline. The ✦ character is U+2726 (Four Pointed Star) — copy-paste or use `&#10022;`. Keep to 3-5 superpowers max; more dilutes the special feeling. The label should be small and secondary — the headline below does the heavy lifting. Consider variations: "✦ Skill #1", "✦ Ability #1", "✦ Power #1" — but "Superpower" has the best ring. This works especially well on landing pages where you're positioning benefits as gains.
 
+---
+
+## Scout Run — 2026-03-30 00:36 UTC
+Sources checked: [CSS Design Awards](https://www.cssdesignawards.com/wotd-award-winners), [Godly](https://godly.website/)
+
+### 🏆 Find 28: Zero-Padded Step Numbers as Section Headers (01, 02, 03)
+**Site:** Veo — [https://www.veo.com](https://www.veo.com)
+**Found on:** CSS Design Awards / Land-book
+**Element type:** Typography / process visualization / visual hierarchy
+**What it is:** Veo displays their "how it works" process as three distinct steps with large, zero-padded numbers: "01" / "02" / "03" positioned prominently above each step's headline. The numbers are styled as oversized typographic elements — larger than the description text, acting as visual anchors. The zero-padding (01 not 1) creates uniformity and implies a system. Each number leads into a short headline and description.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered steps are common, but the visual treatment matters. Veo uses the numbers as dominant typographic elements, not small accent labels. The zero-padding and large scale create a polished, systematic feel that sets it apart from typical "Step 1, Step 2" approaches.
+- Transferability: 9/10 — Perfect for "How it works" on a repair shop site: "01. Text us a photo of your device" / "02. Get a quote in under 5 minutes" / "03. Drop off, pick up same day." The numbered format is universally understood and creates clear expectations. The zero-padding adds polish for minimal effort.
+- Eyecatch factor: 7/10 — The oversized numbers act as visual landmarks. They create rhythm and progression, making it easy to scan the page and understand the sequence at a glance. Not flashy, but functional and clean.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="step-process">` using CSS Grid: `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 32px`. Each `<div class="step">` contains: `<span class="step-number">01</span>` styled at `font-size: clamp(2.5rem, 5vw, 4rem)`, `font-weight: 700`, `color: #ddd` (or a muted brand color), `line-height: 1`, `display: block`, `margin-bottom: 12px`, `font-variant-numeric: tabular-nums`. Below it: `<h3 class="step-title">` at `font-size: 1.1rem`, `font-weight: 600`, `margin-bottom: 8px`, followed by `<p class="step-desc">` at `font-size: 0.95rem`, `color: #666`. Keep to exactly 3 steps — it's a magic number for process sequences. The numbers should be visually dominant but in a lighter color so they don't compete with the headline text.
+
+---
+
+### 🥈 Find 29: "Dear [Reader]," Personal Letter Section with Founder Signature
+**Site:** Acctual — [https://acctual.com](https://acctual.com)
+**Found on:** Godly — [https://godly.website/website/acctual-998](https://godly.website/website/acctual-998)
+**Element type:** Copy structure / trust-building / brand voice
+**What it is:** Acctual includes a mid-page section styled as a personal letter: "Dear business owner, Running a small business isn't for the faint of heart... That's why Net 0 is our love language. Love you, pay me. — Atikh Bana, Cofounder of Acctual." The letter format breaks from the typical marketing structure — it feels direct, human, and personal. The closing "Love you, pay me" is cheeky and memorable. The founder signature adds accountability.
+
+**Scores:**
+- Uniqueness: 9/10 — Most business websites use polished marketing copy. Acctual embeds a personal letter that reads like a founder just sat down and typed it. The "Dear [reader]" opening and handwritten-style signature feel rare in the SaaS/services space. The tone is warm and slightly irreverent.
+- Transferability: 8/10 — Works well for a repair shop: "Dear phone owner, We know that sinking feeling. The moment the screen cracks, or the battery dies mid-day. We've been there too... That's why we built this place. Bring it in, we'll fix it fast. — Sam, Hailey Device Repair." The personal address creates connection. The signature adds accountability.
+- Eyecatch factor: 8/10 — The letter format visually breaks from everything else on the page. It reads differently — not as marketing, but as a message from a person. The signature at the end anchors it as real.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="founder-letter">` with `max-width: 650px`, `margin: 60px auto`, `padding: 40px`, `background: #fafafa` (or a subtle tint), `border-left: 4px solid #your-accent` (optional). Inside: `<p class="letter-salutation">Dear [reader type],</p>` at `font-size: 1.1rem`, `font-style: italic`, `margin-bottom: 16px`. The letter body is 2-4 short paragraphs in regular prose (`font-size: 1rem`, `line-height: 1.7`). End with `<p class="letter-close">` containing a memorable sign-off line + `<span class="signature">— [Name], [Title]</span>` at `font-weight: 600`. Consider adding a small headshot next to the signature for extra trust. The tone should be casual, honest, and specific to your audience — not corporate. If it reads like something you'd actually say in person, you've got it right.
+
