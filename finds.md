@@ -517,3 +517,40 @@ Add a `<p class="replaces-line">` beneath a feature or service section: `<span c
 **Implementation brief:**
 Create a `<div class="discipline-stack">` with `display: flex`, `flex-direction: column`, `gap: 4px`, `align-items: flex-start`. Each item is a `<span class="discipline">` at `font-size: clamp(1.2rem, 3vw, 1.8rem)`, `font-weight: 400`, ending with a period. Alternate every other item with `font-style: italic` or a different `font-weight: 500` for rhythm — use `:nth-child(odd)` or `:nth-child(even)` selectors. Keep to 5-8 words max; fewer feels incomplete, more loses impact. Consider adding subtle hover effects: `.discipline:hover { font-weight: 700; }` with a quick transition. Place this in an "About" or "Services" section as a visual anchor, not as the primary navigation.
 
+---
+
+## Scout Run — 2026-03-30 00:26 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/)
+
+### 🏆 Find 26: Prose Navigation with Inline Links (Narrative-Embedded Navigation)
+**Site:** Anorak Film — [https://anorakfilm.com](https://anorakfilm.com)
+**Found on:** Hover States — [https://www.hoverstat.es/features/anorak-film/](https://www.hoverstat.es/features/anorak-film/)
+**Element type:** Navigation / copywriting / typography
+**What it is:** Instead of listing directors in a grid or menu, Anorak weaves all 50+ director names into a single flowing prose paragraph. The text reads like a creative manifesto: "The speed of dark? Half of 0? Nothing. Failure. The essential ingredient of success... [Adam Berg]. In the beginning. An edgeless shape. [Aisultan Seit]. Racking into focus. [Alex Hulsey]." Each director name is a clickable link embedded in the narrative. The navigation doubles as brand storytelling — you can't browse the roster without absorbing the studio's voice.
+
+**Scores:**
+- Uniqueness: 9/10 — This is rare. Almost every portfolio site uses grids, lists, or cards. Anorak turns their roster into a continuous piece of writing. It's navigation that reads like prose. The format is so unusual that it forces engagement — you actually read it instead of scanning.
+- Transferability: 6/10 — Hard to adapt directly for a repair shop (you don't have 50 directors), but the concept could work for a "story of your business" section: "It started with a cracked screen. [Screen Repair]. Then a dead battery. [Battery Replacement]. Then a friend texted: my kid dropped his tablet. [Tablet Repair]." Each service is embedded in a narrative. Works best if you have 4-8 items and can write a compelling thread.
+- Eyecatch factor: 9/10 — The density of the text with scattered links is immediately striking. It looks nothing like a navigation menu. The contrast between flowing prose and clickable hotspots creates visual tension that pulls you in.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<p class="prose-nav">` with `font-size: clamp(1rem, 2vw, 1.3rem)`, `line-height: 1.8`, `max-width: 900px`, `margin: 0 auto`. Write 150-300 words of narrative that weaves your services/offerings into the story. Each service is a `<a href="/service" class="nav-link">` with styling: `font-weight: 600`, `color: inherit`, `text-decoration: none`, `border-bottom: 2px solid currentColor`, `transition: color 0.2s`. On hover: `color: #your-accent`. The key is the writing — it must flow naturally. Don't just insert service names into filler text; write a genuine story or manifesto. If the prose doesn't work standalone, the navigation fails. Test by reading it aloud — if it sounds awkward, rewrite.
+
+---
+
+### 🥈 Find 27: "✦ Superpower #N" Feature Section Labels
+**Site:** Lovi — [https://lovi.care](https://lovi.care)
+**Found on:** Godly — [https://godly.website/website/lovi-994](https://godly.website/website/lovi-994)
+**Element type:** Copy structure / section labeling / branding
+**What it is:** Instead of generic section headers ("Features", "How it works"), Lovi labels each major feature section with "✦ Superpower #1", "✦ Superpower #2", "✦ Superpower #3". The "superpower" framing transforms ordinary features into something that sounds transformative. The ✦ symbol adds a decorative touch. The numbering creates progression — you're collecting abilities, not reading a list.
+
+**Scores:**
+- Uniqueness: 8/10 — "Superpower" as section framing is uncommon. Most sites use "Features", "Benefits", "How it works", or numbered steps. Calling them "superpowers" is playful and confident. The ✦ symbol adds visual branding without needing a custom icon.
+- Transferability: 8/10 — Works for a repair shop: "✦ Superpower #1: Text Us a Photo, Get a Quote in 5 Minutes" / "✦ Superpower #2: Same-Day Repairs for Most Devices" / "✦ Superpower #3: 90-Day Warranty, No Questions Asked". The framing positions your services as capabilities the customer gains, not things you do.
+- Eyecatch factor: 7/10 — The ✦ symbol is small but distinctive. The "Superpower" label stands out because it's unexpected in a business context. The numbering creates visual rhythm and implies a system.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create section labels with `<span class="superpower-label">✦ Superpower #1</span>` styled at `font-size: 0.75rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #888`, `margin-bottom: 8px`, `display: block`. Place above each major feature section headline. The ✦ character is U+2726 (Four Pointed Star) — copy-paste or use `&#10022;`. Keep to 3-5 superpowers max; more dilutes the special feeling. The label should be small and secondary — the headline below does the heavy lifting. Consider variations: "✦ Skill #1", "✦ Ability #1", "✦ Power #1" — but "Superpower" has the best ring. This works especially well on landing pages where you're positioning benefits as gains.
+
