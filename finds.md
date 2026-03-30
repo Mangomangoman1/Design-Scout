@@ -1664,3 +1664,40 @@ Create a `<p class="capabilities">` with `font-size: clamp(1rem, 2vw, 1.5rem)`, 
 **Implementation brief:**
 Create a `<ul class="benefit-list">` with `list-style: disc`, `padding-left: 24px`, `display: flex`, `flex-direction: column`, `gap: 12px`. Each `<li>` is styled `font-size: 1rem`, `line-height: 1.5`, `color: #333`. Write each item as a complete sentence starting with an action verb (Buy, Find, Trade, Get, Text, Pick up). End each with a period. Keep sentences to one line (under 60 characters). The format works best when items describe user benefits, not product features. Avoid starting with "We" — keep the focus on what the user gets to do.
 
+---
+
+## Scout Run — 2026-03-30 19:29 UTC
+Sources checked: [Land-book](https://land-book.com/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 88: Capability Cards with Bold Headline + Bullet Point Explanation
+**Site:** Supercommon Systems — [https://supercommon.systems/](https://supercommon.systems/)
+**Found on:** Land-book — [https://land-book.com/websites/92800-supercommon-systems](https://land-book.com/)
+**Element type:** Feature documentation / capabilities list / spec-style presentation
+**What it is:** Supercommon presents capabilities as two-line cards: bold headline describing the capability, then a bullet point with a terse explanation. Examples: "**two configurable states** • independent, persistent" / "**idle-aware pausing** • respects inactivity" / "**no subscriptions** • one-time purchase". The format reads like technical documentation but remains scannable.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections use paragraphs or pure headlines. This format splits the difference: bold headline for the "what", bullet for the "how" or "why". The bullet point creates a semantic relationship between the two lines.
+- Transferability: 9/10 — Works for any service with technical details to communicate: "**Same-day repair** • most fixes under an hour" / "**OEM parts only** • no generic substitutes" / "**90-day warranty** • covers parts and labor". For Hailey Device Repair, the format elevates basic features into confident specifications.
+- Eyecatch factor: 7/10 — The bold/bullet rhythm creates visual consistency. The terse explanations prevent overwhelm. The format works as a features grid, pricing tier breakdown, or "What's included" section. Best with 6-10 capabilities.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="capabilities">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))`, `gap: 24px`. Each capability is a `<div class="capability">` containing: `<h4 class="capability-title">` (styled `font-weight: 700`, `font-size: 1rem`, `margin-bottom: 4px`) + `<p class="capability-detail">` (styled `font-size: 0.875rem`, `color: #666`, `line-height: 1.4`). Prepend the detail text with `• ` (bullet-space). Keep titles to 2-4 words. Keep details to 2-4 words. The format works best when each capability is distinct and the detail provides real information (not just restating the title).
+
+---
+
+### 🥈 Find 89: Section Navigation with Numbered Chapters and Arrow Links ("1.0 Intake →")
+**Site:** Linear — [https://linear.app/](https://linear.app/)
+**Found on:** CSS Design Awards (previously featured)
+**Element type:** Page navigation / section anchors / content structure
+**What it is:** Linear structures their homepage as numbered chapters with clickable navigation: "1.0 Intake →" / "2.0 Plan →" / "3.0 Build →" / "4.0 Diffs →" / "5.0 Monitor →". Each section header includes the version-style number (1.0, 2.0), a clear action word, and an arrow indicating more content. The format makes a long page feel organized like a document or manual.
+
+**Scores:**
+- Uniqueness: 8/10 — Most landing pages use generic section headers or no navigation at all. The numbered chapter format creates a sense of progression and completeness. The version-style numbering (1.0 vs 1) feels modern and technical without being alienating.
+- Transferability: 7/10 — Works for service pages with distinct phases: "1.0 Diagnose →" / "2.0 Quote →" / "3.0 Repair →" / "4.0 Test →" / "5.0 Return →". For Hailey Device Repair, the format could structure a "How we work" page or a service breakdown. Less transferable for simple single-service businesses.
+- Eyecatch factor: 8/10 — The numbers create visual anchors. The arrows invite exploration. The format works as sticky navigation, section headers, or a table of contents. Best with exactly 3-5 sections.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create section headers as `<a class="section-nav" href="#section-id">` with `display: inline-flex`, `align-items: center`, `gap: 8px`, `font-size: 0.875rem`, `font-weight: 500`, `color: #666`. Content is `<span class="section-number">1.0</span>` + `<span class="section-title">Intake</span>` + `<span class="section-arrow">→</span>`. Style number with `font-feature-settings: "tnum"` for tabular alignment. Use decimal numbering (1.0, 2.0) not integers. Keep titles to one word. Arrow is Unicode → (U+2192). For sticky nav, add `position: sticky`, `top: 0`. The format works best when sections represent a genuine progression or workflow, not arbitrary categories.
+
