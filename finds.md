@@ -1257,3 +1257,40 @@ Create a `<ul class="service-index">` with `list-style: none`, `padding: 0`, `di
 **Implementation brief:**
 Create a `<div class="prose-directory">` with `font-size: clamp(1rem, 2vw, 1.5rem)`, `line-height: 1.8`, `max-width: 800px`. Write flowing copy that naturally embeds your key links/services. Style links with `color: inherit`, `text-decoration: underline`, `text-underline-offset: 4px`. On hover: `background: #f0f0f0` or subtle highlight. Keep sentences short and rhythmic. Each link should feel like a natural part of the sentence, not forced. Example: "Your phone, broken. [Same-day screen repair]. Your photos, trapped. [Data recovery experts]. Your time, valuable. [Text us now]." The format requires strong copywriting — don't use if your copy is generic. Works best for About pages, service overviews, or hero sections with personality.
 
+---
+
+## Scout Run — 2026-03-30 08:07 UTC
+Sources checked: [Godly](https://godly.website/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 66: Large Percentage Stats with Short Declarative Outcomes
+**Site:** Superpower — [https://superpower.com/](https://superpower.com/)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/)
+**Element type:** Social proof / trust building / stat presentation
+**What it is:** Superpower presents credibility through large percentage stats paired with short outcome statements: "63% of members find early risk factors for diabetes" / "44% of members find elevated heart disease risk" / "70% of members slow their speed of aging." The percentage is oversized, followed by a compact declarative sentence. The format turns data into trust signals.
+
+**Scores:**
+- Uniqueness: 8/10 — Most stat displays use vague numbers ("10,000+ customers") or meaningless metrics. Superpower's format pairs real percentages with specific outcomes. The stats tell a story of what happens when you use the product, not just how many people use it.
+- Transferability: 9/10 — Works for any service with trackable outcomes: "92% of repairs completed same day" / "85% of customers find us through word of mouth" / "98% screen survival rate after our repairs." For Hailey Device Repair, the format turns service quality into concrete, believable claims.
+- Eyecatch factor: 8/10 — The oversized percentage creates visual anchoring. The short sentence below provides context without overwhelming. The format is scannable and memorable. Works best with 2-4 stats that tell a coherent story.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="stat-grid">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))`, `gap: 32px`. Each stat card: `<div class="stat">` containing `<span class="number">` + `<p class="outcome">`. Style the number with `font-size: clamp(3rem, 8vw, 5rem)`, `font-weight: 700`, `line-height: 1`. Outcome text at `font-size: 1rem`, `color: #666`, `max-width: 200px`. Use 2-4 stats. Make sure each stat is specific and outcome-focused (not vanity metrics). Format: "[XX]% of [customers/repairs/phones] [achieve specific outcome]." Avoid round numbers — 92% feels more real than 90%.
+
+---
+
+### 🥈 Find 67: Numbered Steps with Short Action Headlines
+**Site:** Superpower — [https://superpower.com/](https://superpower.com/)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/)
+**Element type:** Process visualization / how-it-works / onboarding flow
+**What it is:** Superpower's "How it works" section uses numbered steps with compact action-oriented headlines: "1. Test your whole body" / "2. An actionable plan" / "3. A connected ecosystem." Each step has a number, a short headline (4-6 words), and a brief description. The format reduces a complex process to digestible chunks.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered steps are common, but Superpower's execution is clean: large numbers, action-focused headlines, and minimal description. Most how-it-works sections over-explain. This one stays tight.
+- Transferability: 9/10 — Direct lift for any service business: "1. Text us your issue" / "2. Get a quote in minutes" / "3. Drop off or we come to you" / "4. Pick up your fixed device." For Hailey Device Repair, the format makes the repair process feel simple and trustworthy.
+- Eyecatch factor: 8/10 — The large numbers create visual rhythm. Short headlines are scannable. The format signals "this is easy" — which is exactly what customers need when their phone is broken. Works best with 3-5 steps.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<ol class="how-it-works">` with `list-style: none`, `counter-reset: steps`, `display: flex`, `flex-direction: column`, `gap: 32px`. Each `<li>` uses `counter-increment: steps` and `::before { content: counter(steps); }`. Style the counter at `font-size: 2.5rem`, `font-weight: 700`, `color: #111`, `margin-bottom: 8px`. Headline at `font-size: 1.25rem`, `font-weight: 600`. Description at `font-size: 1rem`, `color: #666`, `max-width: 300px`. Keep headlines to 4-6 words. Start with an action verb when possible. Use 3-5 steps. The format works best when each step is genuinely distinct and moves the customer forward.
+
