@@ -776,3 +776,40 @@ Create a `<section class="differentiators">` with a header like `<h2>Built diffe
 **Implementation brief:**
 Create a `<ul class="numbered-principles">` with `list-style: none`, `padding: 0`, `margin: 0`. Each `<li class="principle-item">` contains: `<span class="principle-num">0.1</span>` at `font-size: 0.8rem`, `font-weight: 700`, `color: #888`, `font-family: 'SF Mono', 'Consolas', monospace`, `display: inline-block`, `width: 32px`, `margin-right: 12px`. Followed by `<span class="principle-label">Our Mission</span>` at `font-weight: 600`, `color: #111`, then a separator (em dash or line break), then `<span class="principle-desc">` at `font-weight: 400`, `color: #444`. Use tabular-nums for consistent digit alignment: `font-variant-numeric: tabular-nums`. Keep to 3-4 items — the format works best with a small, focused set of principles. The decimal starting point (0.1 vs 1.0) is a stylistic choice — 0.x implies "foundational/baseline", 1.x implies "first version".
 
+---
+
+## Scout Run — 2026-03-30 01:36 UTC
+Sources checked: [Godly](https://godly.website/), [Land-book](https://land-book.com/)
+
+### 🏆 Find 40: Icon-Anchored Mini Feature Grid (Title + One Sentence)
+**Site:** Reflect — [https://reflect.app/home](https://reflect.app/home)
+**Found on:** Godly — [https://godly.website/website/reflect-968](https://godly.website/website/reflect-968)
+**Element type:** Feature presentation / visual hierarchy / iconography
+**What it is:** Reflect presents features as a compact grid where each item has: a small icon, a bold short title ("Built for speed", "Networked notes", "iOS app", "End-to-end encryption"), and a single explanatory sentence below ("Instantly sync your notes across devices"). The icons are simple line-style, the titles are 2-4 words, the sentences are under 10 words. The grid is dense but scannable — visitors can process 8 features in seconds.
+
+**Scores:**
+- Uniqueness: 7/10 — Icon + title + description grids are common, but Reflect's execution is unusually disciplined. The title is *always* short (2-4 words), the description is *always* one brief sentence. Most sites can't resist adding extra details. The constraint creates rhythm.
+- Transferability: 9/10 — Perfect for a repair shop's "Why us" or "What we offer" section: 🔧 "Same-day service" → "Most repairs done in under an hour." / 💬 "Text first" → "No hold music, just text us directly." / ✓ "Warranty included" → "Every repair backed for 90 days." / 📍 "Local shop" → "Right here in Hailey, Idaho." Icons can be emoji or simple SVGs.
+- Eyecatch factor: 8/10 — The grid format is visually balanced. The icons provide visual anchors that guide the eye. The brevity is itself eye-catching — visitors immediately see this is a scannable overview, not a wall of text.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="feature-grid">` using CSS Grid: `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))`, `gap: 24px`. Each `<div class="feature-item">` contains: `<span class="feature-icon">` (emoji or SVG, 24px) followed by `<h4 class="feature-title">` at `font-size: 0.95rem`, `font-weight: 600`, `margin: 8px 0 4px`. Below: `<p class="feature-desc">` at `font-size: 0.85rem`, `color: #666`, `line-height: 1.4`. Keep titles to 2-4 words — if it needs more words, you haven't distilled it. Keep descriptions to one sentence under 10 words. The icon should be muted (gray or light brand color) so the title remains the focus. Aim for 4-8 features — fewer feels thin, more overwhelms. The constraint is the design: short, scannable, consistent.
+
+---
+
+### 🥈 Find 41: Use-Case Headline + Benefit Sentence (Carousel or Stacked)
+**Site:** Umbrel — [https://umbrel.com](https://umbrel.com)
+**Found on:** Godly — [https://godly.website/website/umbrel-975](https://godly.website/website/umbrel-975)
+**Element type:** Feature presentation / use cases / benefit framing
+**What it is:** Umbrel presents its use cases as bold headlines framed around what the user *can do*: "Run your own Bitcoin node." / "Stream your movies & TV shows." / "Block ads on your entire network." / "Automate your home and appliances." Each headline is followed by a single sentence explaining the benefit. The format is action-oriented — it starts with the user's goal, not the product's feature. The carousel/stacked layout lets visitors scan all use cases quickly.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections lead with what the product *does* ("Bitcoin node support"). Umbrel leads with what *you* can do ("Run your own Bitcoin node"). The verb-first headlines are more engaging and action-oriented. The framing puts the customer in control.
+- Transferability: 9/10 — Direct lift for a repair shop: "Get your phone back today." → "Most repairs done same-day, no appointment needed." / "Stop living tethered to a charger." → "New battery installed in under an hour." / "Save hundreds vs. buying new." → "Quality repairs at a fraction of replacement cost." The format turns features into outcomes the customer can visualize.
+- Eyecatch factor: 8/10 — The imperative verb headlines ("Run", "Stream", "Block") are action words that draw attention. The carousel format creates interactivity. The benefit sentences provide the "why it matters" without bloating the headline.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="use-cases">` with either a horizontal carousel or stacked cards. Each `<div class="use-case">` contains: `<h3 class="use-headline">` at `font-size: clamp(1.2rem, 3vw, 1.5rem)`, `font-weight: 700`, `color: #111`. The headline should be action-oriented, starting with an imperative verb or "your" phrasing. Below: `<p class="use-benefit">` at `font-size: 0.95rem`, `color: #555`, `line-height: 1.5`. Keep headlines to 5-8 words — they should be scannable as standalone statements. Keep benefit sentences to one sentence max. For carousel: use CSS scroll-snap or a lightweight JS carousel. For stacked: use `display: flex`, `flex-direction: column`, `gap: 32px`. Optional: add a subtle icon or illustration to each use case, but keep it secondary to the headline.
+
