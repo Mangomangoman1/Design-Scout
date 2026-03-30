@@ -443,3 +443,40 @@ Create an `<dl class="faq-labels">` (description list) with `display: grid`, `gr
 **Implementation brief:**
 Create a `<ul class="service-index">` with `list-style: none`, `padding: 0`. Each `<li class="service-item">` uses CSS Grid: `grid-template-columns: auto 1fr`, `gap: 12px`, `align-items: baseline`, `padding: 12px 0`, `border-bottom: 1px solid #eee`. The index number is a `<span class="index">` at `font-size: 0.85rem`, `font-weight: 500`, `color: #888`, `font-variant-numeric: tabular-nums` (keeps numbers aligned). Use a consistent prefix: "S01.", "R01.", "FX01." — pick one letter that relates to your business. The service name is a `<span class="name">` at `font-size: 1rem`, `font-weight: 600`. Optionally add a brief description below the name at smaller size. Keep to 4-6 services max; more than that and the index loses its impact. The zero-padding matters: "S01" not "S1" — it implies the system could scale.
 
+---
+
+## Scout Run — 2026-03-30 00:06 UTC
+Sources checked: [Land-book](https://land-book.com/), [CSS Design Awards](https://www.cssdesignawards.com/wotd-award-winners)
+
+### 🏆 Find 22: Horizontal Trust Signal Marquee (Infinite Scrolling Ticker)
+**Site:** Persephone Biosciences — [https://persephone.bio](https://persephone.bio)
+**Found on:** Land-book — [https://land-book.com/websites/92728-persephone-biosciences](https://land-book.com/websites/92728-persephone-biosciences)
+**Element type:** Animation / trust-building / social proof
+**What it is:** A full-width horizontal ticker strip that infinitely scrolls trust signals: "Probiotic Blend Made in the USA • Clinically-Studied • Clean Label Project Verified • Every Batch Third-Party Tested & Deep DNA Sequenced • No Artificial Additives •" — the same sequence repeating seamlessly. The ticker creates ambient movement on the page while hammering home credibility points. It's not aggressive, just persistent — as you scroll past, it's still running.
+
+**Scores:**
+- Uniqueness: 7/10 — Horizontal ticker/marquee effects are common in fashion and agency sites, but using them specifically for trust signals rather than client logos or decorative text is less common. The "certifications as ambient animation" framing is the differentiator.
+- Transferability: 9/10 — Perfect for a repair shop: "90-Day Warranty • Same-Day Service • OEM Parts • Locally Owned • Text for a Quote • 90-Day Warranty •" — the repetition is the point. It's background reinforcement, not the main message. Works especially well between sections or as a sticky footer element.
+- Eyecatch factor: 8/10 — Subtle but effective. The horizontal motion draws the eye without demanding attention. It makes the page feel alive without being distracting. The ticker runs continuously, so even if you're focused elsewhere, you've absorbed the trust signals peripherally.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<div class="trust-ticker">` with `overflow: hidden`, `white-space: nowrap`, `background: #111` (or brand color), `padding: 12px 0`. Inside, a `<div class="ticker-track">` with `display: inline-flex`, `animation: scroll 20s linear infinite`. The animation uses `@keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`. Duplicate the content twice so when half scrolls away, the second half seamlessly takes over. Each item is a `<span class="ticker-item">` at `font-size: 0.85rem`, `font-weight: 500`, `color: #fff`, `padding: 0 24px`. Add a bullet separator (`•`) between items with `color: #666`. Keep to 4-6 short trust signals. For accessibility, add `aria-hidden="true"` since the content is decorative/redundant. Pause on hover with `.trust-ticker:hover .ticker-track { animation-play-state: paused; }`.
+
+---
+
+### 🥈 Find 23: "What we like / What we don't like" Honest Review Structure
+**Site:** Console.dev — [https://console.dev](https://console.dev)
+**Found on:** Land-book — [https://land-book.com/websites/92938-console](https://land-book.com/websites/92938-console)
+**Element type:** Copy structure / trust-building / content format
+**What it is:** Each tool review includes two explicit sections: "What we like" with positive points, and "What we don't like" with honest criticisms. The structure is consistent across every review. The "don't like" section isn't buried — it's equally prominent. This format signals: we're giving you the real picture, not a sales pitch. It builds credibility by acknowledging tradeoffs.
+
+**Scores:**
+- Uniqueness: 8/10 — Pro/con lists exist, but explicitly labeling them "What we like / What we don't like" with equal visual weight is uncommon. Most businesses hide downsides or bury them in fine print. Leading with both reads as unusually honest.
+- Transferability: 8/10 — For a repair shop, this could work on a "Why us (and why not)" page or service description: "What you'll love: Same-day turnaround, text-first scheduling, 90-day warranty." / "What to know: We're closed Sundays, we don't repair gaming consoles, walk-ins may wait 30 minutes during peak hours." The "what to know" frame is softer than "what we don't do" but serves the same purpose.
+- Eyecatch factor: 7/10 — Not visually flashy, but attention-grabbing because it breaks the pattern of endless positivity. Seeing a business acknowledge limitations builds trust faster than another list of benefits.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="honest-review">` containing two side-by-side columns on desktop (`display: grid`, `grid-template-columns: 1fr 1fr`, `gap: 24px`), stacking on mobile. Left column: `<div class="likes">` with `<h4>What you'll love</h4>` (`font-size: 0.9rem`, `font-weight: 600`, `color: #2a9d4a`, `margin-bottom: 12px`) followed by `<ul>` of 2-4 points. Right column: `<div class="knows">` with `<h4>What to know</h4>` (`font-size: 0.9rem`, `font-weight: 600`, `color: #888`, `margin-bottom: 12px`) followed by `<ul>` of 2-3 honest limitations. Keep the "knows" column shorter than the "likes" — you're being transparent, not self-deprecating. Use neutral gray for the limitations header, not red or warning colors. The goal is honesty, not alarm. Place this section on a Services or About page, not the homepage hero.
+
