@@ -1738,3 +1738,40 @@ Create a `<p class="replaces">` with `font-size: 0.875rem`, `font-weight: 400`, 
 **Implementation brief:**
 Create section labels as `<span class="section-label">` with `font-size: 0.75rem`, `font-weight: 500`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #888`, `display: block`, `margin-bottom: 8px`. Place above the main `<h2>` headline. Keep labels to exactly 2 words. Use alliteration, rhyme, or evocative imagery ("Shine bright", "Think big", "Move fast", "Fix right"). Avoid generic labels like "Our services" or "Key features." The format works best when the labels contrast with more straightforward headlines below — playful label, clear headline.
 
+---
+
+## Scout Run — 2026-03-30 21:35 UTC
+Sources checked: [CSS Design Awards](https://www.cssdesignawards.com/), [Hover States](https://www.hoverstat.es/)
+
+### 🏆 Find 92: Service Numbers with Prefix Code Format ("S01.", "S02.", "S03.")
+**Site:** Burn Studio — [https://burnstudio.co/](https://burnstudio.co/)
+**Found on:** Hover States — [https://www.hoverstat.es/features/burn/](https://www.hoverstat.es/)
+**Element type:** Service list / capability numbering / systematized structure
+**What it is:** Burn presents their services with code-like prefixes: "S01. Creative Direction & AEO Strategy" / "S02. Multi-Platform Production" / "S03. Cinematic Social & Multi-Platform Content". The "S" prefix suggests "Service" while the zero-padded number (01 vs 1) creates a systematic, organized feel — like a document reference or spec sheet.
+
+**Scores:**
+- Uniqueness: 8/10 — Most service lists use plain numbers (1, 2, 3) or no numbers at all. The "S01." format feels technical and intentional — like a product SKU or technical specification. It suggests organization and precision without being cold.
+- Transferability: 9/10 — Works for any service business with distinct offerings: "S01. Diagnostics" / "S02. Screen Repair" / "S03. Battery Replacement" / "S04. Data Recovery". For Hailey Device Repair, the format communicates professionalism and systematic approach — "we have a process."
+- Eyecatch factor: 7/10 — The prefix creates visual rhythm. The zero-padding aligns numbers vertically. The format works as a services list, pricing tiers, or process steps. Best with 4-6 services.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<ul class="services-list">` with `list-style: none`, `padding: 0`, `display: flex`, `flex-direction: column`, `gap: 16px`. Each service is `<li class="service">` with `display: flex`, `gap: 12px`. The number is `<span class="service-code">` (styled `font-size: 0.875rem`, `font-weight: 500`, `color: #888`, `min-width: 48px`) with content "S01." / "S02." etc. The title follows as `<span class="service-title">` (styled `font-size: 1rem`, `font-weight: 500`). Use two-digit numbers with leading zero (01, 02... not 1, 2). The prefix letter can match your context: "S" for services, "P" for process, "R" for repairs. Keep to exactly one letter + two digits + period.
+
+---
+
+### 🥈 Find 93: Parenthetical Section Labels as Page Structure Markers ("(Intro)", "(01.)", "(Case studies)")
+**Site:** Code Resolution — [https://coderesolution.com/](https://coderesolution.com/)
+**Found on:** CSS Design Awards (SOTD 2026-03-30)
+**Element type:** Section headers / content structure / document-style labeling
+**What it is:** Code Resolution uses parenthetical labels to structure their page: "(Intro)" introduces the company, "(01.)" / "(02.)" / "(03.)" number their services, "(Case studies)" and "(Featured clients)" label their portfolio sections. The parentheses create a meta-narrative feel — like reading a script or academic paper with section markers.
+
+**Scores:**
+- Uniqueness: 8/10 — Parenthetical labels are rare in web design. They create a literary, editorial quality — the page becomes a document with annotated structure. The format feels self-aware and thoughtfully organized.
+- Transferability: 7/10 — Works for pages with distinct content sections: "(About)" / "(Services)" / "(01.) Screens" / "(02.) Batteries" / "(Work)" / "(Contact)". For Hailey Device Repair, the format could structure a single-page site or long-form about page. Less transferable for minimal sites.
+- Eyecatch factor: 7/10 — The parentheses create visual distinction without shouting. The format feels calm and organized. Works as section headers, navigation labels, or inline content markers. Best when used consistently throughout the page.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create section markers as `<span class="section-marker">` with `font-size: 0.75rem`, `font-weight: 400`, `color: #999`, `text-transform: capitalize`, `display: block`, `margin-bottom: 12px`. Format as "(Label)" with parentheses included in the text. For numbered sections, use "(01.)" format — number + period inside parens. Keep labels to one word when possible. Place above section content, not inside headlines. The format works best when used consistently for all major sections — mixing styles breaks the document-like feel. Consider using for nav items as well for full consistency.
+
