@@ -1220,3 +1220,40 @@ Create a `<div class="feature-pills">` using `display: flex`, `flex-wrap: wrap`,
 **Implementation brief:**
 Create a `<ul class="action-list">` with `list-style: none`, `padding: 0`, `display: flex`, `flex-direction: column`, `gap: 12px`. Each `<li>` contains a `<a>` or `<span>` with the action statement. Start every statement with an action verb (Fix, Replace, Recover, Text, Get, Find). Follow with the object and a specific benefit or qualifier ("while you wait", "in under an hour", "same day"). Keep to one sentence per item, max 15 words. Style at `font-size: 1rem`, `line-height: 1.5`, `color: #333`. Optional: wrap the action verb in `<strong>` for emphasis. Use 4-6 items. The format works best for service-focused businesses where you want to communicate capabilities as user actions rather than company offerings.
 
+---
+
+## Scout Run — 2026-03-30 07:05 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Httpster](https://httpster.net/)
+
+### 🏆 Find 64: Zero-Padded Numbered Service Index (S01, S02, S03...)
+**Site:** Burn Studio — [https://burnstudio.co/](https://burnstudio.co/)
+**Found on:** Hover States — [https://www.hoverstat.es/features/burn/](https://www.hoverstat.es/features/burn/)
+**Element type:** Service list / numbering convention / visual hierarchy
+**What it is:** Burn Studio lists their services with zero-padded index labels: "S01. Creative Direction & AEO Strategy / S02. Multi-Platform Production / S03. Cinematic Social & Multi-Platform Content / S04. AI Visibility Reporting / S05. Media Planning & Analytics." The "S" prefix + two-digit format creates a technical, systematic aesthetic — like a spec sheet or inventory system.
+
+**Scores:**
+- Uniqueness: 8/10 — Most service lists use bullets, icons, or simple numbers. The zero-padded index (01, 02, 03) with a category prefix (S for Services) creates a modular, systematic feel. It signals organization and precision without being clinical.
+- Transferability: 9/10 — Works for any service business with 3-10 offerings: "R01. Screen Repair / R02. Battery Replacement / R03. Charging Port Fix / R04. Water Damage Recovery / R05. Data Transfer." For Hailey Device Repair, the format makes a small service list feel comprehensive and professional. The prefix can match the business: "R" for Repair, "S" for Service, "F" for Fix.
+- Eyecatch factor: 8/10 — The zero-padding creates visual consistency — all numbers align. The prefix letter adds branding. The format reads as organized and thorough. Works especially well in monospace or technical fonts.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<ul class="service-index">` with `list-style: none`, `padding: 0`, `display: flex`, `flex-direction: column`, `gap: 16px`. Each `<li>` contains: `<span class="index">S01.</span>` + `<span class="service-name">Service Title</span>`. Style the index with `font-family: monospace` or a technical font, `font-size: 0.85rem`, `color: #666`, `margin-right: 12px`. Service name at `font-size: 1.1rem`, `font-weight: 600`. Use 3-10 items. Zero-pad all numbers (01, 02... 09, 10). Choose a prefix letter that fits your business: S (Service), R (Repair), F (Fix), D (Device). The format creates instant visual rhythm and makes even a short list feel comprehensive.
+
+---
+
+### 🥈 Find 65: Prose Narrative with Embedded Directory Links
+**Site:** Anorak Film — [https://anorakfilm.com/](https://anorakfilm.com/)
+**Found on:** Hover States — [https://www.hoverstat.es/features/anorak-film/](https://www.hoverstat.es/features/anorak-film/)
+**Element type:** Navigation / copywriting / directory presentation
+**What it is:** Anorak presents their director roster woven into flowing prose: "In the beginning. An edgeless shape. [Aisultan Seit]. Racking into focus. [Alex Hulsey]. Light. [Alex Takács]..." Each director name is a clickable link embedded in philosophical, poetic copy. The format turns a directory into a story, making navigation feel like discovery rather than search.
+
+**Scores:**
+- Uniqueness: 9/10 — Directories are almost always grids, lists, or cards. Embedding navigation links into flowing prose is unexpected and memorable. The format forces the reader to engage with the content rather than scan past it. It's both navigation and brand statement.
+- Transferability: 7/10 — Works for businesses with stories to tell: "Text us. [208-555-1234]. No hold music. [Get a quote in 60 seconds]. Cracked screens. [Fixed while you wait]. Dead batteries. [Replaced same day]." For Hailey Device Repair, the format could weave services into a narrative about repair philosophy. Best for brands with personality and copy chops.
+- Eyecatch factor: 9/10 — The prose flow with embedded links creates visual intrigue. You read to find the links rather than scanning a list. The format rewards attention and creates a distinctive brand voice. Works best for creative or personality-driven businesses.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="prose-directory">` with `font-size: clamp(1rem, 2vw, 1.5rem)`, `line-height: 1.8`, `max-width: 800px`. Write flowing copy that naturally embeds your key links/services. Style links with `color: inherit`, `text-decoration: underline`, `text-underline-offset: 4px`. On hover: `background: #f0f0f0` or subtle highlight. Keep sentences short and rhythmic. Each link should feel like a natural part of the sentence, not forced. Example: "Your phone, broken. [Same-day screen repair]. Your photos, trapped. [Data recovery experts]. Your time, valuable. [Text us now]." The format requires strong copywriting — don't use if your copy is generic. Works best for About pages, service overviews, or hero sections with personality.
+
