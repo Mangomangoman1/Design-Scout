@@ -1627,3 +1627,40 @@ Create a `<div class="marquee-container">` with `overflow: hidden`, `white-space
 **Implementation brief:**
 Create a `<section class="features-grid">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 32px`. Each feature is a `<div class="feature">` containing: `<h3 class="feature-headline">` (styled `font-size: 1.25rem`, `font-weight: 700`, `margin-bottom: 8px`) + `<p class="feature-description">` (styled `font-size: 1rem`, `line-height: 1.6`, `color: #666`). Keep headlines to 1-2 words max. Descriptions should be exactly 2 sentences: first sentence states the benefit, second sentence provides proof or detail. Avoid jargon. The format works best when each feature is genuinely distinct and the copy is tight.
 
+---
+
+## Scout Run — 2026-03-30 18:27 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/)
+
+### 🏆 Find 86: Services/Capabilities List with Period-Separated Single Words ("Design. Engineering. Branding.")
+**Site:** Reboot Studio — [https://reboot.studio/](https://reboot.studio/)
+**Found on:** Godly — [https://godly.website/website/reboot-1001](https://godly.website/)
+**Element type:** Capabilities list / services overview / typographic rhythm
+**What it is:** Reboot presents their capabilities as a series of single words with periods: "Design. Engineering. Branding. Copywriting. Video. 3D. Interaction." Each word is a complete sentence — a declarative statement. The periods create dramatic pauses and weight. The format compresses a services page into a single scannable line.
+
+**Scores:**
+- Uniqueness: 8/10 — Most services sections use bullet lists or paragraph descriptions. The period-separated format creates typographic rhythm and treats each capability as a statement rather than a list item. The format implies confidence: "We do Design. Period."
+- Transferability: 8/10 — Works for any multi-service business: "Screens. Batteries. Data. Ports." / "Diagnose. Repair. Test. Return." / "iPhones. Androids. iPads. Laptops." For Hailey Device Repair, the format communicates breadth in minimal space.
+- Eyecatch factor: 8/10 — The periods create visual weight and reading rhythm. The format works as a hero subtitle, about section capability list, or footer tagline. Best with 4-8 single words.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<p class="capabilities">` with `font-size: clamp(1rem, 2vw, 1.5rem)`, `font-weight: 500`, `color: #333`, `line-height: 1.6`. Each word is plain text with `. ` (period-space) between them. Optionally wrap each word in `<span>` for individual styling or hover effects. The key is single words only — no phrases. Each word should be a distinct capability. End the list with a period. The format works best when each word is genuinely different and meaningful, not synonyms or overlapping concepts. Consider adding subtle hover color change on each word if wrapped in spans.
+
+---
+
+### 🥈 Find 87: Bullet-Started Feature Sentences with Action Verbs ("• Buy and sell all types of crypto in an instant.")
+**Site:** Phantom — [https://phantom.com/](https://phantom.com/)
+**Found on:** Godly — [https://godly.website/website/phantom-980](https://godly.website/)
+**Element type:** Feature list / value props / benefit statements
+**What it is:** Phantom presents features as bulleted sentences that read like benefits: "• Buy and sell all types of crypto in an instant." / "• Find trending tokens, top traders, and apps." / "• Trade big moments in culture with Prediction Markets." Each bullet is a complete sentence starting with an action verb, describing what the user can do.
+
+**Scores:**
+- Uniqueness: 7/10 — Bullet lists are common, but Phantom's execution is notable: each item is a complete sentence with subject (implied "you"), verb, and object. The format reads like a conversation about what's possible, not a feature spec sheet.
+- Transferability: 9/10 — Works for any service business: "• Get your phone fixed while you wait." / "• Text us a photo of the damage for an instant quote." / "• Pick up your repaired device the same day." For Hailey Device Repair, the format makes features feel like benefits.
+- Eyecatch factor: 7/10 — The bullets create scannable structure. The complete sentences feel conversational. The format works as a hero section list, features overview, or "What you can do" section. Best with 4-6 items.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<ul class="benefit-list">` with `list-style: disc`, `padding-left: 24px`, `display: flex`, `flex-direction: column`, `gap: 12px`. Each `<li>` is styled `font-size: 1rem`, `line-height: 1.5`, `color: #333`. Write each item as a complete sentence starting with an action verb (Buy, Find, Trade, Get, Text, Pick up). End each with a period. Keep sentences to one line (under 60 characters). The format works best when items describe user benefits, not product features. Avoid starting with "We" — keep the focus on what the user gets to do.
+
