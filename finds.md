@@ -887,3 +887,40 @@ Create a `<section class="process-steps">` with `display: flex`, `flex-direction
 **Implementation brief:**
 Create a `<section class="stats-row">` with `display: flex`, `justify-content: space-around`, `flex-wrap: wrap`, `gap: 32px`, `text-align: center`. Each stat is a `<div class="stat">` containing: `<span class="stat-num">63%</span>` at `font-size: clamp(2.5rem, 6vw, 4rem)`, `font-weight: 700`, `color: #111`, `line-height: 1`, `display: block`. Below: `<span class="stat-context">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.4`, `max-width: 200px`, `margin: 8px auto 0`. The stat should be a real number from your business — don't fabricate. Use percentages, counts, or ratings depending on what you can back up. Keep context lines to one sentence. The format works best with 3-4 stats — enough to establish credibility without feeling like a data dump.
 
+---
+
+## Scout Run — 2026-03-30 02:06 UTC
+Sources checked: [Godly](https://godly.website/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 46: "Built Different" Umbrella Headline + Single-Sentence Feature Grid
+**Site:** Status — [https://status.app](https://status.app)
+**Found on:** Godly — [https://godly.website/website/status-993](https://godly.website/website/status-993)
+**Element type:** Feature presentation / umbrella framing / value props
+**What it is:** Status uses "Built different" as an umbrella headline, followed by a grid of features, each with a bold label and one-sentence explanation: "Open source — Status is a community project. Anyone can build, contribute to and fork its source code." / "Decentralised — Communities are exclusively powered by their members running the Status desktop app." / "Secure — Self-custodial keys safeguard your wallets and messages via elliptic curve cryptography." The umbrella headline provides attitude; the grid provides specifics.
+
+**Scores:**
+- Uniqueness: 8/10 — The "Built different" umbrella headline sets a confident, memorable tone that most sites lack. Instead of generic "Features" or "Why us", it makes a bold claim that frames everything that follows. The grid format is clean but the framing elevates it.
+- Transferability: 9/10 — Perfect for a repair shop's differentiators under a bold umbrella: "We do things differently." → "Local — Not a big box store. We're your neighbors in Hailey." / "Fast — Most repairs done same-day, no appointments needed." / "Honest — Upfront pricing, no surprises at pickup." / "Guaranteed — 90-day warranty on every repair." The umbrella statement sets the tone.
+- Eyecatch factor: 8/10 — The bold umbrella headline draws immediate attention. The grid provides visual balance. The one-sentence explanations are scannable. The format works especially well when you have 4-6 distinct differentiators.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="differentiators">` with a `<h2 class="diff-headline">` like "Built different" or "We do things differently" at `font-size: clamp(1.5rem, 4vw, 2.5rem)`, `font-weight: 700`, `margin-bottom: 32px`. Below: a `<div class="diff-grid">` using CSS Grid `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`, `gap: 24px`. Each item is a `<div class="diff-item">` containing: `<h3 class="diff-label">` at `font-size: 1rem`, `font-weight: 600`, `margin-bottom: 8px`. Below: `<p class="diff-desc">` at `font-size: 0.9rem`, `color: #555`, `line-height: 1.5`. Keep labels to 1-2 words. Keep descriptions to one sentence. The umbrella headline should be confident but not arrogant — it's a statement of fact, not bragging.
+
+---
+
+### 🥈 Find 47: Founder Letter / Personal Note Section
+**Site:** Acctual — [https://acctual.com](https://acctual.com)
+**Found on:** Godly — [https://godly.website/website/acctual-998](https://godly.website/website/acctual-998)
+**Element type:** Trust-building / personal branding / founder presence
+**What it is:** Acctual includes a personal letter from the founder mid-page: "Dear business owner, Running a small business isn't for the faint of heart. Especially when you're working with people all over the world. It can be hard to get paid... That's why Net 0 is our love language. Love you, pay me. — Atikh Bana, Cofounder of Acctual." The letter humanizes the brand, explains the "why" behind the product, and signs off with a name and title.
+
+**Scores:**
+- Uniqueness: 9/10 — Most business sites are faceless. A signed letter from the founder is rare and disarming. It breaks the corporate facade and creates a direct connection. The format feels like receiving a personal note, not reading marketing copy.
+- Transferability: 8/10 — Perfect for a solo repair shop: "Hey, I'm Sam. I started Hailey Device Repair because I got tired of seeing people pay $400 for a new phone when a $90 battery fix would've solved their problem. Every repair I do, I treat like it's my own device. Text me anytime — I'll get back to you. — Sam, Hailey Device Repair." The personal touch differentiates from big-box stores.
+- Eyecatch factor: 7/10 — The letter format is visually distinct from typical marketing sections. The "Dear..." opening signals a different kind of content. The signature at the end provides authenticity. Works best as a break between feature-heavy sections.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="founder-letter">` with `max-width: 600px`, `margin: 64px auto`, `padding: 32px`, `background: #fafafa` (optional light background to set it apart), `border-left: 3px solid #111` (optional visual anchor). Content structure: `<p class="letter-greeting">` "Dear [audience]," at `font-style: italic`, `margin-bottom: 16px`. Then `<p class="letter-body">` with the main message at `font-size: 1rem`, `line-height: 1.7`, `color: #333`. Finally: `<p class="letter-signature">` with the sign-off at `font-weight: 600`, `margin-top: 24px`, followed by `<span class="letter-name">` with name and title. Keep the letter conversational — no marketing speak. 3-5 sentences max. The format works best when it explains the "why" behind your business or addresses a specific pain point your customers face.
+
