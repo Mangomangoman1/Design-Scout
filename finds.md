@@ -1479,3 +1479,40 @@ Create a `<ul class="services-list">` with `list-style: none`, `padding: 0`. Eac
 **Implementation brief:**
 Create a `<ul class="portfolio-list">` with `list-style: none`. Each `<li>` is a single line containing: `<span class="client">` + `<span class="connector"> ✕ </span>` + `<span class="project">`. Style the client at `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`. Style the connector at `color: #999`, `margin: 0 8px`. Style the project at `font-weight: 400`. Use the Unicode "✕" (U+2715) or "×" (U+00D7) character. Keep items to one line each. The format works best when both sides are recognizable or meaningful — avoid generic client names or vague project descriptions.
 
+---
+
+## Scout Run — 2026-03-30 14:19 UTC
+Sources checked: [Godly](https://godly.website/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 78: Decimal-Numbered Mission/Vision Blocks (0.1 / 0.2 / 0.3)
+**Site:** Augen Pro — [https://augen.pro/](https://augen.pro/)
+**Found on:** Godly — [https://godly.website/website/augen-1014](https://godly.website/)
+**Element type:** About section / company values / numbered principles
+**What it is:** Augen Pro presents their mission, vision, and ambition as numbered blocks with decimal prefixes: "0.1 Our Mission — Smarter, smaller AI health tools / 0.2 Our Vision — Lead the future of Invisible Computing / 0.3 Our Ambition — Simplify Heads-Up Computing." The decimal format (0.1 not 01) creates a versioning feel — like a product spec or roadmap rather than generic values copy.
+
+**Scores:**
+- Uniqueness: 8/10 — Most value sections use headers or bullets. The "0.X" decimal prefix creates a technical, product-like feel. It implies iteration and precision. The format reads like documentation, not marketing fluff.
+- Transferability: 8/10 — Works for any service business presenting values or process: "0.1 Diagnose — We identify the issue before quoting / 0.2 Repair — OEM parts, same-day turnaround / 0.3 Verify — Every fix tested before return." For Hailey Device Repair, the format communicates systematic, professional approach.
+- Eyecatch factor: 8/10 — The decimal numbers create visual rhythm. The format signals intentionality and technical competence. Works as an about section, process overview, or values statement. Best with exactly 3 items.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<ul class="principles">` with `list-style: none`, `display: flex`, `flex-direction: column`, `gap: 24px`. Each `<li class="principle">` contains: `<span class="number">` (styled `font-size: 0.875rem`, `font-weight: 500`, `color: #999`, `font-family: monospace`) + `<span class="label">` (styled `font-weight: 600`, `margin: 0 8px`) + `<span class="description">` (styled `color: #666`, `font-weight: 400`). Format numbers as "0.1" / "0.2" / "0.3" — the leading zero is essential for the versioning effect. Keep to exactly 3 principles. Each should have a one-word label followed by a dash and short description.
+
+---
+
+### 🥈 Find 79: Playful Two-Word Section Intros Above Headlines ("Shine bright" / "Framework freedom")
+**Site:** AuthKit — [https://authkit.com/](https://authkit.com/)
+**Found on:** Godly — [https://godly.website/website/authkit-991](https://godly.website/)
+**Element type:** Section labels / copywriting / personality injection
+**What it is:** AuthKit introduces each feature section with a casual two-word phrase above the main headline: "Shine bright → Your brand. Your style." / "Framework freedom → Built on Radix..." / "Advanced security → Designed for developers." The intro phrases are playful and evocative rather than functional — they set the emotional tone before the headline delivers the substance.
+
+**Scores:**
+- Uniqueness: 8/10 — Most section labels are functional ("Features" / "How it works"). These two-word intros are personality injections — they create voice and tone before the headline. The format makes each section feel like it has a character, not just content.
+- Transferability: 7/10 — Works for businesses wanting to add personality: "Speed matters → Most repairs done same day" / "Peace of mind → Every fix includes warranty" / "Real talk → Upfront pricing, no surprises." The format requires good copywriting but adds warmth to otherwise dry service descriptions.
+- Eyecatch factor: 8/10 — The playful intros create a scannable rhythm. Each section has a memorable hook. The format works as feature sections, value props, or service descriptions. Best with 3-5 sections.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section>` with: `<span class="section-intro">` (styled `font-size: 0.875rem`, `font-weight: 500`, `color: #888`, `text-transform: lowercase`, `display: block`, `margin-bottom: 8px`) + `<h2 class="section-headline">` (styled `font-size: 2rem`, `font-weight: 700`). The intro should be exactly two words, lowercase, evocative but not generic ("shine bright" not "our features"). The headline follows with the actual benefit. Keep intros playful and human — they should sound like something a person would say, not a marketing department. Use across 3-5 sections for consistent rhythm.
+
