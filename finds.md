@@ -702,3 +702,40 @@ Create a `<section class="faq-overview">` with `max-width: 800px`, `margin: 0 au
 **Implementation brief:**
 Create a `<div class="credentials">` with `display: flex`, `flex-direction: column`, `gap: 8px` (or `line-height: 2` on a single block). Each line is either a `<span>` with `display: block` or separate `<p>` elements. Style at `font-size: 0.9rem`, `font-weight: 400`, `color: #666`, `text-transform: uppercase` (optional), `letter-spacing: 0.05em`. No bullets, no commas, no conjunctions — each line stands alone. For hierarchy, make the first line (main service) slightly larger or bolder. Works well in a footer column, in an about section sidebar, or as a "quick facts" block on a contact page. The restraint is the design — resist the urge to add icons or bullets.
 
+---
+
+## Scout Run — 2026-03-30 01:16 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Land-book](https://land-book.com/design/landing-page)
+
+### 🏆 Find 36: "What We Like / What We Don't Like" Honest Review Format
+**Site:** Console.dev — [https://console.dev](https://console.dev)
+**Found on:** Land-book — [https://land-book.com/websites/92938-console](https://land-book.com/websites/92938-console)
+**Element type:** Copy structure / trust-building / transparency
+**What it is:** Console.dev reviews developer tools using a simple two-part structure: "What we like" followed by specific positives, then "What we don't like" with honest criticisms. Example for EmailMD: "What we like: Uses Markdown templates to generate email output..." / "What we don't like: Built with TypeScript which makes it difficult to use from other languages." The format is brutally honest — they don't hide the downsides.
+
+**Scores:**
+- Uniqueness: 8/10 — Most product reviews and testimonials are pure praise. Console's format deliberately surfaces negatives alongside positives. The "What we don't like" section is rare in marketing — most businesses only highlight strengths. The honesty is disarming and builds trust.
+- Transferability: 8/10 — Works for a repair shop comparing repair options: "DIY Kit — What we like: Cheap, ships fast, you learn something. What we don't like: Voids warranty, risk of further damage, no guarantee." Or for service tiers: "Mail-In Repair — What we like: Convenient, no travel. What we don't like: Slower turnaround, shipping risk." The format helps customers make informed decisions and positions you as trustworthy.
+- Eyecatch factor: 7/10 — The binary structure is scannable. The green/red or plus/minus visual contrast (if styled) creates quick readability. The "What we don't like" draws attention because it's unexpected in marketing copy.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="honest-review">` with two sections: `<div class="review-like">` and `<div class="review-dislike">`. Each section has a header: `<h4 class="review-header">` styled with an emoji or icon — 👍 or ✓ for "What we like", 👎 or ✗ for "What we don't like". Use `font-size: 0.95rem`, `font-weight: 600`, `margin-bottom: 8px`. List items below in `<ul>` with `list-style: none`, `padding-left: 16px`. Color-code subtly: green tint (`#e8f5e9`) background for likes, red tint (`#ffebee`) for dislikes — or keep it neutral with just the headers. The key is honesty: don't fake criticisms, and don't be so negative you scare customers away. The format works best when the downsides are real but manageable.
+
+---
+
+### 🥈 Find 37: Declarative Pain Point Grid ("Your tools are leaking data")
+**Site:** Runlayer — [https://runlayer.com](https://runlayer.com)
+**Found on:** Land-book — [https://land-book.com/websites/92721-enterprise-mcps-skills-and-agents-runlayer](https://land-book.com/websites/92721-enterprise-mcps-skills-and-agents-runlayer)
+**Element type:** Problem statement / trust-building / urgency
+**What it is:** Runlayer presents customer pain points as a 2x2 grid of short, declarative statements: "Unmanaged AI Everywhere" / "Mass Data Exposure" / "18,000+ Unvetted Servers" / "Zero Visibility or Control" — each with a one-sentence explanation below. The format is stark and urgent. The statements are problems, not features. The design implies: "You have these problems. We solve them."
+
+**Scores:**
+- Uniqueness: 8/10 — Most landing pages lead with features or benefits. Runlayer leads with problems. The grid format makes each pain point feel like a separate crisis. The declarative titles ("Zero Visibility or Control") are more powerful than question-based ("Do you have visibility?").
+- Transferability: 8/10 — Works for a repair shop targeting frustrated customers: "Cracked and Getting Worse" (cracks spread without repair) / "Battery Dying Mid-Day" (you're tethered to chargers) / "Slow and Freezing" (apps take forever to load) / "One Drop Away from Dead" (no protection, next drop is the last). The format validates the customer's frustration before offering the solution.
+- Eyecatch factor: 8/10 — The grid layout with bold titles draws immediate attention. The negative framing creates urgency. The short, punchy statements are scannable and memorable. The format works especially well with dark backgrounds or red/warning accent colors.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="pain-grid">` with `display: grid`, `grid-template-columns: repeat(2, 1fr)`, `gap: 24px`, `max-width: 800px`, `margin: 0 auto`. Each pain point is a `<div class="pain-item">` with: `<h3 class="pain-title">` at `font-size: 1.1rem`, `font-weight: 700`, `color: #c62828` (or your warning color), `margin-bottom: 8px`, followed by `<p class="pain-desc">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.5`. Keep titles to 3-5 words max. Keep descriptions to one sentence. The grid should appear before your solution section — problem first, then answer. Optional: add a warning icon (⚠️) or red accent border to emphasize urgency. The format works best when the problems are specific and relatable to your audience.
+
