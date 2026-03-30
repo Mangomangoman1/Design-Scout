@@ -1590,3 +1590,40 @@ Create a `<section class="how-it-works">` with `display: flex`, `flex-direction:
 **Implementation brief:**
 Create a `<section class="founder-letter">` with `max-width: 600px`, `margin: 0 auto`, `padding: 48px 24px`. Content structure: `<p class="greeting">` (styled `font-style: italic`, `margin-bottom: 16px`) + multiple `<p class="body">` paragraphs (styled `font-size: 1rem`, `line-height: 1.7`, `margin-bottom: 16px`) + `<p class="signoff">` (styled `font-weight: 500`, `margin-top: 24px`) + `<p class="signature">` (styled `font-size: 0.875rem`, `color: #666`). Write the letter in first person with a conversational tone. Start with "Dear [customer type]" and end with a memorable sign-off + founder name and title. Keep to 3-4 short paragraphs. The format works best when the letter explains the why behind the business from personal experience.
 
+---
+
+## Scout Run — 2026-03-30 17:25 UTC
+Sources checked: [Land-book](https://land-book.com/), [Awwwards](https://www.awwwards.com/websites/sites-of-the-day/), [Godly](https://godly.website/)
+
+### 🏆 Find 84: Horizontal Scrolling Trust Badge Marquee with Bullet Separators
+**Site:** Persephone Biosciences — [https://persephone.bio/](https://persephone.bio/)
+**Found on:** Land-book — [https://land-book.com/websites/92728-persephone-biosciences](https://land-book.com/)
+**Element type:** Trust signals / social proof / credibility badges
+**What it is:** Persephone displays their trust credentials as an auto-scrolling horizontal marquee: "Probiotic Blend Made in the USA • Clinically-Studied • Clean Label Project Verified • Every Batch Third-Party Tested & Deep DNA Sequenced • No Artificial Additives •" The badges repeat infinitely in a smooth scroll, creating constant motion and reinforcing credibility without taking up vertical space.
+
+**Scores:**
+- Uniqueness: 8/10 — Most trust badges are static grids or footer icons. The scrolling marquee creates movement and draws attention without being distracting. The infinite loop means the credibility message is always visible, always moving.
+- Transferability: 9/10 — Works for any service business with trust credentials: "Same-Day Service • OEM Parts Only • 90-Day Warranty • Locally Owned • Google 5-Star Rated • BBB Accredited •" For Hailey Device Repair, the format surfaces multiple trust signals without cluttering the page.
+- Eyecatch factor: 8/10 — The movement naturally draws the eye. The bullet separators create rhythm. The format works below the hero, above the footer, or as a section divider. Best with 4-8 short badges.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="marquee-container">` with `overflow: hidden`, `white-space: nowrap`, `width: 100%`. Inside, place `<div class="marquee-content">` with `display: inline-block`, `animation: marquee 30s linear infinite`. Add keyframes: `@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }`. Content is duplicated text to create seamless loop. Each badge is inline text with ` • ` (space-bullet-space) separators. Style at `font-size: 0.875rem`, `font-weight: 500`, `text-transform: uppercase`, `letter-spacing: 0.05em`, `color: #666`. Keep badges to 2-5 words each. Use CSS `hover:pause` to let users read on hover. The format works best with factual, verifiable claims rather than vague marketing speak.
+
+---
+
+### 🥈 Find 85: Feature Grid with Bold Headlines and One-Sentence Descriptions
+**Site:** Tatem — [https://tatem.com/](https://tatem.com/)
+**Found on:** Godly — [https://godly.website/website/tatem-1003](https://godly.website/)
+**Element type:** Feature section / value props / scannable grid
+**What it is:** Tatem presents features as a clean grid with two-word bold headlines and single-sentence descriptions: "Split inbox → Prioritize what's important. Split your inbox so you can focus on what matters." / "Modern text editor → Write faster. The text editor you love in your docs, now in your email." / "Speed → Say goodbye to lag. With <50ms interactions, Tatem delivers unmatched speed." Each feature is scannable in under 3 seconds.
+
+**Scores:**
+- Uniqueness: 7/10 — Feature grids are common, but Tatem's execution is tight: the headlines are just 1-2 words, the descriptions are exactly 2 sentences (benefit + proof). The format respects the reader's time.
+- Transferability: 9/10 — Works for any service with multiple features: "Fast turnaround → Get your phone back today. Most repairs done in under an hour." / "Fair pricing → Know the cost upfront. No hourly rates, no surprise fees." / "Local service → Support your neighbor. Family-owned in Hailey since 2024." The format makes complex services scannable.
+- Eyecatch factor: 7/10 — The bold headlines create visual hierarchy. The short descriptions prevent overwhelm. The format works as a features section, services grid, or pricing page add-on. Best with 4-6 features.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="features-grid">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 32px`. Each feature is a `<div class="feature">` containing: `<h3 class="feature-headline">` (styled `font-size: 1.25rem`, `font-weight: 700`, `margin-bottom: 8px`) + `<p class="feature-description">` (styled `font-size: 1rem`, `line-height: 1.6`, `color: #666`). Keep headlines to 1-2 words max. Descriptions should be exactly 2 sentences: first sentence states the benefit, second sentence provides proof or detail. Avoid jargon. The format works best when each feature is genuinely distinct and the copy is tight.
+
