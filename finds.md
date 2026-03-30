@@ -591,3 +591,40 @@ Create a `<div class="step-process">` using CSS Grid: `grid-template-columns: re
 **Implementation brief:**
 Create a `<div class="founder-letter">` with `max-width: 650px`, `margin: 60px auto`, `padding: 40px`, `background: #fafafa` (or a subtle tint), `border-left: 4px solid #your-accent` (optional). Inside: `<p class="letter-salutation">Dear [reader type],</p>` at `font-size: 1.1rem`, `font-style: italic`, `margin-bottom: 16px`. The letter body is 2-4 short paragraphs in regular prose (`font-size: 1rem`, `line-height: 1.7`). End with `<p class="letter-close">` containing a memorable sign-off line + `<span class="signature">— [Name], [Title]</span>` at `font-weight: 600`. Consider adding a small headshot next to the signature for extra trust. The tone should be casual, honest, and specific to your audience — not corporate. If it reads like something you'd actually say in person, you've got it right.
 
+---
+
+## Scout Run — 2026-03-30 00:46 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/)
+
+### 🏆 Find 30: Alphanumeric Service Codes (S01. / S02. / S03.)
+**Site:** Burn Studio — [https://burnstudio.co](https://burnstudio.co)
+**Found on:** Hover States — [https://www.hoverstat.es/features/burn/](https://www.hoverstat.es/features/burn/)
+**Element type:** Typography / services presentation / visual hierarchy
+**What it is:** Instead of numbered lists or bullets, Burn labels each service with alphanumeric codes: "S01. Creative Direction & AEO Strategy" / "S02. Multi-Platform Production" / "S03. Cinematic Social & Multi-Platform Content" and so on. The "S" prefix implies "Service" without spelling it out. The period after the number adds punctuation weight. The format feels technical and systematic — like a catalog or reference document.
+
+**Scores:**
+- Uniqueness: 8/10 — Most service lists use plain numbers (1, 2, 3) or bullets. The "S01" format borrows from industrial/technical documentation and applies it to creative services. It's unexpected and creates a distinct visual pattern. The period adds formality.
+- Transferability: 8/10 — Works well for a repair shop's service menu: "S01. Screen Repair" / "S02. Battery Replacement" / "S03. Charging Port Fix" / "S04. Water Damage Recovery". The coding system implies a comprehensive catalog and professionalism. It also scales cleanly if you add more services.
+- Eyecatch factor: 7/10 — The alphanumeric codes create a systematic rhythm that stands out from typical bullet lists. The "S" prefix is visually distinctive without being flashy. The periods add punctuation that makes each line feel complete.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<ul class="service-codes">` with `list-style: none`, `padding: 0`, `margin: 0`. Each `<li class="service-item">` contains: `<span class="service-code">S01.</span>` at `font-size: 0.85rem`, `font-weight: 600`, `color: #888`, `display: inline-block`, `width: 48px`, `margin-right: 8px`, followed by `<span class="service-name">` at `font-size: 1rem`, `font-weight: 500`. Use a monospace or tabular-nums font for the codes to ensure alignment: `font-family: 'SF Mono', 'Consolas', monospace`, `font-variant-numeric: tabular-nums`. Vertical spacing: `margin-bottom: 12px` per item. The system scales to S01–S99 without alignment issues. Consider using different prefix letters for service categories: "R01" for repairs, "A01" for accessories, etc.
+
+---
+
+### 🥈 Find 31: Large Percentage Stats with "of [audience]..." Context Lines
+**Site:** Superpower — [https://superpower.com](https://superpower.com)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/website/superpower-1015)
+**Element type:** Statistics display / trust-building / social proof
+**What it is:** Superpower displays key stats as large percentage numbers with context: "63% of members find early risk factors for diabetes" / "44% of members find elevated heart disease risk" / "70% of members slow their speed of ageing." The percentage is dominant and oversized. The "of members" phrasing grounds the stat in real user outcomes. The verb ("find", "slow") makes the stat active rather than passive.
+
+**Scores:**
+- Uniqueness: 7/10 — Percentage stats are common, but the "of members" framing is specific and human. Most sites show stats like "95% satisfaction" or "10,000+ customers" — abstract numbers. Superpower shows what people actually experienced, which is more compelling.
+- Transferability: 9/10 — Perfect for a repair shop: "92% of customers repaired same day" / "85% of devices saved from water damage" / "100% of repairs backed by 90-day warranty". The "of customers" or "of devices" framing makes abstract stats feel like real outcomes. The verb matters — "repaired", "saved", "backed" are active.
+- Eyecatch factor: 8/10 — The large percentage number acts as a visual anchor. The context line below provides meaning without cluttering. Three stats in a row create rhythm and build cumulative trust. The format is scannable but informative.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<div class="stat-row">` using CSS Grid: `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))`, `gap: 32px`, `text-align: center`. Each `<div class="stat">` contains: `<span class="stat-number">63%</span>` at `font-size: clamp(2.5rem, 6vw, 4rem)`, `font-weight: 700`, `color: #your-brand`, `line-height: 1`, `display: block`. Below: `<span class="stat-context">of customers repaired same day</span>` at `font-size: 0.95rem`, `font-weight: 400`, `color: #666`, `line-height: 1.4`. Keep to 3 stats — it's the magic number for scannable social proof. Each stat should answer "what outcome?" with an active verb. Avoid vague stats like "high satisfaction" — be specific about what happened.
+
