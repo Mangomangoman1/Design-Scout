@@ -739,3 +739,40 @@ Create a `<div class="honest-review">` with two sections: `<div class="review-li
 **Implementation brief:**
 Create a `<section class="pain-grid">` with `display: grid`, `grid-template-columns: repeat(2, 1fr)`, `gap: 24px`, `max-width: 800px`, `margin: 0 auto`. Each pain point is a `<div class="pain-item">` with: `<h3 class="pain-title">` at `font-size: 1.1rem`, `font-weight: 700`, `color: #c62828` (or your warning color), `margin-bottom: 8px`, followed by `<p class="pain-desc">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.5`. Keep titles to 3-5 words max. Keep descriptions to one sentence. The grid should appear before your solution section — problem first, then answer. Optional: add a warning icon (⚠️) or red accent border to emphasize urgency. The format works best when the problems are specific and relatable to your audience.
 
+---
+
+## Scout Run — 2026-03-30 01:26 UTC
+Sources checked: [Godly](https://godly.website/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 38: "Built Different" Feature Grid with Single-Word Headers
+**Site:** Status — [https://status.app](https://status.app)
+**Found on:** Godly — [https://godly.website/website/status-993](https://godly.website/website/status-993)
+**Element type:** Feature presentation / trust-building / typography
+**What it is:** Status presents its key differentiators under a "Built different" section header. Each feature uses a single bold word as the header ("Open source", "Decentralised", "Secure", "Community driven", "Permissionless", "Free and ad-free") followed by a single explanatory sentence. The format is brutally concise — one word captures the concept, one sentence explains why it matters. The six features are arranged in a 2×3 or 3×2 grid.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections use multi-word headers or phrases. Status commits to single-word (or hyphenated compound) headers that each carry full weight. The contrast between the bold, punchy header and the explanatory sentence creates visual hierarchy without extra design elements.
+- Transferability: 9/10 — Perfect for a repair shop's differentiators: "Fast." → "Most repairs done in under an hour." / "Honest." → "We tell you the cost before we start." / "Local." → "We're in Hailey, not some distant call center." / "Guaranteed." → "Every repair backed by 90-day warranty." The single-word format forces you to identify the core attribute.
+- Eyecatch factor: 8/10 — The bold single-word headers stand out immediately. The grid layout creates visual rhythm. The brevity is itself eye-catching — visitors can scan all six features in seconds and retain them.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="differentiators">` with a header like `<h2>Built different</h2>` or `<h2>Why choose us</h2>`. Below, a `<div class="diff-grid">` using CSS Grid: `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 24px`. Each `<div class="diff-item">` contains: `<h3 class="diff-header">` at `font-size: 1rem`, `font-weight: 700`, `color: #111`, `margin-bottom: 4px`, with just ONE word (or hyphenated compound). Below: `<p class="diff-desc">` at `font-size: 0.9rem`, `font-weight: 400`, `color: #666`, `line-height: 1.5` — one sentence only, no period optional for punchier feel. The constraint forces clarity: if you can't capture the differentiator in one word, you don't understand it yet. The sentence should explain *why it matters to the customer*, not what it is.
+
+---
+
+### 🥈 Find 39: Decimal-Numbered Mission/Vision/Ambition List (0.1 / 0.2 / 0.3)
+**Site:** Augen Pro — [https://augen.pro](https://augen.pro)
+**Found on:** Godly — [https://godly.website/website/augen-1014](https://godly.website/website/augen-1014)
+**Element type:** Typography / organizational structure / brand positioning
+**What it is:** Augen Pro presents its company direction as a numbered list with decimal notation: "0.1 Our Mission — Smarter, smaller AI health tools" / "0.2 Our Vision — Lead the future of Invisible Computing" / "0.3 Our Ambition — Simplify Heads-Up Computing". The decimal format (0.1, 0.2, 0.3) implies versioning and iteration — like software or scientific documentation. The structure elevates standard "mission/vision" content into something that feels systematic and technical.
+
+**Scores:**
+- Uniqueness: 9/10 — Most mission/vision sections use plain headings or bullet points. The decimal numbering (starting from 0.1 rather than 1) has a distinct technical flavor — it suggests precision, iteration, and engineering rigor. The format is rare in service business contexts, which makes it memorable.
+- Transferability: 7/10 — Works for a repair shop positioning itself as technical and precise: "0.1 Our Focus — Mobile devices, done right" / "0.2 Our Standard — Same-day turnaround, no exceptions" / "0.3 Our Promise — Fixed or you don't pay". The decimal format might feel overly technical for some casual businesses, but for repair shops it reinforces competence and precision.
+- Eyecatch factor: 8/10 — The decimal numbers are visually distinctive. The format breaks expectations — visitors don't expect to see "0.1" on a business website. The systematization implies thoroughness and attention to detail.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<ul class="numbered-principles">` with `list-style: none`, `padding: 0`, `margin: 0`. Each `<li class="principle-item">` contains: `<span class="principle-num">0.1</span>` at `font-size: 0.8rem`, `font-weight: 700`, `color: #888`, `font-family: 'SF Mono', 'Consolas', monospace`, `display: inline-block`, `width: 32px`, `margin-right: 12px`. Followed by `<span class="principle-label">Our Mission</span>` at `font-weight: 600`, `color: #111`, then a separator (em dash or line break), then `<span class="principle-desc">` at `font-weight: 400`, `color: #444`. Use tabular-nums for consistent digit alignment: `font-variant-numeric: tabular-nums`. Keep to 3-4 items — the format works best with a small, focused set of principles. The decimal starting point (0.1 vs 1.0) is a stylistic choice — 0.x implies "foundational/baseline", 1.x implies "first version".
+
