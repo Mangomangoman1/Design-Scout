@@ -1368,3 +1368,40 @@ Create a `<section class="faq-grid">` with `display: grid`, `grid-template-colum
 **Implementation brief:**
 Create a `<p class="tagline-list">` with `font-size: 1.25rem`, `color: #666`, `letter-spacing: 0.02em`. Items are inline text separated by ` · ` (space-middot-space). Use CSS `white-space: nowrap` on mobile to prevent awkward line breaks, or break into stacked list on small screens with media query. Keep to 2-4 items. Each item should be a distinct service category or value prop. The format works best when items are parallel in structure and roughly equal in importance.
 
+---
+
+## Scout Run — 2026-03-30 11:13 UTC
+Sources checked: [Land-book](https://land-book.com/), [Httpster](https://httpster.net/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 72: Feature Cards with Numbered Headlines and Capability Tags
+**Site:** Interfere — [https://interfere.com/](https://interfere.com/)
+**Found on:** Land-book — [https://land-book.com/websites/93190-interfere-build-software-that-never-breaks](https://land-book.com/)
+**Element type:** Features section / value props / numbered list with tags
+**What it is:** Interfere presents features with a 01/02/03 number prefix, a short headline, and a row of capability tags below. Example: "01 / Learn about issues before your customers do" followed by tags like "Full-stack understanding · User Tracking · Logging & Alerting · Session Replays." The format combines numbered progression with scannable capability keywords.
+
+**Scores:**
+- Uniqueness: 8/10 — Numbered feature sections exist, but adding capability tags below each headline creates a dual-layer of information: the headline tells what, the tags show how. The format is both scannable and detailed.
+- Transferability: 8/10 — Works for service businesses with multiple offerings: "01 / Screen Repairs" + tags: "iPhone · Samsung · Same-day · Warranty" / "02 / Battery Replacements" + tags: "30-min service · OEM parts · Price match." For Hailey Device Repair, the format communicates service breadth while staying scannable.
+- Eyecatch factor: 8/10 — The large numbers create visual anchors. The tags create horizontal rhythm. The format works as a features section, services overview, or capabilities grid. Best with 3-5 items.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="features">` with `display: grid`, `gap: 48px`. Each feature is a `<div class="feature-card">` containing: `<span class="number">` (styled `font-size: 0.875rem`, `font-weight: 600`, `color: #999`), `<h3 class="headline">` (styled `font-size: 1.5rem`, `font-weight: 600`, `margin: 12px 0`), and `<div class="tags">` (styled `display: flex`, `flex-wrap: wrap`, `gap: 8px`). Each tag is a `<span class="tag">` with `padding: 4px 12px`, `background: #f0f0f0`, `border-radius: 4px`, `font-size: 0.875rem`. Keep to 3-5 features. Each headline should be a clear benefit. Tags should be specific capabilities, not vague descriptors.
+
+---
+
+### 🥈 Find 73: Three-Part Manifesto with Subheads (Statement. / Proof. / Implication.)
+**Site:** NOA Labs — [https://www.noa-labs.com/](https://www.noa-labs.com/)
+**Found on:** Land-book via NOA redirect
+**Element type:** Philosophy section / manifesto / trust-building
+**What it is:** NOA Labs presents three principles in a bold statement + supporting context format: "Hardware is Easy. / If you did it before. / We did it thousands of times." Each principle is a claim, followed by the qualification, then the proof of capability. The format transforms abstract principles into concrete credibility.
+
+**Scores:**
+- Uniqueness: 8/10 — Most manifesto sections are either just taglines or long paragraphs. This three-line rhythm (bold claim → qualifier → proof) creates memorable statements that also back up the claim. The format is both aspirational and grounded.
+- Transferability: 8/10 — Works for any service business making claims: "Device repair is stressful. / If you don't know who to trust. / We've fixed 2000+ devices for Hailey locals." / "Speed matters. / When you need your phone for work. / Same-day repairs, every time." The format builds trust by immediately backing up claims.
+- Eyecatch factor: 7/10 — The bold headlines create visual anchors. The supporting lines add depth without clutter. The format works as a philosophy section, about page intro, or footer statement. Best with exactly 3 principles.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="manifesto">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`, `gap: 48px`. Each principle is a `<div class="principle">` containing: `<h3 class="statement">` (styled `font-size: 1.5rem`, `font-weight: 700`, `margin-bottom: 8px`), and two `<p class="support">` lines (styled `font-size: 1rem`, `color: #666`, `line-height: 1.5`). First support line is the qualifier (the condition). Second support line is the proof (your capability). Keep to exactly 3 principles. Each statement should be bold and slightly provocative. The supports should ground the claim in reality.
+
