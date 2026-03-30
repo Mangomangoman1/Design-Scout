@@ -628,3 +628,40 @@ Create a `<ul class="service-codes">` with `list-style: none`, `padding: 0`, `ma
 **Implementation brief:**
 Create a `<div class="stat-row">` using CSS Grid: `grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))`, `gap: 32px`, `text-align: center`. Each `<div class="stat">` contains: `<span class="stat-number">63%</span>` at `font-size: clamp(2.5rem, 6vw, 4rem)`, `font-weight: 700`, `color: #your-brand`, `line-height: 1`, `display: block`. Below: `<span class="stat-context">of customers repaired same day</span>` at `font-size: 0.95rem`, `font-weight: 400`, `color: #666`, `line-height: 1.4`. Keep to 3 stats — it's the magic number for scannable social proof. Each stat should answer "what outcome?" with an active verb. Avoid vague stats like "high satisfaction" — be specific about what happened.
 
+---
+
+## Scout Run — 2026-03-30 00:56 UTC
+Sources checked: [Land-book](https://land-book.com/), [Awwwards](https://www.awwwards.com/websites/sites-of-the-day/)
+
+### 🏆 Find 32: Question-Based Navigation Links ("Curious who we are?")
+**Site:** forpeople — [https://forpeople.com](https://forpeople.com)
+**Found on:** Land-book — [https://land-book.com/websites/92878-forpeople-o-global-creative-agency](https://land-book.com/websites/92878-forpeople-o-global-creative-agency)
+**Element type:** Navigation / copywriting / conversational UX
+**What it is:** Instead of standard navigation labels ("About", "Services", "Contact"), forpeople uses question-based links: "Curious who we are?" / "How we work?" / "What we've been up to?" / "How to contact us?" / "Or if we use LinkedIn?" Each question is conversational and leads naturally into the page content. The format transforms navigation from a menu into a dialogue.
+
+**Scores:**
+- Uniqueness: 9/10 — Almost every site uses noun-based navigation ("About", "Work", "Contact"). Framing navigation as questions is rare and instantly distinctive. It creates a conversational relationship with the visitor — they're asking questions, you're answering.
+- Transferability: 7/10 — Works for a repair shop: "Need your phone fixed?" (Services) / "Wondering how it works?" (Process) / "Want to get a quote?" (Contact) / "Curious who fixes your stuff?" (About). The question format requires some creative rewriting but creates more engaging navigation. Best for businesses with a casual, approachable tone.
+- Eyecatch factor: 8/10 — The question marks stand out. The format breaks expectations — visitors don't expect to be asked questions by a navigation menu. The conversational tone makes the site feel warmer and more human.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<nav class="question-nav">` with links styled as `<a class="nav-question">Curious who we are?</a>`. Style at `font-size: 1rem`, `font-weight: 400`, `color: inherit`, `text-decoration: none`. On hover: `color: #your-accent`, `text-decoration: underline`. The question mark is crucial — it creates the conversational feel. Keep questions short (5-7 words max). Each question should naturally lead into the page content. Structure as: "Question word + what the page covers?" Examples: "How does it work?" / "Ready to get started?" / "Want to see our work?" Test by reading aloud — if it sounds like something you'd actually ask, it works.
+
+---
+
+### 🥈 Find 33: Animated Percentage Counter with Supporting Context
+**Site:** The Sculpt Society — [https://thesculptsociety.com](https://thesculptsociety.com)
+**Found on:** Awwwards — [https://www.awwwards.com/sites/the-sculpt-society](https://www.awwwards.com/sites/the-sculpt-society)
+**Element type:** Statistics display / trust-building / animation
+**What it is:** The Sculpt Society displays key stats with animated percentage counters: "0%" counts up to "92%" (see real results with TSS) / "0%" counts up to "95%" (feel stronger since joining) / "0%" counts up to "97%" (look forward to TSS workouts). The numbers animate when the section scrolls into view. The "0" placeholder creates anticipation before revealing the actual stat. Context appears below each number.
+
+**Scores:**
+- Uniqueness: 7/10 — Animated stat counters aren't new, but the execution matters. TSS uses round numbers (92%, 95%, 97%) that feel specific and believable. The animation triggers on scroll, creating a reveal moment. The context phrasing ("feel stronger since joining") is human and outcome-focused.
+- Transferability: 9/10 — Perfect for a repair shop: "0% → 98% of devices we receive are repairable" / "0% → 100% of repairs backed by warranty" / "0% → Same-day turnaround for most repairs". The counter animation adds visual interest without complexity. The format works for any stat you can express as a percentage.
+- Eyecatch factor: 8/10 — The counting animation creates movement that draws the eye. The numbers are large and dominant. The scroll trigger creates a "reveal" moment that makes visitors pause and watch. More engaging than static numbers.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<div class="stat-counter">` using CSS Grid: `grid-template-columns: repeat(3, 1fr)`, `gap: 24px`. Each stat is: `<div class="stat"><span class="stat-value" data-target="92">0</span><span class="stat-symbol">%</span><span class="stat-label">see real results</span></div>`. Style `.stat-value` at `font-size: clamp(3rem, 8vw, 5rem)`, `font-weight: 700`, `line-height: 1`. Use Intersection Observer to trigger count animation when visible: `const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { animateCounter(entry.target); } }); }, { threshold: 0.5 });` The counter function increments from 0 to `data-target` over 1.5-2 seconds with easing. Add `font-variant-numeric: tabular-nums` to prevent layout shift during animation. Context labels below should be concise (3-5 words).
+
