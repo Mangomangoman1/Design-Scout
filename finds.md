@@ -1146,3 +1146,40 @@ Create a `<section class="prose-directory">` with `<p class="directory-text">` a
 **Implementation brief:**
 Create a `<section class="capability-list">` with a `<ul>` at `list-style: none`, `padding: 0`, `display: flex`, `flex-direction: column`, `gap: 16px`. Each `<li>` at `font-size: 1rem`, `line-height: 1.5`, `padding: 16px`, `background: #f8f8f8`, `border-radius: 8px`. Format each capability as: [Action verb] + [what] + [specific outcome/context]. Examples: "Transcribe voice notes with human-level accuracy" / "Generate outlines from scattered thoughts" / "List key takeaways from meeting notes." Keep to 4-6 capabilities. Use specific qualifiers ("human-level", "same-day", "while you wait") to make abstract services concrete. Avoid buzzwords — describe what actually happens.
 
+---
+
+## Scout Run — 2026-03-30 04:56 UTC
+Sources checked: [Godly](https://godly.website/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 60: Hyphenated Category Positioning in Headline ("Revenue-first web analytics")
+**Site:** Visitors — [https://visitors.now](https://visitors.now)
+**Found on:** Godly — [https://godly.website/website/visitors](https://godly.website/)
+**Element type:** Copywriting / positioning / headline strategy
+**What it is:** Visitors doesn't call itself "web analytics" — it says "Revenue-first web analytics" in the hero headline. The hyphenated prefix ("Revenue-first") creates instant differentiation within a crowded category. The format signals: "We're still analytics, but with this twist." It's more specific and memorable than generic positioning like "Better analytics" or "Modern analytics."
+
+**Scores:**
+- Uniqueness: 8/10 — Most companies position themselves with vague adjectives ("better", "faster", "smarter"). The hyphenated category modifier (Revenue-first, Privacy-first, etc.) is specific and creates a sub-category. It's positioning as strategy, not just copywriting.
+- Transferability: 10/10 — Direct lift for any service business: "Same-day phone repair" / "Text-first customer service" / "Honest-pricing screen fixes" / "Local-first device repair." The format works because it tells customers *exactly* what makes you different in one phrase. For Hailey Device Repair: "Text-first repair service" or "Same-day phone repair" positions the business instantly.
+- Eyecatch factor: 8/10 — The hyphenated format makes you stop and process it. It's more concrete than buzzwords. The specificity builds trust immediately. It reads as a value statement, not marketing fluff.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Identify your single biggest differentiator — the one thing customers care about most. Format it as: "[Differentiator]-first [category]" or "[Outcome]-focused [category]". Examples: "Same-day phone repair" / "Text-first repair service" / "Honest-pricing screen fixes" / "Local-first device repair in Hailey." Place this as the `<h1>` hero headline at `font-size: clamp(2rem, 5vw, 3.5rem)`, `font-weight: 700`, `line-height: 1.2`. Follow with a single-sentence explanation underneath at `font-size: 1.1rem`, `font-weight: 400`, `color: #666`. The hyphenated format works because it's specific enough to be believable and broad enough to not be limiting. Avoid vague modifiers ("better", "modern", "smart") — use concrete outcomes or methods.
+
+---
+
+### 🥈 Find 61: Selective ALL-CAPS Word Emphasis in Multi-Line Headlines
+**Site:** Duties — [https://www.duties.xyz](https://www.duties.xyz)
+**Found on:** Godly — [https://godly.website/website/duties-1009](https://godly.website/website/duties-1009)
+**Element type:** Typography / headline treatment / emphasis pattern
+**What it is:** Duties uses a two-line hero headline with selective ALL-CAPS emphasis: "BRANDS and websites" / "for BRAVE companies." The caps draw the eye to the key nouns (BRANDS, BRAVE), while the lowercase connector words (and, for) create rhythm and hierarchy within the headline itself. The format is bolder than selective bolding but more restrained than all-caps headlines.
+
+**Scores:**
+- Uniqueness: 8/10 — Selective caps within running text is uncommon on hero headlines. Most sites go all-caps or all-lowercase. This hybrid creates visual tension and emphasis without shouting. The pattern makes two key words unforgettable (BRANDS, BRAVE) while keeping the sentence readable.
+- Transferability: 9/10 — Works immediately for service businesses: "SCREEN REPAIRS done same day" / "BROKEN PHONES fixed while you wait" / "TEXT US for honest pricing" / "HAILEY'S local repair shop." The format lets you emphasize the most important words without sacrificing readability. For Hailey Device Repair: "PHONES and tablets" / "FIXED same day."
+- Eyecatch factor: 9/10 — The caps create instant visual hierarchy. Your eye goes to BRANDS and BRAVE first, then fills in the rest. The contrast is striking without being aggressive. The pattern works especially well for short, punchy value propositions.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Write a 2-line headline that pairs a service/product with a differentiator or audience. Identify the 1-2 most important words and set them in ALL CAPS. Keep connectors (and, for, with, done, while) in lowercase. Example: "SCREEN REPAIRS done same day" / "BROKEN PHONES fixed in an hour." Use `<h1>` at `font-size: clamp(2.5rem, 6vw, 4.5rem)`, `font-weight: 700`, `line-height: 1.1`. Style caps words with `text-transform: uppercase` or write them manually in caps. Use a strong sans-serif (Inter, Helvetica, Satoshi). The lowercase words should be the same size as caps — don't mix font sizes. The size contrast comes from the letterforms themselves. Keep headlines to 2 lines max. This format works best for confident, direct positioning — not subtle or elegant brands.
+
