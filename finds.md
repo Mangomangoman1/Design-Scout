@@ -1442,3 +1442,40 @@ Create a `<section class="stats">` with `display: flex`, `justify-content: cente
 **Implementation brief:**
 Create a `<div class="feature-block">` containing: `<h3 class="feature-title">` (styled `font-size: 1.5rem`, `font-weight: 600`), `<p class="feature-description">` (styled `font-size: 1rem`, `color: #444`, `margin: 8px 0`), and `<p class="replaces">` (styled `font-size: 0.875rem`, `color: #999`). Format the replaces line as "Replaces: [Name], [Name], [Name]" — use real competitor or category names. Keep to 2-4 names. The format works best when competitors are recognizable and when you genuinely offer a viable alternative to all listed options.
 
+---
+
+## Scout Run — 2026-03-30 13:16 UTC
+Sources checked: [Hover States](https://www.hoverstat.es/), [Land-book](https://land-book.com/)
+
+### 🏆 Find 76: Services as Coded Labels with "S01. / S02. / S03." Prefix
+**Site:** Burn Studio — [https://burnstudio.co/](https://burnstudio.co/)
+**Found on:** Hover States — [https://www.hoverstat.es/features/burn/](https://www.hoverstat.es/)
+**Element type:** Services list / capabilities / structured presentation
+**What it is:** Burn presents their services with a coded prefix format: "S01. Creative Direction & AEO Strategy / S02. Multi-Platform Production / S03. Cinematic Social & Multi-Platform Content / S04. AI Visibility Reporting / S05. Media Planning & Analytics." The "S01." prefix creates a systems-like feel — like you're looking at a spec sheet or catalog rather than marketing copy. Each service is a single line with no additional description.
+
+**Scores:**
+- Uniqueness: 8/10 — Numbered services exist, but the "S01." format with the period-dot prefix creates a technical, catalog-like aesthetic. The format signals precision and organization. It feels like a menu from a professional system rather than generic marketing bullets.
+- Transferability: 8/10 — Works for any service business with defined offerings: "S01. Screen Repairs / S02. Battery Replacements / S03. Charging Port Fixes / S04. Water Damage Recovery / S05. Data Transfer." For Hailey Device Repair, the format communicates professionalism and clarity.
+- Eyecatch factor: 8/10 — The coded prefixes create visual rhythm. The single-line format is scannable. The format works as a services section, footer capability list, or about page overview. Best with 4-6 items.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<ul class="services-list">` with `list-style: none`, `padding: 0`. Each `<li>` contains: `<span class="service-code">` (styled `font-size: 0.875rem`, `font-weight: 500`, `color: #999`, `margin-right: 8px`) + `<span class="service-name">` (styled `font-size: 1rem`, `font-weight: 500`). Format the code as "S01." with zero-padded numbers. Keep service names to 3-5 words max — no descriptions, just the capability name. Use `display: flex`, `flex-direction: column`, `gap: 12px` for the list. The format works best when you have distinct, parallel services that don't need explanation.
+
+---
+
+### 🥈 Find 77: Portfolio Items with "✕" Cross Connector (Client ✕ Project)
+**Site:** Lafour — [https://lafour.com/](https://lafour.com/)
+**Found on:** Hover States — [https://www.hoverstat.es/features/lafour/](https://www.hoverstat.es/)
+**Element type:** Portfolio list / work credits / client display
+**What it is:** Lafour presents their work as a list of client-project pairs connected by a "✕" (multiplication/cross) symbol: "MONCLER ✕ EDWARD ENNINFUL CAMPAIGN VIDEO" / "MARGIELA ✕ GENTLE MONSTER" / "ON ✕ FKA TWIGS CAPSULE SS25." The format creates a collaboration feel — two names joined by a connector. The "✕" symbol reads as "with" or "featuring" but feels more editorial than "and" or "/".
+
+**Scores:**
+- Uniqueness: 8/10 — Most portfolio lists use slashes, dashes, or just client names. The "✕" connector creates a fashion/editorial aesthetic. It implies collaboration and partnership rather than just "client: project." The format makes each work feel like an event or collaboration, not just a job completed.
+- Transferability: 7/10 — Works for businesses with notable partnerships or repeat customers: "iPhone 14 Pro ✕ Screen Replacement" / "Hailey Locals ✕ Same-Day Service" / "Water Damage ✕ Data Recovery Success." The format is best when both sides have weight — client + project, device + service, problem + solution.
+- Eyecatch factor: 8/10 — The "✕" symbol is visually distinctive. The format creates a scannable list with editorial rhythm. Works as a portfolio section, case study list, or testimonial format ("Local Business Owner ✕ Saved $200 vs Apple Store").
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<ul class="portfolio-list">` with `list-style: none`. Each `<li>` is a single line containing: `<span class="client">` + `<span class="connector"> ✕ </span>` + `<span class="project">`. Style the client at `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`. Style the connector at `color: #999`, `margin: 0 8px`. Style the project at `font-weight: 400`. Use the Unicode "✕" (U+2715) or "×" (U+00D7) character. Keep items to one line each. The format works best when both sides are recognizable or meaningful — avoid generic client names or vague project descriptions.
+
