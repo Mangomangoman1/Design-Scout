@@ -665,3 +665,40 @@ Create a `<nav class="question-nav">` with links styled as `<a class="nav-questi
 **Implementation brief:**
 Create a `<div class="stat-counter">` using CSS Grid: `grid-template-columns: repeat(3, 1fr)`, `gap: 24px`. Each stat is: `<div class="stat"><span class="stat-value" data-target="92">0</span><span class="stat-symbol">%</span><span class="stat-label">see real results</span></div>`. Style `.stat-value` at `font-size: clamp(3rem, 8vw, 5rem)`, `font-weight: 700`, `line-height: 1`. Use Intersection Observer to trigger count animation when visible: `const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { animateCounter(entry.target); } }); }, { threshold: 0.5 });` The counter function increments from 0 to `data-target` over 1.5-2 seconds with easing. Add `font-variant-numeric: tabular-nums` to prevent layout shift during animation. Context labels below should be concise (3-5 words).
 
+---
+
+## Scout Run — 2026-03-30 01:06 UTC
+Sources checked: [Godly](https://godly.website/), [Land-book](https://land-book.com/)
+
+### 🏆 Find 34: Pre-Emptive FAQ Section ("What we do / How it helps / Who are we for")
+**Site:** Duties — [https://duties.xyz](https://duties.xyz)
+**Found on:** Godly — [https://godly.website/website/duties-1009](https://godly.website/website/duties-1009)
+**Element type:** Copy structure / services presentation / trust-building
+**What it is:** Instead of a traditional "About" or "Services" section, Duties structures their value proposition as a series of pre-emptive questions: "What we do" / "How it helps" / "Who are we for" / "When to engage" / "What it costs" — each with a single-paragraph answer below. The questions are bold and serve as section headers. The format anticipates exactly what a potential customer is wondering and answers before they ask.
+
+**Scores:**
+- Uniqueness: 8/10 — Most business sites organize content around internal categories (Services, About, Portfolio). Duties organizes around customer questions. The "When to engage" and "What it costs" headers are especially rare — most businesses avoid these on the homepage. The directness is refreshing.
+- Transferability: 9/10 — Perfect for a repair shop: "What we fix" (phones, tablets, laptops — screens, batteries, ports) / "How it helps" (get your device back same day, no appointments) / "Who we're for" (anyone in Hailey/Wood River Valley with a broken device) / "When to come in" (walk-ins welcome, text first for complex repairs) / "What it costs" (upfront quotes, no hidden fees). The structure guides the visitor through the exact decision flow.
+- Eyecatch factor: 7/10 — The bold question headers create visual rhythm. The Q&A format is scannable — visitors can find exactly what they need. The structure feels less like marketing and more like a helpful conversation.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="faq-overview">` with `max-width: 800px`, `margin: 0 auto`, `padding: 60px 24px`. Each question-answer pair is a `<div class="faq-item">` with `margin-bottom: 32px`. The question is `<h3 class="faq-q">` at `font-size: 1.1rem`, `font-weight: 700`, `color: #111`, `margin-bottom: 8px`. The answer is `<p class="faq-a">` at `font-size: 1rem`, `font-weight: 400`, `color: #444`, `line-height: 1.6`. Keep answers to 2-3 sentences max — the format works because it's concise. Consider adding a subtle left border (`border-left: 3px solid #your-accent`, `padding-left: 16px`) to each item for visual grouping. The questions should follow the customer's mental decision sequence: What is this? → Why should I care? → Is this for me? → When/how? → How much?
+
+---
+
+### 🥈 Find 35: Stacked Single-Line Credentials Block
+**Site:** SavoirFaire — [https://savoirfaire.nyc](https://savoirfaire.nyc)
+**Found on:** Godly — [https://godly.website/website/savoirfaire-1008](https://godly.website/website/savoirfaire-1008)
+**Element type:** Footer/about section / typography / minimal layout
+**What it is:** SavoirFaire displays core business facts as single lines stacked vertically: "Digital & Branding Design" / "Photography & Film Production" / "Founded in 2020" / "Brooklyn, NY" — no bullets, no commas, just one fact per line. The format is ultra-minimal and reads like metadata or a business card. Each line is a complete statement. The stacking creates rhythm and hierarchy without decoration.
+
+**Scores:**
+- Uniqueness: 8/10 — Most footer/about sections cram information into paragraphs or bullet lists. SavoirFaire treats each fact as its own line item, like a vertical business card. The one-fact-per-line format is rare and creates visual breathing room.
+- Transferability: 9/10 — Direct steal for a repair shop footer or about section: "Phone & Tablet Repair" / "Same-Day Service" / "Est. 2024" / "Hailey, Idaho" — or for services: "Cracked Screens" / "Dead Batteries" / "Water Damage" / "Charging Issues". The format works anywhere you'd normally use a bullet list but want more visual weight.
+- Eyecatch factor: 8/10 — The vertical stacking and generous line spacing make each fact register individually. The format is bold by being minimal — no visual clutter means every line gets attention. The lack of punctuation between items is deliberate and clean.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="credentials">` with `display: flex`, `flex-direction: column`, `gap: 8px` (or `line-height: 2` on a single block). Each line is either a `<span>` with `display: block` or separate `<p>` elements. Style at `font-size: 0.9rem`, `font-weight: 400`, `color: #666`, `text-transform: uppercase` (optional), `letter-spacing: 0.05em`. No bullets, no commas, no conjunctions — each line stands alone. For hierarchy, make the first line (main service) slightly larger or bolder. Works well in a footer column, in an about section sidebar, or as a "quick facts" block on a contact page. The restraint is the design — resist the urge to add icons or bullets.
+
