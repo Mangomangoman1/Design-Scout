@@ -1405,3 +1405,40 @@ Create a `<section class="features">` with `display: grid`, `gap: 48px`. Each fe
 **Implementation brief:**
 Create a `<section class="manifesto">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`, `gap: 48px`. Each principle is a `<div class="principle">` containing: `<h3 class="statement">` (styled `font-size: 1.5rem`, `font-weight: 700`, `margin-bottom: 8px`), and two `<p class="support">` lines (styled `font-size: 1rem`, `color: #666`, `line-height: 1.5`). First support line is the qualifier (the condition). Second support line is the proof (your capability). Keep to exactly 3 principles. Each statement should be bold and slightly provocative. The supports should ground the claim in reality.
 
+---
+
+## Scout Run — 2026-03-30 12:15 UTC
+Sources checked: [Godly](https://godly.website/), [Awwwards SOTD](https://www.awwwards.com/websites/sites-of-the-day/)
+
+### 🏆 Find 74: Outcome Statistics with Plain-Language Descriptions
+**Site:** Superpower — [https://superpower.com/](https://superpower.com/)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/)
+**Element type:** Social proof / stats / trust-building
+**What it is:** Superpower presents customer outcomes as large percentage numbers with plain-language descriptions: "63% of members find early risk factors for diabetes" / "44% of members find elevated heart disease risk" / "70% of members slow their speed of ageing." The format turns abstract statistics into concrete, relatable outcomes. Numbers are bold and large; descriptions are conversational.
+
+**Scores:**
+- Uniqueness: 8/10 — Most stat sections use vanity metrics ("10,000+ customers served"). Superpower flips it by showing what customers *discovered* or *achieved*. The format makes statistics about the customer, not the company. Percentages feel more credible than round numbers.
+- Transferability: 9/10 — Works for any service business with trackable outcomes: "87% of repairs completed same-day" / "94% of customers rate us 5 stars" / "3 out of 4 customers return for their next repair." For Hailey Device Repair, the format builds trust through real results.
+- Eyecatch factor: 8/10 — Large percentage numbers create visual anchors. The plain-language descriptions make stats approachable. The format works as a hero section, trust section, or CTA accompaniment. Best with 3 statistics.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="stats">` with `display: flex`, `justify-content: center`, `gap: 48px`, `flex-wrap: wrap`. Each stat is a `<div class="stat-block">` containing: `<span class="number">` (styled `font-size: 3rem`, `font-weight: 700`, `color: #111`, `display: block`) and `<p class="description">` (styled `font-size: 1rem`, `color: #666`, `max-width: 200px`, `line-height: 1.5`). Use percentage signs inline with numbers. Keep descriptions to one sentence that starts with "of customers/members [action]" or similar customer-centric framing. Best with exactly 3 statistics that represent outcomes, not vanity metrics.
+
+---
+
+### 🥈 Find 75: "Replaces: [Competitor List]" Positioning Under Feature Headlines
+**Site:** Amie — [https://amie.so/](https://amie.so/)
+**Found on:** Godly — [https://godly.website/website/amie-992](https://godly.website/)
+**Element type:** Positioning / competitive differentiation / feature context
+**What it is:** Amie positions features with a subtle "Replaces:" line listing competitors: "Meeting Notes / Summarize any meeting, without a bot / Replaces: Fireflies, Otter, Fathom." The format immediately communicates market position and helps visitors understand what problem the feature solves by referencing tools they already know.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections describe benefits generically. Adding "Replaces:" creates instant context — visitors immediately understand the problem space. The format is confident without being aggressive. It borrows credibility from known competitors.
+- Transferability: 7/10 — Works for services competing with established alternatives: "Screen Repair / Replaces: The Genius Bar, UBreakIFix" / "Same-Day Service / Replaces: Mail-in repair, waiting a week." The format works best when competitors are well-known and the replacement claim is credible.
+- Eyecatch factor: 7/10 — The "Replaces:" line is subtle but attention-grabbing. It invites comparison. The format works as a feature section subtitle, pricing page differentiator, or FAQ context. Best with 2-4 competitor names.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create a `<div class="feature-block">` containing: `<h3 class="feature-title">` (styled `font-size: 1.5rem`, `font-weight: 600`), `<p class="feature-description">` (styled `font-size: 1rem`, `color: #444`, `margin: 8px 0`), and `<p class="replaces">` (styled `font-size: 0.875rem`, `color: #999`). Format the replaces line as "Replaces: [Name], [Name], [Name]" — use real competitor or category names. Keep to 2-4 names. The format works best when competitors are recognizable and when you genuinely offer a viable alternative to all listed options.
+
