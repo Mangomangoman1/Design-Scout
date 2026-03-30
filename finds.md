@@ -1553,3 +1553,40 @@ Create a `<section class="about-qa">` with `display: grid`, `gap: 32px`, `grid-t
 **Implementation brief:**
 Create a `<section class="superpowers">` with `display: flex`, `flex-direction: column`, `gap: 64px`. Each superpower is a `<div class="superpower">` containing: `<span class="superpower-label">` (styled `font-size: 0.75rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #666`, `display: block`, `margin-bottom: 16px`) + the feature content below. Format the label as "✦ Superpower #1" using the Unicode sparkle (✦ U+2726). Keep to exactly 3 superpowers. Each should be a distinct, powerful capability. The playful framing works best when the features genuinely give users meaningful power or advantage.
 
+---
+
+## Scout Run — 2026-03-30 16:23 UTC
+Sources checked: [Godly](https://godly.website/), [Httpster](https://httpster.net/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 82: "How it works" Steps with Large Circled Numbers and Action Headlines
+**Site:** Superpower — [https://superpower.com/](https://superpower.com/)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/)
+**Element type:** Process flow / onboarding steps / numbered guide
+**What it is:** Superpower presents their "How it works" section with three large circled numbers (1, 2, 3), each followed by a short action headline and one-sentence description: "1 / Test your whole body — Get a comprehensive blood draw..." / "2 / An actionable plan — Easy to understand results..." / "3 / A connected ecosystem — Book additional diagnostics..." The numbers are visually prominent and the headlines are action-oriented.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered steps are common, but the combination of large circled numbers + action verb headlines + single-sentence descriptions creates a clean, scannable format. The format feels modern without being gimmicky.
+- Transferability: 9/10 — Works for any service with a clear process: "1 / Text us your issue — Describe what's broken" / "2 / Get a quote — Upfront pricing, no surprises" / "3 / Drop off or schedule — Same-day repairs available." For Hailey Device Repair, the format demystifies the customer journey.
+- Eyecatch factor: 8/10 — The large numbers create visual anchors. The action headlines are scannable. The format works as a hero section, process overview, or FAQ alternative. Best with exactly 3 steps.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="how-it-works">` with `display: flex`, `flex-direction: column`, `gap: 32px` (or horizontal on desktop with `flex-direction: row`). Each step is a `<div class="step">` containing: `<span class="step-number">` (styled `display: flex`, `align-items: center`, `justify-content: center`, `width: 48px`, `height: 48px`, `border-radius: 50%`, `background: #f0f0f0`, `font-size: 1.25rem`, `font-weight: 600`, `margin-bottom: 16px`) + `<h3 class="step-headline">` (styled `font-size: 1.25rem`, `font-weight: 600`, `margin-bottom: 8px`) + `<p class="step-description">` (styled `font-size: 1rem`, `color: #666`, `line-height: 1.5`). Keep to exactly 3 steps. Headlines should start with an action noun or verb. Descriptions should be one sentence max.
+
+---
+
+### 🥈 Find 83: Founder's Personal Letter/Note Section with Sign-off ("Dear [customer]... Love, [Name]")
+**Site:** Acctual — [https://acctual.com/](https://acctual.com/)
+**Found on:** Godly — [https://godly.website/website/acctual-998](https://godly.website/)
+**Element type:** About section / founder letter / trust-building
+**What it is:** Acctual includes a personal letter from the founder: "Dear business owner, Running a small business isn't for the faint of heart... No wonder staying in the game is so hard. That's why Net 0 is our love language. Love you, pay me. — Atikh Bana, Cofounder of Acctual." The format is an actual letter with greeting, body, sign-off, and signature. It humanizes the company and explains the mission through personal narrative.
+
+**Scores:**
+- Uniqueness: 8/10 — Most about sections are third-person corporate prose. A first-person letter format breaks the wall between company and customer. The casual sign-off ("Love you, pay me") adds memorable personality. The format makes the founder feel present and approachable.
+- Transferability: 8/10 — Works for any founder-led business: "Dear device owner, I know how frustrating it is when your phone breaks... That's why I started Hailey Device Repair. Fair prices, fast fixes, no corporate runaround. Your neighbor in Hailey, Sam." The format builds trust and explains the why behind the business.
+- Eyecatch factor: 7/10 — The letter format is immediately recognizable. The personal sign-off is memorable. The format works as an about section, homepage story, or email signature-style footer. Best as a single, authentic letter.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="founder-letter">` with `max-width: 600px`, `margin: 0 auto`, `padding: 48px 24px`. Content structure: `<p class="greeting">` (styled `font-style: italic`, `margin-bottom: 16px`) + multiple `<p class="body">` paragraphs (styled `font-size: 1rem`, `line-height: 1.7`, `margin-bottom: 16px`) + `<p class="signoff">` (styled `font-weight: 500`, `margin-top: 24px`) + `<p class="signature">` (styled `font-size: 0.875rem`, `color: #666`). Write the letter in first person with a conversational tone. Start with "Dear [customer type]" and end with a memorable sign-off + founder name and title. Keep to 3-4 short paragraphs. The format works best when the letter explains the why behind the business from personal experience.
+
