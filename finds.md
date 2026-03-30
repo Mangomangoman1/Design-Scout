@@ -1183,3 +1183,40 @@ Identify your single biggest differentiator — the one thing customers care abo
 **Implementation brief:**
 Write a 2-line headline that pairs a service/product with a differentiator or audience. Identify the 1-2 most important words and set them in ALL CAPS. Keep connectors (and, for, with, done, while) in lowercase. Example: "SCREEN REPAIRS done same day" / "BROKEN PHONES fixed in an hour." Use `<h1>` at `font-size: clamp(2.5rem, 6vw, 4.5rem)`, `font-weight: 700`, `line-height: 1.1`. Style caps words with `text-transform: uppercase` or write them manually in caps. Use a strong sans-serif (Inter, Helvetica, Satoshi). The lowercase words should be the same size as caps — don't mix font sizes. The size contrast comes from the letterforms themselves. Keep headlines to 2 lines max. This format works best for confident, direct positioning — not subtle or elegant brands.
 
+---
+
+## Scout Run — 2026-03-30 06:01 UTC
+Sources checked: [Godly](https://godly.website/), [Awwwards SOTD](https://www.awwwards.com/websites/sites-of-the-day/), [Land-book](https://land-book.com/)
+
+### 🏆 Find 62: Toggle-Style Feature List with Icon Labels
+**Site:** AuthKit — [https://authkit.com](https://authkit.com)
+**Found on:** Godly — [https://godly.website/website/authkit-991](https://godly.website/)
+**Element type:** Feature presentation / capability list / visual checklist
+**What it is:** AuthKit presents its features as a visual toggle/checkbox list: "Single Sign-On / Password / Multi-Factor Auth / Social Login / Role-Based Access Control / Magic Auth." Each feature appears as a distinct pill-shaped label, creating a scannable checklist that shows capability breadth at a glance. The format feels like product specifications rather than marketing copy.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature lists are bullet points or grids with icons. The toggle/checkbox pill format feels more like a settings panel or product spec sheet. It communicates "these are toggleable options you get" rather than "here's what we do." The visual restraint (no icons, no descriptions) is confident.
+- Transferability: 9/10 — Works for any service with multiple offerings: "Screen Repair / Battery Replacement / Charging Port / Water Damage / Data Recovery / Diagnostics." For Hailey Device Repair, this format could show the full range of services in one scannable block without overwhelming the page with details.
+- Eyecatch factor: 8/10 — The pill labels create visual rhythm. The format is scannable and clean. Each item registers as a distinct capability without requiring explanation. Works especially well when you have 5-8 related services/features.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<div class="feature-pills">` using `display: flex`, `flex-wrap: wrap`, `gap: 8px`. Each feature is a `<span class="pill">` with `display: inline-block`, `padding: 8px 16px`, `background: #f0f0f0`, `border-radius: 20px`, `font-size: 0.9rem`, `font-weight: 500`. For emphasis, use a filled variant: `background: #111`, `color: #fff` for key features. Keep labels to 1-3 words each. Use 5-8 pills total. The format works best when all items are at the same level of abstraction (all services, all features, all benefits). Don't mix categories. Place near the hero section as a quick capability overview, or in a "What we fix" section. No icons needed — the constraint is the design.
+
+---
+
+### 🥈 Find 63: Bracketed Action Statements with Progressive Reveal
+**Site:** Phantom — [https://phantom.app](https://phantom.app)
+**Found on:** Godly — [https://godly.website/website/phantom-980](https://godly.website/)
+**Element type:** Feature presentation / benefit list / copywriting pattern
+**What it is:** Phantom presents features as action-focused statements, each starting with a verb: "Buy and sell all types of crypto in an instant." / "Find trending tokens, top traders, and apps." / "Trade big moments in culture with Prediction Markets." Each statement is a complete benefit in one sentence, formatted as a list with brackets linking to more detail. The format turns features into outcomes.
+
+**Scores:**
+- Uniqueness: 8/10 — Most benefit lists are noun-focused ("Fast trading", "Easy discovery"). Phantom's verb-first approach ("Buy and sell...", "Find...", "Trade...") makes features feel like actions you can take immediately. Each bullet is a promise, not a description.
+- Transferability: 9/10 — Direct lift for service businesses: "Fix cracked screens while you wait." / "Recover photos from water-damaged phones." / "Replace dead batteries in under an hour." / "Text us for a quote — no hold music." For Hailey Device Repair, each service becomes an action statement that communicates both what and how.
+- Eyecatch factor: 8/10 — The verb-first format creates momentum. Each line reads like something you can do right now. The brackets/links create visual hierarchy without icons. The format is scannable but also readable as complete sentences.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<ul class="action-list">` with `list-style: none`, `padding: 0`, `display: flex`, `flex-direction: column`, `gap: 12px`. Each `<li>` contains a `<a>` or `<span>` with the action statement. Start every statement with an action verb (Fix, Replace, Recover, Text, Get, Find). Follow with the object and a specific benefit or qualifier ("while you wait", "in under an hour", "same day"). Keep to one sentence per item, max 15 words. Style at `font-size: 1rem`, `line-height: 1.5`, `color: #333`. Optional: wrap the action verb in `<strong>` for emphasis. Use 4-6 items. The format works best for service-focused businesses where you want to communicate capabilities as user actions rather than company offerings.
+
