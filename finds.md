@@ -1035,3 +1035,40 @@ Create a `<section class="process-steps">` with `display: flex`, `flex-wrap: wra
 **Implementation brief:**
 Create a `<section class="capabilities">` with a `<h2 class="cap-question">` like "What can we fix?" at `font-size: clamp(1.5rem, 4vw, 2.5rem)`, `text-align: center`, `margin-bottom: 32px`. Below: a `<div class="cap-carousel">` using `display: flex`, `gap: 24px`, `overflow-x: auto`, `scroll-snap-type: x mandatory`, `padding: 16px 0`. Each card is a `<div class="cap-card">` with `min-width: 280px`, `flex-shrink: 0`, `scroll-snap-align: start`, `padding: 24px`, `background: #f8f8f8`, `border-radius: 12px`. Inside: `<h3 class="cap-headline">` at `font-size: 1.1rem`, `font-weight: 600`, `margin-bottom: 8px`. Below: `<p class="cap-desc">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.5`. Keep headlines to one action phrase. Keep descriptions to one sentence. Use 5-8 cards to make scrolling worthwhile. Add subtle left/right arrows for desktop users who might not notice horizontal scroll.
 
+---
+
+## Scout Run — 2026-03-30 02:46 UTC
+Sources checked: [Godly](https://godly.website/), [Hover States](https://www.hoverstat.es/)
+
+### 🏆 Find 54: Trust Badge Grid with Specific Numbers
+**Site:** Notion — [https://www.notion.com](https://www.notion.com)
+**Found on:** Godly — [https://godly.website/website/notion-1013](https://godly.website/website/notion-1013)
+**Element type:** Social proof / trust-building / credibility signals
+**What it is:** Notion presents trust signals as a grid of specific, impressive statistics: "Over 100M users worldwide" / "#1 knowledge base 3 years running (G2)" / "#1 AI enterprise search (G2)" / "62% of Fortune 100" / "Over 50% of YC companies" / "1.4M+ community members." Each badge is a standalone fact, and the specificity (62%, not "most") creates credibility.
+
+**Scores:**
+- Uniqueness: 8/10 — Most sites use vague claims ("trusted by thousands"). Notion's specificity (#1 on G2, 62% of Fortune 100) makes the claims verifiable and more believable. The grid format shows breadth of proof without repetition.
+- Transferability: 8/10 — Works for a repair shop with adapted metrics: "500+ devices fixed" / "4.9★ on Google (127 reviews)" / "#1 rated in Blaine County" / "Same-day service 94% of the time" / "Serving Hailey since 2024". The format works even with smaller numbers if they're specific and honest.
+- Eyecatch factor: 8/10 — The grid of short, punchy facts is immediately scannable. Numbers draw the eye. The format breaks up text and adds visual interest while building trust.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="trust-badges">` using CSS Grid `grid-template-columns: repeat(auto-fit, minmax(180px, 1fr))`, `gap: 24px`, `text-align: center`. Each badge is a `<div class="badge">` containing: `<p class="badge-stat">` at `font-size: 1.1rem`, `font-weight: 600`, `color: #111`. Keep each badge to one line or two short lines. Use specific numbers (94%, not "most"). Include source where relevant (#1 on G2, 4.9★ Google). Avoid superlatives without proof ("best in town" is weaker than "127 5-star reviews"). Use 4-6 badges. The format works best when placed after the hero section or before a CTA.
+
+---
+
+### 🥈 Find 55: Version-Numbered Section System (0.1, 0.2, 1.0, 2.0)
+**Site:** Augen Pro — [https://augen.pro](https://augen.pro)
+**Found on:** Godly — [https://godly.website/website/augen-1014](https://godly.website/website/augen-1014)
+**Element type:** Navigation / section labeling / information architecture
+**What it is:** Augen Pro numbers sections like software versions: "0.1 Our Mission" / "0.2 Our Vision" / "0.3 Our Ambition" for intro content, then "1.0 Scientific Evidence" / "2.0 Driven by People" / "3.0 Get in Touch" for main sections. The decimal notation creates a sense of systematic organization and positions the brand as technical and thoughtful.
+
+**Scores:**
+- Uniqueness: 9/10 — Version-style numbering (0.1, 1.0) is common in software but rare in web design navigation. The format signals technical sophistication and systematic thinking. The decimal precision feels intentional and modern.
+- Transferability: 6/10 — Works for tech-forward brands but might feel forced for a casual repair shop. Could work for a "geeky" repair shop positioning: "1.0 What We Fix" / "2.0 How It Works" / "3.0 Text Us Now". Best for businesses that want to project technical competence.
+- Eyecatch factor: 8/10 — The decimal numbering is visually distinctive. The format creates a sense of progression and completeness. Works especially well for longer pages with clear section breaks.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create section headers with version-style labels: `<h2 class="section-header"><span class="section-num">1.0</span> <span class="section-title">Section Name</span></h2>`. Style the number at `font-family: 'SF Mono', monospace`, `font-size: 0.9rem`, `color: #888`, `margin-right: 12px`. Use 0.x for subsections within an intro, then 1.0, 2.0, 3.0 for main sections. Keep numbering consistent throughout the page. The format works best when you have 3-5 major sections and want to signal systematic organization. Don't use for casual or playful brands — it implies technical precision.
+
