@@ -1109,3 +1109,40 @@ Create a `<section class="differentiators">` with `<h2 class="diff-headline">` l
 **Implementation brief:**
 Create section labels using the format: `<span class="superpower-label">✦ Superpower #1</span>`. Style at `font-size: 0.85rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`, `color: #888`, `margin-bottom: 12px`, `display: block`. The ✦ can be Unicode (✦ or ✧) or an SVG sparkle icon. Place above each major section's headline. Use for 3 key features/differentiators — more than 3 dilutes the "superpower" framing. Pair with descriptive section headlines below. The format works best for playful, consumer-facing brands — may feel forced for serious B2B.
 
+---
+
+## Scout Run — 2026-03-30 03:06 UTC
+Sources checked: [Awwwards](https://www.awwwards.com/), [Hover States](https://www.hoverstat.es/), [Godly](https://godly.website/)
+
+### 🏆 Find 58: Prose-Style Directory with Embedded Links
+**Site:** Anorak Film — [https://anorakfilm.com](https://anorakfilm.com)
+**Found on:** Hover States — [https://www.hoverstat.es/features/anorak-film/](https://www.hoverstat.es/features/anorak-film/)
+**Element type:** Navigation / directory / content presentation
+**What it is:** Anorak presents their directors not as a grid or list, but woven into flowing philosophical prose. Each director's name is an inline link within sentences: "The speed of dark? Half of 0? Nothing. Failure. The essential ingredient of success. Thesis: mother. Anti-thesis: father. Synthesis: child. [Adam Berg]. In the beginning. An edgeless shape. [Aisultan Seit]. Racking into focus. [Alex Hulsey]. Light." The format turns a boring directory into something you actually want to read.
+
+**Scores:**
+- Uniqueness: 9/10 — Most directories are grids or lists. Embedding names within narrative text is rare and unexpected. The philosophical tone makes a commercial page feel like art. The format demands attention and creates emotional connection.
+- Transferability: 5/10 — Works for creative/artistic brands but risky for service businesses. Could work for an "About the Team" section with personality: "The cracked screen that wouldn't quit. [Sam]. The battery that came back from the dead. [Mango]. The water-damaged phone that made us believers." But requires strong writing skills and brand confidence.
+- Eyecatch factor: 9/10 — The flowing prose is immediately arresting. The embedded links create visual rhythm within the text. The format signals "this is different" from the first scroll.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="prose-directory">` with `<p class="directory-text">` at `font-size: clamp(1rem, 2.5vw, 1.3rem)`, `line-height: 1.7`, `color: #333`. Embed names as `<a class="directory-link">` with `font-weight: 600`, `color: inherit`, `text-decoration: underline`, `text-underline-offset: 3px`. On hover: `background: #111`, `color: #fff`, `padding: 0 4px`. Use periods to create rhythm. Each name should have 3-8 words of narrative before it. The format requires thoughtful writing — the prose should reflect your brand's personality. Works best for creative agencies, artist collectives, or any brand with strong voice. Not recommended for formal B2B.
+
+---
+
+### 🥈 Find 59: AI Capabilities as Complete Action Sentences
+**Site:** Reflect — [https://reflect.app/home](https://reflect.app/home)
+**Found on:** Godly — [https://godly.website/website/reflect-968](https://godly.website/website/reflect-968)
+**Element type:** Feature presentation / AI framing / capability list
+**What it is:** Reflect presents AI features not as buzzwords but as complete, specific action sentences: "Transcribe voice notes with human-level accuracy" / "Generate article outlines from your scattered thoughts" / "List key takeaways and action items from your meeting notes" / "Chat with your notes to find and organize information" / "Save your own custom prompts." Each capability is a verb + object + outcome.
+
+**Scores:**
+- Uniqueness: 8/10 — Most AI feature lists are vague ("AI-powered insights", "smart automation"). Reflect's format describes concrete actions you can take. The specificity ("from your scattered thoughts", "with human-level accuracy") makes abstract AI feel tangible.
+- Transferability: 8/10 — Works for any business describing what they do: "Fix cracked screens while you grab coffee" / "Diagnose battery issues with a free text consultation" / "Recover photos from water-damaged phones others gave up on." The verb + object + outcome structure works for any service.
+- Eyecatch factor: 7/10 — The format isn't visually flashy but creates trust through specificity. Each bullet is immediately understandable. The complete sentences feel confident and definitive.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="capability-list">` with a `<ul>` at `list-style: none`, `padding: 0`, `display: flex`, `flex-direction: column`, `gap: 16px`. Each `<li>` at `font-size: 1rem`, `line-height: 1.5`, `padding: 16px`, `background: #f8f8f8`, `border-radius: 8px`. Format each capability as: [Action verb] + [what] + [specific outcome/context]. Examples: "Transcribe voice notes with human-level accuracy" / "Generate outlines from scattered thoughts" / "List key takeaways from meeting notes." Keep to 4-6 capabilities. Use specific qualifiers ("human-level", "same-day", "while you wait") to make abstract services concrete. Avoid buzzwords — describe what actually happens.
+
