@@ -1294,3 +1294,40 @@ Create a `<div class="stat-grid">` with `display: grid`, `grid-template-columns:
 **Implementation brief:**
 Create a `<ol class="how-it-works">` with `list-style: none`, `counter-reset: steps`, `display: flex`, `flex-direction: column`, `gap: 32px`. Each `<li>` uses `counter-increment: steps` and `::before { content: counter(steps); }`. Style the counter at `font-size: 2.5rem`, `font-weight: 700`, `color: #111`, `margin-bottom: 8px`. Headline at `font-size: 1.25rem`, `font-weight: 600`. Description at `font-size: 1rem`, `color: #666`, `max-width: 300px`. Keep headlines to 4-6 words. Start with an action verb when possible. Use 3-5 steps. The format works best when each step is genuinely distinct and moves the customer forward.
 
+---
+
+## Scout Run — 2026-03-30 09:09 UTC
+Sources checked: [Land-book](https://land-book.com/), [Awwwards SOTD](https://www.awwwards.com/websites/sites-of-the-day/)
+
+### 🏆 Find 68: Three-Word Philosophy Rhythm (Verb. → Verb. → Verb.)
+**Site:** Sirnik — [https://sirnik.co/](https://sirnik.co/)
+**Found on:** Land-book — [https://land-book.com/websites/92613-sirnik-design-and-development-studio](https://land-book.com/)
+**Element type:** Philosophy statement / brand positioning / typography pattern
+**What it is:** Sirnik presents their creative process as three single-word imperatives with periods: "Observe. → Distil. → Design." Each word is a verb that describes a phase of their work. The format compresses an entire philosophy into three beats. The rhythm creates momentum and communicates confidence.
+
+**Scores:**
+- Uniqueness: 9/10 — Most philosophy statements are paragraphs or bulleted lists. Compressing a creative process into three single words with punctuation creates a distinctive rhythm. The periods make each word feel complete and intentional. The format is both memorable and shareable.
+- Transferability: 8/10 — Works for any service with a clear process: "Diagnose. → Fix. → Test." / "Text. → Quote. → Repair." / "Assess. → Replace. → Verify." For Hailey Device Repair, the format communicates a methodical, professional approach in just three words.
+- Eyecatch factor: 9/10 — The three-beat rhythm is visually striking. Each word stands alone as a design element. The format works as a hero section, footer tagline, or section divider. The periods add visual weight and finality.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Create a `<div class="philosophy">` with `display: flex`, `gap: 24px`, `align-items: center`, `justify-content: center`. Each word is a `<span class="phase">` with `font-size: clamp(1.5rem, 4vw, 3rem)`, `font-weight: 600`, `letter-spacing: -0.02em`. Add periods to each word manually for control. Style the arrow/separator with `color: #999`, `font-size: 1.5rem`. Keep to exactly 3 words. Each word should be a single imperative verb. The format works best when the verbs genuinely describe your process in sequence. Avoid abstract words — choose concrete actions. Example: "Listen. → Repair. → Deliver." or "Text. → Drop. → Pick up."
+
+---
+
+### 🥈 Find 69: Multi-Step Progress Quote Builder with Tab Navigation
+**Site:** Veo — [https://veo.co/](https://veo.co/)
+**Found on:** Land-book — [https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse](https://land-book.com/)
+**Element type:** Quote flow / configurator / lead capture
+**What it is:** Veo's "Get your personal quote" section uses a multi-step wizard with visible tab navigation: "Teams → Sport → Cameras → Mounting → Add-ons → Get your quote." Each step is a single question with clear options. The progress indicator shows where you are in the flow. The format makes a complex configuration feel manageable.
+
+**Scores:**
+- Uniqueness: 7/10 — Multi-step forms exist, but Veo's execution is clean: visible progress tabs, one question per step, clear options. The format transforms what could be a long form into a guided conversation.
+- Transferability: 8/10 — Works for any service with configuration options: "Device → Issue → Timeline → Contact → Quote." For Hailey Device Repair: "1. What device? (iPhone/Samsung/Other) → 2. What's wrong? (Screen/Battery/Port/Water) → 3. When do you need it? (Today/This week/Flexible) → 4. Your info → Get quote." The format qualifies leads while making the process feel easy.
+- Eyecatch factor: 7/10 — The tab navigation creates a sense of progress. Each step is manageable. The format signals "this will be quick" rather than "fill out this long form." Works best with 4-6 steps.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create a `<div class="quote-wizard">` containing: 1) Progress tabs at top with `display: flex`, `gap: 8px`, each tab with `padding: 8px 16px`, current tab with `background: #111`, `color: #fff`, inactive with `background: #f0f0f0`. 2) Question area with `<h3>` for the question, options as clickable buttons or radio cards. 3) Navigation with "Back" and "Next" buttons. Use JavaScript or a form library to manage state. Keep to 4-6 steps. Each step should have one clear question with 2-5 options. The final step captures contact info. The format works best when you need to qualify leads or gather configuration details before quoting.
+
