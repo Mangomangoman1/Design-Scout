@@ -1516,3 +1516,40 @@ Create a `<ul class="principles">` with `list-style: none`, `display: flex`, `fl
 **Implementation brief:**
 Create a `<section>` with: `<span class="section-intro">` (styled `font-size: 0.875rem`, `font-weight: 500`, `color: #888`, `text-transform: lowercase`, `display: block`, `margin-bottom: 8px`) + `<h2 class="section-headline">` (styled `font-size: 2rem`, `font-weight: 700`). The intro should be exactly two words, lowercase, evocative but not generic ("shine bright" not "our features"). The headline follows with the actual benefit. Keep intros playful and human — they should sound like something a person would say, not a marketing department. Use across 3-5 sections for consistent rhythm.
 
+---
+
+## Scout Run — 2026-03-30 15:21 UTC
+Sources checked: [Godly](https://godly.website/), [Land-book](https://land-book.com/), [Hover States](https://www.hoverstat.es/)
+
+### 🏆 Find 80: Question-Based About Section Structure ("What we do" / "How it helps" / "Who are we for")
+**Site:** Duties — [https://www.duties.xyz/](https://www.duties.xyz/)
+**Found on:** Godly — [https://godly.website/website/duties-1009](https://godly.website/)
+**Element type:** About section / FAQ-style overview / structured value proposition
+**What it is:** Duties structures their about section as a series of question-answer pairs: "What we do — We design brand identities and Framer websites..." / "How it helps — We help you create a memorable first impression..." / "Who are we for — Ambitious companies shaping their brand..." / "When to engage — You're ready to invest..." / "What it costs — Fixed-price basis, scoped to your project." Each question is a natural customer question reframed as a header.
+
+**Scores:**
+- Uniqueness: 9/10 — Most about sections are narrative paragraphs or generic value props. This format anticipates visitor questions and answers them directly. It's FAQ energy applied to the about section — structured yet conversational. Visitors scan for their question and get the answer.
+- Transferability: 9/10 — Works for any service business: "What we do — Screen repairs, battery replacements, data recovery" / "How it helps — Get your device back same day" / "Who are we for — Hailey locals who need fast, reliable repairs" / "When to engage — Your phone is broken and you need it working today" / "What it costs — Flat-rate pricing, no hourly surprises."
+- Eyecatch factor: 8/10 — The question format is immediately scannable. Each block is self-contained. The format works as an about section, services overview, or onboarding FAQ. Best with 4-6 questions.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Create a `<section class="about-qa">` with `display: grid`, `gap: 32px`, `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`. Each block is a `<div class="qa-block">` containing: `<h3 class="question">` (styled `font-size: 1rem`, `font-weight: 500`, `color: #888`, `margin-bottom: 8px`, `text-transform: lowercase`) + `<p class="answer">` (styled `font-size: 1rem`, `line-height: 1.6`, `color: #333`). Questions should be natural customer questions: "what we do" / "how it helps" / "who we're for" / "when to reach out" / "what it costs." Keep answers to 2-3 sentences max. The format works best when questions flow logically from general to specific.
+
+---
+
+### 🥈 Find 81: "✦ Superpower #1 / #2 / #3" Feature Labels with Emoji Marker
+**Site:** Lovi — [https://lovi.care/](https://lovi.care/)
+**Found on:** Godly — [https://godly.website/website/lovi-994](https://godly.website/)
+**Element type:** Feature sections / capability numbering / playful structure
+**What it is:** Lovi numbers their core features with "✦ Superpower #1" / "✦ Superpower #2" / "✦ Superpower #3" labels. The "✦" sparkle emoji adds visual flair. The word "Superpower" frames features as capabilities rather than features — things that give the user power. Each section then dives into the specific feature.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature numbering is dry ("Feature 1" / "Section 2"). The "Superpower" framing is playful and user-centric — it says "here's what you'll be able to do" rather than "here's what we built." The sparkle emoji adds personality without being cartoonish.
+- Transferability: 7/10 — Works for businesses with distinct capabilities: "✦ Superpower #1: Same-Day Turnaround" / "✦ Superpower #2: Data Recovery" / "✦ Superpower #3: Price Match Guarantee." The format requires confident, playful brand voice — may not fit ultra-professional contexts.
+- Eyecatch factor: 8/10 — The emoji creates visual anchors. The "Superpower" word is memorable. The format works as a features section, landing page structure, or capability overview. Best with exactly 3 items.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="superpowers">` with `display: flex`, `flex-direction: column`, `gap: 64px`. Each superpower is a `<div class="superpower">` containing: `<span class="superpower-label">` (styled `font-size: 0.75rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #666`, `display: block`, `margin-bottom: 16px`) + the feature content below. Format the label as "✦ Superpower #1" using the Unicode sparkle (✦ U+2726). Keep to exactly 3 superpowers. Each should be a distinct, powerful capability. The playful framing works best when the features genuinely give users meaningful power or advantage.
+
