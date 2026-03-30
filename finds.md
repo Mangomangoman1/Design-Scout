@@ -1775,3 +1775,40 @@ Create a `<ul class="services-list">` with `list-style: none`, `padding: 0`, `di
 **Implementation brief:**
 Create section markers as `<span class="section-marker">` with `font-size: 0.75rem`, `font-weight: 400`, `color: #999`, `text-transform: capitalize`, `display: block`, `margin-bottom: 12px`. Format as "(Label)" with parentheses included in the text. For numbered sections, use "(01.)" format — number + period inside parens. Keep labels to one word when possible. Place above section content, not inside headlines. The format works best when used consistently for all major sections — mixing styles breaks the document-like feel. Consider using for nav items as well for full consistency.
 
+---
+
+## Scout Run — 2026-03-30 22:37 UTC
+Sources checked: [Godly](https://godly.website/), [Awwwards](https://www.awwwards.com/)
+
+### 🏆 Find 94: Inline Category Pills with Count Numbers ("Important32", "Team15", "Calendar7")
+**Site:** Tatem — [https://tatem.com/](https://tatem.com/)
+**Found on:** Godly — [https://godly.website/website/tatem-1003](https://godly.website/)
+**Element type:** Feature visualization / UI preview / inline labels
+**What it is:** Tatem shows their "Split inbox" feature with inline category pills that include count numbers: "Important32 / Team15 / Calendar7 / Receipts3". The number is attached directly to the category name with no space. The format creates a realistic UI preview while communicating the feature benefit — organized categories with volume indicators.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections describe capabilities in abstract terms. Tatem shows a realistic UI preview with actual-looking data. The format is part mockup, part feature description. The attached numbers feel like live data rather than marketing copy.
+- Transferability: 7/10 — Works for services with countable categories or statuses: "Screens24 / Batteries18 / Data5 / Other12" or "Pending3 / InProgress2 / Done47". For Hailey Device Repair, could visualize repair categories or service stats. Less transferable if you don't have natural category/count data.
+- Eyecatch factor: 8/10 — The UI-like appearance is immediately recognizable. The attached numbers create visual density. The format works as a feature preview, stats visualization, or service breakdown. Best when categories feel real and numbers feel plausible.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="category-pills">` with `display: flex`, `gap: 8px`, `flex-wrap: wrap`. Each pill is `<span class="pill">` with `display: inline-flex`, `padding: 6px 12px`, `background: #f5f5f5`, `border-radius: 999px`, `font-size: 0.875rem`, `font-weight: 500`. Structure content as `<span class="pill-name">Important</span><span class="pill-count">32</span>` — name and count have NO space between them. Style count slightly differently (can be same color, slightly bolder, or offset with opacity). Keep to 3-5 pills. Numbers should feel realistic (not round numbers like 10, 100). The format works best when mimicking actual UI elements from your product or service dashboard.
+
+---
+
+### 🥈 Find 95: Numbered Company Values with Single-Word Titles ("(1)Entertaining", "(2)Innovative", "(3)Memorable")
+**Site:** Bigpicture Company — [https://www.bpco.kr/](https://www.bpco.kr/)
+**Found on:** Godly — [https://godly.website/website/bigpicture-company-1005](https://godly.website/)
+**Element type:** Company values / brand pillars / about section structure
+**What it is:** Bigpicture presents their company values as numbered single-word titles: "(1)Entertaining" / "(2)Innovative" / "(3)Memorable". The parenthetical number followed directly by a single adjective creates a manifesto-like feel. Each value then expands into a paragraph explanation below.
+
+**Scores:**
+- Uniqueness: 8/10 — Most company value sections use phrases or sentences. The single-word format is bold and confident — it says "our values are clear enough to fit in one word." The parenthetical numbers add structure without being clinical.
+- Transferability: 8/10 — Works for any business defining their values or approach: "(1)Fast" / "(2)Transparent" / "(3)Guaranteed" or "(1)Local" / "(2)Expert" / "(3)Honest". For Hailey Device Repair, the format could define the repair experience in memorable single words.
+- Eyecatch factor: 7/10 — Single words are scannable and memorable. The format creates a manifesto feel. Works as values section, about page pillars, or brand principles. Best with exactly 3 values (occasionally 4-5).
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="values">` with `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 48px`. Each value is `<div class="value">` containing: `<h3 class="value-title">` (styled `font-size: 1.5rem`, `font-weight: 700`, `margin-bottom: 16px`) with content "(1)Entertaining" — parenthetical number directly attached to single word, no space. Below is `<p class="value-description">` (styled `font-size: 1rem`, `line-height: 1.6`, `color: #666`). Keep titles to exactly one word (adjectives work best: Fast, Local, Honest, Expert, Reliable). Use exactly 3 values for strongest impact. The format works best when words are genuinely distinctive — avoid generic adjectives like "Quality" or "Professional."
+
