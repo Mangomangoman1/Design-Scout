@@ -813,3 +813,40 @@ Create a `<section class="feature-grid">` using CSS Grid: `grid-template-columns
 **Implementation brief:**
 Create a `<section class="use-cases">` with either a horizontal carousel or stacked cards. Each `<div class="use-case">` contains: `<h3 class="use-headline">` at `font-size: clamp(1.2rem, 3vw, 1.5rem)`, `font-weight: 700`, `color: #111`. The headline should be action-oriented, starting with an imperative verb or "your" phrasing. Below: `<p class="use-benefit">` at `font-size: 0.95rem`, `color: #555`, `line-height: 1.5`. Keep headlines to 5-8 words — they should be scannable as standalone statements. Keep benefit sentences to one sentence max. For carousel: use CSS scroll-snap or a lightweight JS carousel. For stacked: use `display: flex`, `flex-direction: column`, `gap: 32px`. Optional: add a subtle icon or illustration to each use case, but keep it secondary to the headline.
 
+---
+
+## Scout Run — 2026-03-30 01:46 UTC
+Sources checked: [Godly](https://godly.website/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 42: "✦ Superpower #N" Feature Section Labels
+**Site:** Lovi — [https://lovi.care](https://lovi.care)
+**Found on:** Godly — [https://godly.website/website/lovi-994](https://godly.website/website/lovi-994)
+**Element type:** Copy structure / section labeling / playful branding
+**What it is:** Lovi labels its main feature sections with "✦ Superpower #1", "✦ Superpower #2", "✦ Superpower #3" — using a sparkle symbol and whimsical "superpower" framing instead of generic "Feature" or "Benefit" headers. Each superpower section then details a capability (face scanning, cosmetics checking, AI assistant). The format transforms boring feature announcements into something playful and memorable.
+
+**Scores:**
+- Uniqueness: 9/10 — Most sites use bland section headers like "Features", "What We Do", or numbered lists. Calling features "superpowers" is unexpected and memorable. The sparkle symbol (✦) adds visual flair without requiring custom icons. The format is rare in service business contexts.
+- Transferability: 8/10 — Works for a repair shop's key differentiators: "✦ Superpower #1: Same-Day Turnaround" / "✦ Superpower #2: Text-First Communication" / "✦ Superpower #3: 90-Day Warranty". The playful framing makes a repair shop feel more personable and less corporate. Adapt the term if "superpower" feels off-brand — "✦ Specialty #1" or "✦ Promise #1" works too.
+- Eyecatch factor: 8/10 — The sparkle symbol draws the eye. The "superpower" framing creates curiosity. The numbered structure creates progression — visitors want to see all three. The format works especially well when you have 3-5 major capabilities to highlight.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create section dividers using `<div class="superpower-label">` with content like "✦ Superpower #1". Style at `font-size: 0.8rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #888`, `margin-bottom: 16px`. The sparkle (✦) can be HTML entity `&#10038;` or Unicode U+2726. Place the label above the section headline: `<h2 class="superpower-title">` at `font-size: clamp(1.5rem, 4vw, 2rem)`, `font-weight: 700`. Keep to 3-5 superpowers — more dilutes the impact. The label creates hierarchy and signals "this is one of our key things" without the generic "Feature" framing. Variants: "✦ Promise", "✦ Specialty", "✦ What we do best", "✦ Why we're different".
+
+---
+
+### 🥈 Find 43: Feature Chip/Toggle List (Selectable Categories)
+**Site:** AuthKit — [https://authkit.com](https://authkit.com)
+**Found on:** Godly — [https://godly.website/website/authkit-991](https://godly.website/website/authkit-991)
+**Element type:** Feature presentation / navigation / visual selection
+**What it is:** AuthKit presents its feature categories as selectable chips/toggles: "Single Sign-On", "Password", "Multi-Factor Auth", "Social Login", "Role-Based Access Control", "Magic Auth" — displayed as button-like elements that visitors can click to see more about each feature. The chips are visually distinct (pill-shaped or rounded rectangles) and the selected one is highlighted. The format turns a feature list into an interactive menu.
+
+**Scores:**
+- Uniqueness: 8/10 — Most feature sections show all content at once or use accordion dropdowns. The chip/toggle pattern lets visitors self-select what interests them without scrolling through everything. The compact horizontal layout is scannable and non-committal — you see all options at a glance before diving in.
+- Transferability: 7/10 — Works for a repair shop showing service categories: "Screen Repair" / "Battery Replacement" / "Charging Port" / "Water Damage" / "Data Recovery" — each chip reveals pricing, time estimate, and details when selected. Less essential for small service menus, but great when you have 5+ distinct service types.
+- Eyecatch factor: 8/10 — The pill-shaped chips are visually distinctive. The hover/active states add interactivity. The compact layout shows all options without overwhelming. The pattern feels modern and app-like.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<div class="feature-chips">` with `display: flex`, `flex-wrap: wrap`, `gap: 8px`, `margin-bottom: 24px`. Each chip is a `<button class="chip">` or `<a class="chip">` with: `padding: 8px 16px`, `border-radius: 999px`, `font-size: 0.9rem`, `font-weight: 500`, `background: #f5f5f5`, `color: #333`, `border: 1px solid #e0e0e0`, `cursor: pointer`, `transition: all 0.15s`. Active state: `background: #111`, `color: #fff`. Hover state: `background: #eee`. Use JavaScript to show/hide corresponding content panels when chips are clicked. Keep chip text to 1-3 words. For accessibility: use `role="tablist"` on the container and `role="tab"` on chips. The pattern works best when each chip reveals a distinct content panel with details, images, or specifics.
+
