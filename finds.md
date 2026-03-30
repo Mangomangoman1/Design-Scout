@@ -961,3 +961,40 @@ Create a `<div class="service-card">` with `position: relative`, `padding: 24px`
 **Implementation brief:**
 Create project titles using the format: `<h3 class="collab-title"><span class="brand-a">BRAND A</span> <span class="collab-symbol">×</span> <span class="brand-b">BRAND B</span></h3>`. Style the title at `font-size: clamp(1rem, 2.5vw, 1.5rem)`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`. The × symbol (`&times;` or Unicode ×) should be styled at `margin: 0 8px`, `color: #888` (slightly muted) or same as text. For maximum impact, use this format in hero headlines or portfolio cards. Keep brand names short — trim to key words if needed. The format works best when presenting partnerships, collaborations, or client work where you want to emphasize both parties.
 
+---
+
+## Scout Run — 2026-03-30 02:26 UTC
+Sources checked: [Godly](https://godly.website/), [Awwwards](https://www.awwwards.com/)
+
+### 🏆 Find 50: Q&A Positioning Grid (What We Do / Who We're For / What It Costs)
+**Site:** Duties — [https://www.duties.xyz](https://www.duties.xyz)
+**Found on:** Godly — [https://godly.website/website/duties-1009](https://godly.website/website/duties-1009)
+**Element type:** Positioning / copy structure / FAQ as value props
+**What it is:** Duties presents their positioning as a Q&A grid with five clear questions: "What we do → We design brand identities and Framer websites..." / "How it helps → We help you create a memorable first impression..." / "Who are we for → We deliver the most value when helping ambitious companies..." / "When to engage → You're ready to invest in safeguarding your business..." / "What it costs → We work on a fixed-price basis..." Each question is a bold label followed by a conversational answer.
+
+**Scores:**
+- Uniqueness: 9/10 — Most "About" sections are rambling paragraphs. Duties turns positioning into a structured Q&A that answers the exact questions prospects have. The format is direct and respects the visitor's time. The "What it costs" inclusion is especially bold — most sites hide pricing.
+- Transferability: 9/10 — Perfect for a repair shop: "What we do → We fix phones, tablets, and laptops — screens, batteries, charging ports, water damage." / "Who we're for → People in Hailey who need their device back fast without driving to Boise." / "What it costs → Screen repairs from $79. Battery swaps from $49. No hidden fees." / "When to text us → Your device is broken and you need it working today."
+- Eyecatch factor: 8/10 — The question-answer format is immediately scannable. The bold questions act as section anchors. The conversational answers feel human. The format works especially well when you have 4-6 positioning questions to answer.
+- **Average: 8.7/10**
+
+**Implementation brief:**
+Create a `<section class="positioning-qa">` using CSS Grid `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 32px`. Each item is a `<div class="qa-item">` containing: `<h3 class="qa-question">` at `font-size: 0.85rem`, `font-weight: 600`, `text-transform: lowercase`, `color: #888`, `margin-bottom: 12px`. Below: `<p class="qa-answer">` at `font-size: 1rem`, `line-height: 1.6`, `color: #111`. Keep questions to 2-4 words ("what we do", "who it's for", "what it costs"). Keep answers to 2-3 sentences max. The format works best when addressing the core questions every prospect has — don't pad with filler questions.
+
+---
+
+### 🥈 Find 51: Themed Feature Lists with Inline Sentence Bullets
+**Site:** Phantom — [https://phantom.com](https://phantom.com)
+**Found on:** Godly — [https://godly.website/website/phantom-980](https://godly.website/website/phantom-980)
+**Element type:** Feature presentation / grouped benefits / scannable lists
+**What it is:** Phantom groups features into themes (Trading, Cash, Security) with each theme showing multiple benefits as inline sentence bullets: "Buy and sell all types of crypto in an instant." / "Find trending tokens, top traders, and apps." / "Trade big moments in culture with Prediction Markets." Each bullet is a complete sentence that stands alone. The visual grouping makes complex feature sets scannable.
+
+**Scores:**
+- Uniqueness: 7/10 — Feature lists are common, but Phantom's execution is unusually clean. Each bullet is a complete, action-oriented sentence rather than a noun phrase. The grouping by theme (Trading/Cash/Security) helps visitors find what matters to them.
+- Transferability: 9/10 — Works for a repair shop's service breakdown: "Phone Repairs → Fix cracked screens in under an hour. / Replace dying batteries same-day. / Rescue water-damaged devices when others can't." / "Why Text Us → Get a quote in minutes, not hours. / No hold music, just real responses. / Know the cost before you commit."
+- Eyecatch factor: 7/10 — The grouped format creates visual hierarchy. The complete sentences are more engaging than bullet fragments. The thematic organization helps visitors navigate to relevant content quickly.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="feature-themes">` with `display: flex`, `flex-direction: column`, `gap: 48px`. Each theme is a `<div class="theme-group">` containing: `<h3 class="theme-title">` at `font-size: 1.1rem`, `font-weight: 600`, `margin-bottom: 16px`. Below: `<ul class="theme-features">` with `list-style: none`, `padding: 0`. Each `<li>` at `font-size: 0.95rem`, `line-height: 1.6`, `padding: 8px 0`, `border-bottom: 1px solid #eee` (optional separator). Write each bullet as a complete sentence starting with an action verb. Keep to 3-5 bullets per theme. Use 2-4 themes total. The format works best when you have multiple distinct service categories or benefit areas.
+
