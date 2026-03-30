@@ -998,3 +998,40 @@ Create a `<section class="positioning-qa">` using CSS Grid `grid-template-column
 **Implementation brief:**
 Create a `<section class="feature-themes">` with `display: flex`, `flex-direction: column`, `gap: 48px`. Each theme is a `<div class="theme-group">` containing: `<h3 class="theme-title">` at `font-size: 1.1rem`, `font-weight: 600`, `margin-bottom: 16px`. Below: `<ul class="theme-features">` with `list-style: none`, `padding: 0`. Each `<li>` at `font-size: 0.95rem`, `line-height: 1.6`, `padding: 8px 0`, `border-bottom: 1px solid #eee` (optional separator). Write each bullet as a complete sentence starting with an action verb. Keep to 3-5 bullets per theme. Use 2-4 themes total. The format works best when you have multiple distinct service categories or benefit areas.
 
+---
+
+## Scout Run — 2026-03-30 02:36 UTC
+Sources checked: [Land-book](https://land-book.com/), [CSS Design Awards](https://www.cssdesignawards.com/)
+
+### 🏆 Find 52: Numbered "How It Works" Step Flow (01 → 02 → 03)
+**Site:** Veo — [https://www.veo.com](https://www.veo.com)
+**Found on:** Land-book — [https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse](https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse)
+**Element type:** Process visualization / onboarding / step sequence
+**What it is:** Veo presents their service as a three-step process with prominent numbered steps: "01 — Record and livestream every match, home and away" / "02 — Instantly relive the match and break down every key play" / "03 — Share and celebrate your winning moments." The large zero-padded numbers (01, 02, 03) create visual rhythm and make the process feel organized and easy.
+
+**Scores:**
+- Uniqueness: 7/10 — Numbered steps aren't new, but Veo's execution with zero-padded numbers (01, 02, 03) and action-oriented titles feels cleaner than typical "Step 1" implementations. The format makes complexity feel manageable.
+- Transferability: 9/10 — Perfect for explaining a repair process: "01 — Text us a photo of your broken device" / "02 — Get a quote within minutes" / "03 — Pick up your repaired device, usually same-day." The numbered format signals a clear, organized process — important for building trust with new customers.
+- Eyecatch factor: 8/10 — Large numbers create visual anchors. The zero-padding (01 vs 1) feels more designed. The format breaks up text and makes the page scannable. Works especially well with 3-4 steps.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="process-steps">` with `display: flex`, `flex-wrap: wrap`, `gap: 32px`, `justify-content: center`. Each step is a `<div class="step">` containing: `<span class="step-num">` at `font-size: clamp(2rem, 5vw, 3.5rem)`, `font-weight: 700`, `color: #ddd` (muted), `display: block`, `margin-bottom: 12px`. Format numbers with leading zeros using JavaScript `String(n).padStart(2, '0')` or hardcode as "01", "02", "03". Below: `<h3 class="step-title">` at `font-size: 1rem`, `font-weight: 600`, `margin-bottom: 8px`. Below: `<p class="step-desc">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.5`. Keep to 3-4 steps max. Start each title with an action verb. The format works best when explaining a service process or customer journey.
+
+---
+
+### 🥈 Find 53: Scrolling Use-Case Carousel with "What can I do?" Framing
+**Site:** Umbrel — [https://umbrel.com](https://umbrel.com)
+**Found on:** Godly — [https://godly.website/website/umbrel-975](https://godly.website/website/umbrel-975)
+**Element type:** Feature showcase / carousel / capability list
+**What it is:** Umbrel asks "What can I do with umbrelOS?" then presents answers as a scrolling carousel of use cases: "Run your own Bitcoin node. Don't trust. Verify." / "Run OpenClaw, your own AI agent. The AI that clears your inbox..." / "Stream your movies & TV shows." Each card has a bold capability headline followed by a one-sentence elaboration. The carousel format lets them showcase many capabilities without overwhelming the page.
+
+**Scores:**
+- Uniqueness: 8/10 — The "What can I do with [product]?" framing is clever — it shifts focus from features to user outcomes. The carousel format with headline + elaboration keeps each card scannable while allowing depth. The format feels like answering questions before they're asked.
+- Transferability: 7/10 — Works for showcasing repair capabilities: "What can we fix?" → "Cracked screens. Get your phone looking new in under an hour." / "Dead batteries. Stop carrying a charger everywhere." / "Water damage. We've saved devices others gave up on." The carousel keeps the section compact while showing range.
+- Eyecatch factor: 8/10 — The question framing draws visitors in. The scrolling carousel is interactive without being distracting. Bold headlines per card make scanning easy. The format works especially well when you have 5-8 distinct capabilities to showcase.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create a `<section class="capabilities">` with a `<h2 class="cap-question">` like "What can we fix?" at `font-size: clamp(1.5rem, 4vw, 2.5rem)`, `text-align: center`, `margin-bottom: 32px`. Below: a `<div class="cap-carousel">` using `display: flex`, `gap: 24px`, `overflow-x: auto`, `scroll-snap-type: x mandatory`, `padding: 16px 0`. Each card is a `<div class="cap-card">` with `min-width: 280px`, `flex-shrink: 0`, `scroll-snap-align: start`, `padding: 24px`, `background: #f8f8f8`, `border-radius: 12px`. Inside: `<h3 class="cap-headline">` at `font-size: 1.1rem`, `font-weight: 600`, `margin-bottom: 8px`. Below: `<p class="cap-desc">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.5`. Keep headlines to one action phrase. Keep descriptions to one sentence. Use 5-8 cards to make scrolling worthwhile. Add subtle left/right arrows for desktop users who might not notice horizontal scroll.
+
