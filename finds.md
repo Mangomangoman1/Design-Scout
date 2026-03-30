@@ -1701,3 +1701,40 @@ Create a `<section class="capabilities">` with `display: grid`, `grid-template-c
 **Implementation brief:**
 Create section headers as `<a class="section-nav" href="#section-id">` with `display: inline-flex`, `align-items: center`, `gap: 8px`, `font-size: 0.875rem`, `font-weight: 500`, `color: #666`. Content is `<span class="section-number">1.0</span>` + `<span class="section-title">Intake</span>` + `<span class="section-arrow">→</span>`. Style number with `font-feature-settings: "tnum"` for tabular alignment. Use decimal numbering (1.0, 2.0) not integers. Keep titles to one word. Arrow is Unicode → (U+2192). For sticky nav, add `position: sticky`, `top: 0`. The format works best when sections represent a genuine progression or workflow, not arbitrary categories.
 
+---
+
+## Scout Run — 2026-03-30 20:31 UTC
+Sources checked: [Awwwards](https://www.awwwards.com/websites/sites-of-the-day/), [Godly](https://godly.website/)
+
+### 🏆 Find 90: "Replaces: [Competitor1], [Competitor2], [Competitor3]" Replacement Callout
+**Site:** Amie — [https://amie.so/](https://amie.so/)
+**Found on:** Godly — [https://godly.website/website/amie-992](https://godly.website/)
+**Element type:** Value prop / competitive positioning / trust signal
+**What it is:** Amie positions their product with "Replaces: Fireflies, Otter, Fathom" directly under feature sections. The format explicitly names competitors the product replaces, signaling to users that this is a consolidation play. It appears multiple times: "Replaces: Fireflies, Otter, Fathom" for meeting notes, "Replaces: Gcal, Things 3, Motion" for calendar.
+
+**Scores:**
+- Uniqueness: 9/10 — Most products avoid naming competitors or use vague "alternative to" language. Amie's format is bold and direct: "This replaces those tools. Period." It turns competitor awareness into a selling point.
+- Transferability: 7/10 — Works for businesses that consolidate services or replace multiple vendors: "Replaces: Best Buy, mail-in repair, waiting days" or "Replaces: driving to Boise, waiting in line, corporate runaround." Less transferable if you don't have clear competitors or if naming them feels aggressive for your brand.
+- Eyecatch factor: 8/10 — The directness is memorable. The comma-separated list is scannable. The format works as a subtitle, feature callout, or comparison section header. Best placed directly after a feature headline.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<p class="replaces">` with `font-size: 0.875rem`, `font-weight: 400`, `color: #888`, `margin-top: 8px`. Content is "Replaces: " (bold or semi-bold) followed by comma-separated competitor names in regular weight. Keep to 2-4 competitors max. Names should be recognizable to your target audience — obscure competitors won't land. The format works best when your product genuinely consolidates multiple tools or when competitors are household names. Avoid using this if the comparison isn't favorable or if naming competitors feels petty for your brand voice.
+
+---
+
+### 🥈 Find 91: Two-Word Section Labels with Evocative Phrasing ("Shine bright", "Framework freedom")
+**Site:** AuthKit — [https://authkit.com/](https://authkit.com/)
+**Found on:** Godly — [https://godly.website/website/authkit-991](https://godly.website/)
+**Element type:** Section headers / feature intros / copywriting pattern
+**What it is:** AuthKit uses two-word labels above section headlines: "Shine bright" → "Your brand. Your style." / "Extensible by design" → "Your users. Your data. Maximum flexibility." / "Framework freedom" → "Built on Radix..." Each label is playful and evocative, setting tone before the headline delivers the benefit.
+
+**Scores:**
+- Uniqueness: 7/10 — Section labels exist everywhere, but AuthKit's are notably playful. "Shine bright" is poetic; "Framework freedom" alliterates. They feel human rather than corporate. The pattern elevates standard section headers into memorable moments.
+- Transferability: 8/10 — Works for any service page with distinct sections: "Fix fast" → "Same-day repairs for most devices" / "Price right" → "Upfront quotes, no surprises" / "Stay covered" → "90-day warranty on all work." For Hailey Device Repair, the format adds personality to otherwise functional headers.
+- Eyecatch factor: 7/10 — The short labels create rhythm and pacing. The evocative language primes the reader emotionally before the headline. The format works as section intros, feature callouts, or navigation labels. Best with exactly 2 words per label.
+- **Average: 7.3/10**
+
+**Implementation brief:**
+Create section labels as `<span class="section-label">` with `font-size: 0.75rem`, `font-weight: 500`, `text-transform: uppercase`, `letter-spacing: 0.1em`, `color: #888`, `display: block`, `margin-bottom: 8px`. Place above the main `<h2>` headline. Keep labels to exactly 2 words. Use alliteration, rhyme, or evocative imagery ("Shine bright", "Think big", "Move fast", "Fix right"). Avoid generic labels like "Our services" or "Key features." The format works best when the labels contrast with more straightforward headlines below — playful label, clear headline.
+
