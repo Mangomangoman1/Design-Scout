@@ -1072,3 +1072,40 @@ Create a `<section class="trust-badges">` using CSS Grid `grid-template-columns:
 **Implementation brief:**
 Create section headers with version-style labels: `<h2 class="section-header"><span class="section-num">1.0</span> <span class="section-title">Section Name</span></h2>`. Style the number at `font-family: 'SF Mono', monospace`, `font-size: 0.9rem`, `color: #888`, `margin-right: 12px`. Use 0.x for subsections within an intro, then 1.0, 2.0, 3.0 for main sections. Keep numbering consistent throughout the page. The format works best when you have 3-5 major sections and want to signal systematic organization. Don't use for casual or playful brands — it implies technical precision.
 
+---
+
+## Scout Run — 2026-03-30 02:56 UTC
+Sources checked: [Land-book](https://land-book.com/), [Godly](https://godly.website/)
+
+### 🏆 Find 56: "Built Different" Differentiator Grid with Bold Headline + One-Liner
+**Site:** Status — [https://status.app](https://status.app)
+**Found on:** Godly — [https://godly.website/website/status-993](https://godly.website/website/status-993)
+**Element type:** Feature differentiation / trust-building / value proposition
+**What it is:** Status presents their differentiators under a "Built different" heading using a grid of 6 cards, each with a bold one-word/two-word headline followed by a single explanatory sentence: "Open source: Status is a community project. Anyone can build, contribute to and fork its source code." / "Decentralised: Communities are exclusively powered by their members..." / "Secure: Self-custodial keys safeguard your wallets..." The format is punchy and scannable.
+
+**Scores:**
+- Uniqueness: 8/10 — The "Built different" framing is bold and confident. Each differentiator gets a distinct card with a memorable one-word label. The format communicates values quickly without walls of text.
+- Transferability: 9/10 — Perfect for a repair shop's differentiators: "Fast: Most repairs done same-day, not same-week." / "Transparent: Know the cost before you commit." / "Local: Skip the Boise drive. We're in Hailey." / "Honest: If we can't fix it, we won't charge you." / "Text-first: No hold music, just real responses."
+- Eyecatch factor: 8/10 — The grid format with bold headlines creates visual rhythm. The single-sentence explanations keep the page light. The "Built different" umbrella phrase is memorable.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="differentiators">` with `<h2 class="diff-headline">` like "Built different" at `font-size: clamp(1.5rem, 4vw, 2.5rem)`, `font-weight: 700`, `margin-bottom: 32px`. Below: a grid using `display: grid`, `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`, `gap: 24px`. Each card is a `<div class="diff-card">` containing: `<h3 class="diff-title">` at `font-size: 1rem`, `font-weight: 600`, `margin-bottom: 8px`. Below: `<p class="diff-desc">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.5`. Keep titles to 1-2 words. Keep descriptions to one sentence. Use 4-6 differentiators. The format works best when you want to communicate values/positioning concisely. The umbrella headline should be confident and memorable.
+
+---
+
+### 🥈 Find 57: "✦ Superpower #1/2/3" Playful Section Labels
+**Site:** Lovi — [https://lovi.care](https://lovi.care)
+**Found on:** Godly — [https://godly.website/website/lovi-994](https://godly.website/website/lovi-994)
+**Element type:** Section labeling / information architecture / playful branding
+**What it is:** Lovi labels major feature sections with "✦ Superpower #1", "✦ Superpower #2", "✦ Superpower #3" — treating each key capability as a superpower. The sparkle (✦) emoji adds visual flair, and the numbering creates progression. The framing makes features feel exciting rather than functional.
+
+**Scores:**
+- Uniqueness: 8/10 — "Superpowers" as a framing for features is clever and memorable. The ✦ symbol adds visual distinction. The format makes mundane features sound exciting. More playful than typical "Features" or "How it works" sections.
+- Transferability: 7/10 — Works for brands with a playful tone. For a repair shop: "✦ Superpower #1: Same-Day Turnaround" / "✦ Superpower #2: Text-First Communication" / "✦ Superpower #3: No-Fix, No-Fee Guarantee". Best for businesses that want to feel approachable and fun.
+- Eyecatch factor: 8/10 — The ✦ symbol catches the eye. The "Superpower" framing creates curiosity. The numbering implies progression and completeness. Works especially well for 3 key differentiators.
+- **Average: 7.7/10**
+
+**Implementation brief:**
+Create section labels using the format: `<span class="superpower-label">✦ Superpower #1</span>`. Style at `font-size: 0.85rem`, `font-weight: 600`, `text-transform: uppercase`, `letter-spacing: 0.05em`, `color: #888`, `margin-bottom: 12px`, `display: block`. The ✦ can be Unicode (✦ or ✧) or an SVG sparkle icon. Place above each major section's headline. Use for 3 key features/differentiators — more than 3 dilutes the "superpower" framing. Pair with descriptive section headlines below. The format works best for playful, consumer-facing brands — may feel forced for serious B2B.
+
