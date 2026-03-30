@@ -850,3 +850,40 @@ Create section dividers using `<div class="superpower-label">` with content like
 **Implementation brief:**
 Create a `<div class="feature-chips">` with `display: flex`, `flex-wrap: wrap`, `gap: 8px`, `margin-bottom: 24px`. Each chip is a `<button class="chip">` or `<a class="chip">` with: `padding: 8px 16px`, `border-radius: 999px`, `font-size: 0.9rem`, `font-weight: 500`, `background: #f5f5f5`, `color: #333`, `border: 1px solid #e0e0e0`, `cursor: pointer`, `transition: all 0.15s`. Active state: `background: #111`, `color: #fff`. Hover state: `background: #eee`. Use JavaScript to show/hide corresponding content panels when chips are clicked. Keep chip text to 1-3 words. For accessibility: use `role="tablist"` on the container and `role="tab"` on chips. The pattern works best when each chip reveals a distinct content panel with details, images, or specifics.
 
+---
+
+## Scout Run — 2026-03-30 01:56 UTC
+Sources checked: [Land-book](https://land-book.com/), [Godly](https://godly.website/)
+
+### 🏆 Find 44: Zero-Padded Step Numbers (01, 02, 03) with Declarative Headlines
+**Site:** Veo — [https://veo.co](https://veo.co)
+**Found on:** Land-book — [https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse](https://land-book.com/websites/92676-veo-sports-cameras-record-stream-and-analyse)
+**Element type:** Process presentation / numbering / visual hierarchy
+**What it is:** Veo presents its "how it works" section with zero-padded step numbers: "01 Record and livestream every match, home and away" / "02 Instantly relive the match and break down every key play" / "03 Share and celebrate your winning moments". The numbers are large and styled distinctly from the text. Each step is a single sentence describing the action. The zero-padding (01 vs 1) gives a modern, technical feel.
+
+**Scores:**
+- Uniqueness: 8/10 — Zero-padded numbers are common in design portfolios but rare in service business contexts. The "01" format feels more intentional and designed than plain "1" or "Step 1". The monospace or tabular styling creates visual rhythm and alignment.
+- Transferability: 9/10 — Perfect for a repair shop's process: "01 Text us a photo of your issue" / "02 Get a quote in minutes, no commitment" / "03 Drop off or we come to you" / "04 Fixed same-day, guaranteed". The format is simple to implement and immediately communicates a clear process.
+- Eyecatch factor: 8/10 — The large, bold numbers draw the eye and create visual anchors. The zero-padding feels intentional and polished. The format works especially well with 3-5 steps — enough to show a process without overwhelming.
+- **Average: 8.3/10**
+
+**Implementation brief:**
+Create a `<section class="process-steps">` with `display: flex`, `flex-direction: column`, `gap: 32px` (or CSS Grid for horizontal layout). Each step is a `<div class="step">` containing: `<span class="step-num">01</span>` at `font-size: clamp(2rem, 5vw, 3rem)`, `font-weight: 700`, `color: #ccc` (muted) or brand color, `font-family: 'SF Mono', 'JetBrains Mono', monospace`, `font-variant-numeric: tabular-nums`. Followed by `<h3 class="step-text">` at `font-size: 1.1rem`, `font-weight: 600`, `color: #111`. Keep step text to one sentence max. The number should be visually dominant but the text carries the meaning. For horizontal layouts, use `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))`. The zero-padding signals intentionality — use it consistently across your site if you adopt it.
+
+---
+
+### 🥈 Find 45: Large Stat Callouts with Context Line (63% of members find X)
+**Site:** Superpower — [https://superpower.com](https://superpower.com)
+**Found on:** Godly — [https://godly.website/website/superpower-1015](https://godly.website/website/superpower-1015)
+**Element type:** Social proof / trust-building / data visualization
+**What it is:** Superpower presents key statistics as large percentage numbers with a context line below: "63% of members find early risk factors for diabetes" / "44% of members find elevated heart disease risk" / "70% of members slow their speed of ageing". The percentage is huge and bold; the context line is smaller and explains what the number means. The format makes abstract benefits concrete and believable.
+
+**Scores:**
+- Uniqueness: 7/10 — Stat callouts are common, but Superpower's execution is unusually effective. The percentage is genuinely large (not just bold text), and the context line uses "of members" phrasing that makes it feel like real data rather than marketing speak.
+- Transferability: 9/10 — Works for a repair shop's track record: "94% of repairs completed same-day" / "500+ devices fixed in 2024" / "98% customer satisfaction rating" / "72% of customers find us through referrals". The format turns vague claims into specific, believable data points.
+- Eyecatch factor: 8/10 — Large numbers draw immediate attention. The percentage format is instantly parseable. The context line provides meaning without requiring the visitor to search for it. The format works especially well in a row of 3-4 stats.
+- **Average: 8/10**
+
+**Implementation brief:**
+Create a `<section class="stats-row">` with `display: flex`, `justify-content: space-around`, `flex-wrap: wrap`, `gap: 32px`, `text-align: center`. Each stat is a `<div class="stat">` containing: `<span class="stat-num">63%</span>` at `font-size: clamp(2.5rem, 6vw, 4rem)`, `font-weight: 700`, `color: #111`, `line-height: 1`, `display: block`. Below: `<span class="stat-context">` at `font-size: 0.9rem`, `color: #666`, `line-height: 1.4`, `max-width: 200px`, `margin: 8px auto 0`. The stat should be a real number from your business — don't fabricate. Use percentages, counts, or ratings depending on what you can back up. Keep context lines to one sentence. The format works best with 3-4 stats — enough to establish credibility without feeling like a data dump.
+
